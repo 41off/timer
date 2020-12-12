@@ -1,94 +1,124 @@
 <html>
-
 <head>
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>TIMER</title>
+    <title>Timer</title>
 </head>
 
+<!--
+html, body {
+height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
+-->
+   
 <body>
+
+
 <style type="text/css">
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+header {
+    position: absolute;
+    right: 25%;
+    top:0px;
+    height: 20px;
+    width: 25%;
+}
 
 body {
 	background: url('pics/silverbars.jpg') no-repeat fixed center;
-    -webkit-background-size: cover;
+	/*background-image:url('224830242-black-and-blue-abstract-wallpaper.jpg')*/
+	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; 
     background-size: 100% 100%;
-    -khtml-background-size: 100%;        
-    margin: 0px;
+    -khtml-background-size: 100%;
+    display: flex;
+    flex-direction: column;        
+    color: white
 }
-
-#container {
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
-	}
-
-</style>
-
-
-
-
-<script type="text/javascript" src="js/timer_query.js"></script>
-       <center>
-       <div class="timer">
-            <span class="closebtn2">&times;</span>
-            <span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>.<span class="milli">00</span>
-        </div>
-       </center>
-        <div class="footer">
-         <span class="closebtn2">&times;</span>
-          <center>  
-            <button class="timerbutton1" onClick="timer.reset(0)">Reset</button> 
-            <button class="timerbutton3" onClick="timer.start(10)">Start</button> 
-            <button class="timerbutton5" onClick="timer.stop()">Stop</button> 
-            <button class="timerbutton4" onClick="timer.mode(1)">Count up</button> 
-            <button class="timerbutton5" onClick="timer.mode(0)">Count down</button>
-           </center>
-        </div>
-
-<script>
-var close = document.getElementsByClassName("closebtn2");
-var i;
-
-for (i = 0; i < close.length; i++) {
-    close[i].onclick = function(){
-        var div = this.parentElement;
-        div.style.opacity = "0";
-        setTimeout(function(){ div.style.display = "none"; }, 1200);
-    }
-}
-</script>
 
 
 <style>
+
+.header {
+    padding: 10px;
+    background-color: red;
+    border-radius: 12px;
+    font-family: "Century Schoolbook";
+    font-size: 20px;
+    color: white;
+    opacity: 1;
+    transition: opacity 3s;
+    border: 2px solid silver;
+    margin-bottom: 0px
+}
+.header:hover {
+	background-color: #FF66FF;
+	border: 5px #C0C0C0;
+	border-style: dashed;
+	color: black;
+}
+
+
+
+.content {
+  flex: 1 0 auto;
+}
+
+/*
+.footer {
+    
+    flex-shrink: 0;
+     width: 99%;
+}
+*/
 
 .footer {
     position:absolute;
     left: 0px;
     right: 0px;
     padding-top: 0px;
+    padding-bottom:3px;
     padding-left: 2px;
-    background-color: black;
+    background-color: transparent;
+    border: 5px;
+    border-color: silver;
     border-radius: 12px;
+    border-style: double;
+    height:28px;
     font-family: "Arial Narrow", Arial, sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     color: white;
-    opacity: 1;
+    opacity: .4;
     transition: opacity 3s;
-    border: 2px solid silver;
-    margin-bottom: 1px;
     bottom: 0px
 }
+
 .footer:hover {
 	background-color: #C0C0C0;
-	border: 5px pink;
-	border-style: dashed;
+	border-color: red;
+	opacity: 1;
 	color: black;
+}
+
+#container {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center
 }
 
 .timerbutton {
@@ -110,9 +140,19 @@ for (i = 0; i < close.length; i++) {
     width: 80px; height: 30px
 }
 
+.timerbutton1:focus {
+    background-color: yellow; 
+    color: black
+}
+
 .timerbutton1:hover {
     background-color: #4CAF50;
     color: white;
+}
+
+.timerbutton1:active {
+    background-color: yellow; 
+    color: black
 }
 
 .timerbutton2 {
@@ -123,9 +163,19 @@ for (i = 0; i < close.length; i++) {
     width: 80px; height: 30px
 }
 
-.timerbutton:hover {
-    background-color: #008CBA;
+.timerbutton2:focus {
+    background-color: yellow; 
+    color: black
+}
+
+.timerbutton2:hover {
+    background-color: #4CAF50;
     color: white;
+}
+
+.timerbutton2:active {
+    background-color: yellow; 
+    color: black
 }
 
 .timerbutton3 {
@@ -136,9 +186,19 @@ for (i = 0; i < close.length; i++) {
     width: 80px; height: 30px
 }
 
+.timerbutton3:focus {
+    background-color: yellow; 
+    color: black
+}
+
 .timerbutton3:hover {
-    background-color: #f44336;
+    background-color: red;
     color: white;
+}
+
+.timerbutton3:active {
+    background-color: yellow; 
+    color: black
 }
 
 .timerbutton4 {
@@ -149,9 +209,19 @@ for (i = 0; i < close.length; i++) {
     width: 80px; height: 30px
 }
 
+.timerbutton4:focus {
+    background-color: yellow; 
+    color: black
+}
+
 .timerbutton4:hover {
     background-color: #e7e7e7; 
     color: gray
+}
+
+.timerbutton4:active {
+    background-color: yellow; 
+    color: black
 }
 
 .timerbutton5 {
@@ -162,9 +232,19 @@ for (i = 0; i < close.length; i++) {
     width: 100px; height: 30px     
 }
 
+.timerbutton5:focus {
+    background-color: yellow; 
+    color: black
+}
+
 .timerbutton5:hover {
     background-color: #555555; 
     color: white;
+}
+
+.timerbutton5:active {
+    background-color: yellow; 
+    color: black
 }
 
 .closebtn2 {
@@ -235,7 +315,108 @@ for (i = 0; i < close.length; i++) {
     background-color: #555555; 
     color: black;
 }
+
+form {
+  overflow: hidden;
+  text-align:right;
+  border:medium;
+  font:caption;
+  font-family:"Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size:22px
+}
+input {
+  float: right;
+  clear: both;
+}
+
+input[type=text] {
+    padding:3px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=button] {
+    padding:3px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+input[type=button]:hover {
+    border-color:#333;
+    color:red;
+    background:aqua
+}
+
+input[type=reset] {
+    padding:2px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+input[type=reset]:hover {
+    padding:2px 15px; 
+    background:red; 
+    border:2px silver;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
 </style>
+
+
+     <form name="converter">
+        <input type="text" value="0.00"  name="mph" >Miles Per Hour&nbsp;
+        <input type="button" value="Convert mph to m/s" onclick="javascript:calc()"> 
+        <input type="button" value="Convert m/s to mph" onclick="javascript:calc2()">
+        <input type="reset" value="reset" onclick="javascript:calc()">
+        <input type="text" value="0.00"  name="mps"><br><br><br><br>Meters Per Second&nbsp;&nbsp;
+        <br /><br />
+      </form>
+
+       <center>
+       <div class="timer">
+            <span class="closebtn2">&times;</span>
+            <span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>.<span class="milli">00</span>
+        </div>
+       </center>
+        <div class="footer">
+         <span class="closebtn2">&times;</span>
+          <center>
+            <button class="timerbutton4" onClick="timer.mode(1)">Count up</button>  
+            <button class="timerbutton2" onClick="timer.start(10)">Go</button> 
+            <button class="timerbutton5" onClick="timer.mode(0)">Count down</button>
+            <button class="timerbutton3" onClick="timer.stop()">Stop</button>
+            <button class="timerbutton1" onClick="timer.reset(0)">Reset</button>
+           </center>
+        </div>
+                 
+<script type="text/javascript" src="js/timer_query.js"></script>
+<script>
+
+var close = document.getElementsByClassName("closebtn2");
+var i;
+
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 1200);
+    }
+}
+</script>
+
+
 
 <script>
 function _timer(callback)
@@ -363,13 +544,6 @@ $(document).ready(function(e)
     
 </script>
 
-<form name="converter">
-<input type="text" value="0.0"  name="mps"> Meters Per Second
-<br /><br />
-<input type="button" value="Convert m/s to mph" onclick="javascript:calc()"> <input type="reset" value="reset" onclick="javascript:calc()">
-<br /><br />
-<input type="text" value="0.0"  name="mph"> Miles Per Hour
-</form>
 <script language="javascript">
 
 //MPS to MPH converter script
@@ -377,7 +551,14 @@ $(document).ready(function(e)
 
 //calculate function
 function calc(){
+//variables
+var milesperhour = document.converter.mph.value
+var calculated = Math.round(milesperhour * 0.44704*100)/100
 
+//write in text box
+document.converter.mps.value=calculated
+}
+function calc2(){
 //variables
 var meterspersecond = document.converter.mps.value
 var calculated = Math.round(meterspersecond * 3600 / 1610.3*1000)/1000
@@ -387,5 +568,13 @@ document.converter.mph.value=calculated
 }
 </script>
 
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
