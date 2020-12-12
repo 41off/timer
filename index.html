@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Timer</title>
-</head>
+</head> 
 
 <body>
 
@@ -96,12 +96,6 @@ body {
 	border-color: red;
 	opacity: 1;
 	color: black;
-}
-
-#container {
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center
 }
 
 .timerbutton {
@@ -244,51 +238,24 @@ body {
     color: yellow;
 }
 
-.timercontrol {
-    position:absolute;
-    background-color: black;
-    border-radius: 12px;
-    font-family: "Arial Narrow", Arial, sans-serif;
-    font-size: 16px;
-    color: white;
-    opacity: 1;
-    transition: opacity 3s;
-    border: 2px solid silver;
-    left: 0px;
-    right: 0px;
-    padding-top: 0px;
-    padding-left: 0px;
-    margin-bottom: 2px;
-    bottom: 15px
-}
-.timercontrol:hover {
-	background-color: #C0C0C0;
-	border: 5px pink;
-	border-style: dashed;
-	color: black;
-}
-
-
 .timer {
     transition: opacity 6s;
     border:10px #666666 solid;
     border-radius: 20px;
     border-style:double;
-    line-height:240px;
-    font-size:160px;
+    line-height:90px;
+    font-size:80px;
     font-family:"Verdana";
     text-align:center;
     color: white;
     margin:5px;
     margin-bottom: 2px;
     position:absolute;
-    padding-top: 0px;
-    left:1%;
-    right: 1%;
-    padding-top: 0px;
+    padding-bottom: 5px;
+    left:20%;
+    right: 20%;
     padding-left: 4px;
-    margin-bottom: 0px;
-    bottom: 10%
+    bottom: 20%
 
 }
 .timer:hover {
@@ -550,4 +517,3 @@ var calculated = Math.round(meterspersecond * 3600 / 1610.3*1000)/1000
 document.converter.mph.value=calculated
 }
 </script>
-	
