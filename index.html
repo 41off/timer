@@ -378,8 +378,8 @@ input[type=reset]:hover {
      <form name="converter">
         <input type="text" value="0.00"  name="mph" >Miles Per Hour&nbsp;
         <input type="button" value="Convert mph to m/s" onclick="javascript:calc()"> 
-        <input type="button" value="Convert m/s to mph" onclick="javascript:calc2()">
         <input type="reset" value="reset" onclick="javascript:calc()">
+        <input type="button" value="Convert m/s to mph" onclick="javascript:calc2()">        
         <input type="text" value="0.00"  name="mps"><br><br><br><br>Meters Per Second&nbsp;&nbsp;
         <br /><br />
       </form>
@@ -567,14 +567,4 @@ var calculated = Math.round(meterspersecond * 3600 / 1610.3*1000)/1000
 document.converter.mph.value=calculated
 }
 </script>
-
-
-
-
-
-
-
-
-
-
-
+	
