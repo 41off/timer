@@ -650,123 +650,9 @@ document.clock.DalarmTime.value = alarmTime; // sets initially and displays only
 alarmOn();
 }
 
-function whichEggsm() {
-
-x = 601;  // x Seconds
-
-document.clock.jbEgg.checked = false;
-document.clock.xlEgg.checked = false;
-document.clock.lgEgg.checked = false;
-document.clock.meEgg.checked = false;
-document.clock.smEgg.checked = true;
-document.clock.clEgg.checked = false;
-document.clock.wmEgg.checked = false;
-document.clock.noEgg.checked = false;
-document.clock.snoozeOptM.value = "10";
-TypeMessage = "10 Minutes"
-snooze();
-timer.mode(1);
-timer.start(10);
-
-
-setTimeout(whichEggwm, x*1000);
-}
-whichEggsm(); // execute function
-
-function whichEggme() {
-
-x = 301;  // x Seconds
-
-document.clock.jbEgg.checked = false;
-document.clock.xlEgg.checked = false;
-document.clock.lgEgg.checked = false;
-document.clock.meEgg.checked = true;
-document.clock.smEgg.checked = false;
-document.clock.clEgg.checked = false;
-document.clock.wmEgg.checked = false;
-document.clock.noEgg.checked = false;
-document.clock.snoozeOptM.value = "5";
-TypeMessage = "5 Minutes"
-snooze();
-timer.mode(1);
-timer.start(10);
-
-
-setTimeout(whichEggwm, x*1000);
-}
-whichEggme(); // execute function
-
-function whichEgglg() {
-
-x = 241;  // x Seconds
-
-document.clock.jbEgg.checked = false;
-document.clock.xlEgg.checked = false;
-document.clock.lgEgg.checked = true;
-document.clock.meEgg.checked = false;
-document.clock.smEgg.checked = false;
-document.clock.clEgg.checked = false;
-document.clock.wmEgg.checked = false;
-document.clock.noEgg.checked = false;
-document.clock.snoozeOptM.value = "4";
-TypeMessage = "4 Minutes"
-snooze();
-timer.mode(1);
-timer.start(10);
-
-setTimeout(whichEggwm, x*1000);
-}
-whichEgglg(); // execute function
-
-function whichEggxl() {
-
-x = 181;  // x Seconds
-
-document.clock.jbEgg.checked = false;
-document.clock.xlEgg.checked = true;
-document.clock.lgEgg.checked = false;
-document.clock.meEgg.checked = false;
-document.clock.smEgg.checked = false;
-document.clock.clEgg.checked = false;
-document.clock.wmEgg.checked = false;
-document.clock.noEgg.checked = false;
-document.clock.snoozeOptM.value = "3";
-TypeMessage = "3 Minutes"
-snooze();
-timer.mode(1);
-timer.start(10);
-
-
-setTimeout(whichEggwm, x*1000);
-}
-whichEggxl(); // execute function
-
-function whichEggjb() {
-
-x = 121;  // x Seconds
-
-document.clock.jbEgg.checked = true;
-document.clock.xlEgg.checked = false;
-document.clock.lgEgg.checked = false;
-document.clock.meEgg.checked = false;
-document.clock.smEgg.checked = false;
-document.clock.clEgg.checked = false;
-document.clock.wmEgg.checked = false;
-document.clock.noEgg.checked = false;
-document.clock.snoozeOptM.value = "2";
-TypeMessage = "2 Minutes "
-snooze();
-timer.mode(1);
-timer.start(10);
-
-
-setTimeout(whichEggwm, x*1000);
-}
-whichEggjb(); // execute function
-
 function whichEggcl() {
 
-x = 61;  // x Seconds
+x = 600;  // x Seconds
 
 document.clock.jbEgg.checked = false;
 document.clock.xlEgg.checked = false;
@@ -776,20 +662,137 @@ document.clock.smEgg.checked = false;
 document.clock.clEgg.checked = true;
 document.clock.wmEgg.checked = false;
 document.clock.noEgg.checked = false;
+document.clock.snoozeOptM.value = "10";
+TypeMessage = "10 Minute"
+snooze();
+timer.mode(1);
+timer.start(10);
+
+
+setTimeout(whichEggcl, x*10001/10);
+}
+whichEggcl(); // execute function
+
+
+function whichEggsm() {
+
+x = 300;  // x Seconds
+
+document.clock.jbEgg.checked = false;
+document.clock.xlEgg.checked = false;
+document.clock.lgEgg.checked = false;
+document.clock.meEgg.checked = false;
+document.clock.smEgg.checked = true;
+document.clock.clEgg.checked = false;
+document.clock.wmEgg.checked = false;
+document.clock.noEgg.checked = false;
+document.clock.snoozeOptM.value = "5";
+TypeMessage = "5 Minute"
+snooze();
+timer.mode(1);
+timer.start(10);
+
+
+setTimeout(whichEggsm, x*10001/10);
+}
+whichEggsm(); // execute function
+
+function whichEggme() {
+
+x = 240;  // x Seconds
+
+document.clock.jbEgg.checked = false;
+document.clock.xlEgg.checked = false;
+document.clock.lgEgg.checked = false;
+document.clock.meEgg.checked = true;
+document.clock.smEgg.checked = false;
+document.clock.clEgg.checked = false;
+document.clock.wmEgg.checked = false;
+document.clock.noEgg.checked = false;
+document.clock.snoozeOptM.value = "4";
+TypeMessage = "4 Minute"
+snooze();
+timer.mode(1);
+timer.start(10);
+
+
+setTimeout(whichEggme, x*10001/10);
+}
+whichEggme(); // execute function
+
+function whichEgglg() {
+
+x = 180;  // x Seconds
+
+document.clock.jbEgg.checked = false;
+document.clock.xlEgg.checked = false;
+document.clock.lgEgg.checked = true;
+document.clock.meEgg.checked = false;
+document.clock.smEgg.checked = false;
+document.clock.clEgg.checked = false;
+document.clock.wmEgg.checked = false;
+document.clock.noEgg.checked = false;
+document.clock.snoozeOptM.value = "3";
+TypeMessage = "3 Minute"
+snooze();
+timer.mode(1);
+timer.start(10);
+
+setTimeout(whichEgglg, x*10001/10);
+}
+whichEgglg(); // execute function
+
+function whichEggxl() {
+
+x = 120;  // x Seconds
+
+document.clock.jbEgg.checked = false;
+document.clock.xlEgg.checked = true;
+document.clock.lgEgg.checked = false;
+document.clock.meEgg.checked = false;
+document.clock.smEgg.checked = false;
+document.clock.clEgg.checked = false;
+document.clock.wmEgg.checked = false;
+document.clock.noEgg.checked = false;
+document.clock.snoozeOptM.value = "2";
+TypeMessage = "2 Minute"
+snooze();
+timer.mode(1);
+timer.start(10);
+
+
+setTimeout(whichEggxl, x*10001/10);
+}
+whichEggxl(); // execute function
+
+
+
+function whichEggjb() {
+
+x = 60;  // x Seconds
+
+document.clock.jbEgg.checked = true;
+document.clock.xlEgg.checked = false;
+document.clock.lgEgg.checked = false;
+document.clock.meEgg.checked = false;
+document.clock.smEgg.checked = false;
+document.clock.clEgg.checked = false;
+document.clock.wmEgg.checked = false;
+document.clock.noEgg.checked = false;
 document.clock.snoozeOptM.value = "1";
 TypeMessage = "1 Minute "
 snooze();
 timer.mode(1);
 timer.start(10);
 
-
-setTimeout(whichEggwm, x*1000);
+setTimeout(whichEggjb, x*10001/10);
 }
-whichEggcl(); // execute function
+whichEggjb(); // execute function
+
 
 function whichEggwm() {
 
-x = 31;  // x Seconds
+x = 30;  // x Seconds
 
 document.clock.jbEgg.checked = false;
 document.clock.xlEgg.checked = false;
@@ -800,12 +803,12 @@ document.clock.clEgg.checked = false;
 document.clock.wmEgg.checked = true;
 document.clock.noEgg.checked = false;
 document.clock.snoozeOptS.value = "30";
-TypeMessage = "30 Seconds "
+TypeMessage = "30 Second "
 snooze();
 timer.mode(1);
 timer.start(10);
 
-setTimeout(whichEggwm, x*1000);
+setTimeout(whichEggwm, x*10001/10);
 
 }
 
@@ -870,7 +873,7 @@ Choose&nbsp;Preset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input type="radio" name="lgEgg" onClick="whichEgglg()">3 Minutes 
 <input type="radio" name="meEgg" onClick="whichEggme()">4 Minutes  
 <input type="radio" name="smEgg" onClick="whichEggsm()">5 Minutes   
-10 Minutes <input type="radio" name="clEgg" onClick="whichEggcl()"> 
+<input type="radio" name="clEgg" onClick="whichEggcl()">10 Minutes  
 <input type="radio" name="noEgg" onClick="whichEggno()" checked>None 
 </nobr>
 </td>
@@ -923,4 +926,3 @@ Choose&nbsp;Preset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <SCRIPT LANGUAGE="JavaScript">
    document.write(y0);
 </SCRIPT>
-
