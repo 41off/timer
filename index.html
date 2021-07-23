@@ -284,19 +284,26 @@ input.btn {
 	border-color: red;
 	opacity: 1;
 	color: black;
+}
 
 
 </style>
 
 
+
+
      <div class="convertor">
        <span class="closebtn2">&times;</span>
-        <input type="text" value="0.00"  name="mph" >Miles Per Hour&nbsp;
-        <input type="button" value="Convert mph to m/s" onclick="javascript:calc()"> 
-        <input type="button" value="Convert m/s to mph" onclick="javascript:calc2()">
-        <input type="reset" value="reset" onclick="javascript:calc()">
-        <input type="text" value="0.00"  name="mps">Meters Per Second&nbsp;&nbsp;
-        
+       <form name="converter">
+          Miles Per Hour&nbsp;<input type="text" value="0.00"  name="mph">&nbsp;&nbsp;&nbsp;
+          <input type="button" value="Convert MPH to &#x2192;" onclick="javascript:calc(); javascript:calc3()">&nbsp;&nbsp;&nbsp;
+          <input type="reset" value="reset" onclick="javascript:calc()">&nbsp;&nbsp;&nbsp;
+          <input type="button" value="&#x2190;Convert to MPH" onclick="javascript:calc2()">
+          Meters Per Second&nbsp;<input type="text" value="0.00"  name="mps">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="button" value="&#x2190;Convert to MPH" onclick="javascript:calc4()">         
+          Kilometers Per Hour&nbsp;<input type="text" value="0.00"  name="kph">&nbsp;&nbsp;&nbsp;
+                
+       </form>
       </div>
 
        <center>
@@ -316,7 +323,7 @@ input.btn {
            </center>
         </div>
                  
-<script type="text/javascript" src="js/timer_query.js"></script>
+
 <script>
 
 var close = document.getElementsByClassName("closebtn2");
@@ -331,7 +338,7 @@ for (i = 0; i < close.length; i++) {
 }
 </script>
 
-
+<script type="text/javascript" src="js/timer_query.js"></script>
 
 <script>
 function _timer(callback)
@@ -462,29 +469,44 @@ $(document).ready(function(e)
 
 <script language="javascript">
 
-//MPS to MPH converter script
-//Visit http://javascriptkit.com for this script
-
 //calculate function
 function calc(){
 //variables
 var milesperhour = document.converter.mph.value
-var calculated = Math.round(milesperhour * 0.44704*100)/100
+var calculated = Math.round(milesperhour * 0.44704*1000)/1000
 
 //write in text box
 document.converter.mps.value=calculated
 }
+
 function calc2(){
 //variables
 var meterspersecond = document.converter.mps.value
-var calculated = Math.round(meterspersecond * 3600 / 1610.3*1000)/1000
+var calculated = Math.round(meterspersecond * 3600/1610.3)
 
 //write in text box
 document.converter.mph.value=calculated
 }
-</script>
 
-<script language="javascript">
+function calc3(){
+//variables
+var milesperhour = document.converter.mph.value
+var calculated = Math.round(milesperhour * 1.609344*1000)/1000
+
+//write in text box
+document.converter.kph.value=calculated
+}
+
+function calc4(){
+//variables
+var kilometersperhour = document.converter.kph.value
+var calculated = Math.round(kilometersperhour * 6214)/10000
+
+//write in text box
+document.converter.mph.value=calculated
+}
+
+
 
 
 var alarmTime = "0000~00:00:00";
@@ -926,3 +948,4 @@ Choose&nbsp;Preset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <SCRIPT LANGUAGE="JavaScript">
    document.write(y0);
 </SCRIPT>
+
