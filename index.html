@@ -52,7 +52,7 @@ input.btn {
     color: white;
     opacity: .4;
     transition: opacity 3s;
-    bottom: 2%
+    bottom: 2.5%
 }
 
 .footer:hover {
@@ -217,7 +217,7 @@ input.btn {
     padding-top: 0px;
     padding-left: 0px;
     margin-bottom: 2px;
-    bottom: 15px
+    bottom: 5px
 }
 .timercontrol:hover {
 	background-color: #C0C0C0;
@@ -232,17 +232,17 @@ input.btn {
     border:10px #666666 solid;
     border-radius: 5px;
     border-style:double;
-    height:10%;
-    line-height:160px;
-    font-size:120px;
+    height:140px;
+    line-height:120px;
+    font-size:100px;
     font-family:"Verdana";
     text-align:center;
     color: white;
     margin:0px;
-    position:absolute;
-    padding-bottom: 5%;
-    left:20%;
-    right: 20%;
+    position:absolute;    
+    padding-bottom: 1%;
+    left:26%;
+    right: 26%;
     padding-left: 4px;
     bottom: 1%
 
@@ -308,19 +308,18 @@ input.btn {
        <div class="timer">
             <span class="closebtn2">&times;</span>
             <span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>.<span class="milli">00</span>
-        </div>
-       </center>
-        <div class="footer">
-         <span class="closebtn2">&times;</span>
-          <center>
+       </div>
+       
+     <div class="footer">
+            <span class="closebtn2">&times;</span>
+            <center>
             <button class="timerbutton4" onClick="timer.mode(1)">Count up</button>  
             <button class="timerbutton2" onClick="timer.start(10)">Go</button> 
             <button class="timerbutton5" onClick="timer.mode(0)">Count down</button>
             <button class="timerbutton3" onClick="timer.stop()">Stop</button>
             <button class="timerbutton1" onClick="timer.reset(0)">Reset</button>
            </center>
-        </div>
-                 
+           </div>
 
 <script>
 
@@ -949,3 +948,4 @@ Choose&nbsp;Preset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <SCRIPT LANGUAGE="JavaScript">
    document.write(y0);
 </SCRIPT>
+
