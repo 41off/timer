@@ -232,9 +232,9 @@ input.btn {
     border:10px #666666 solid;
     border-radius: 5px;
     border-style:double;
-    height:140px;
-    line-height:110px;
-    font-size:100px;
+    height:110px;
+    line-height:100px;
+    font-size:90px;
     font-family:"Verdana";
     text-align:center;
     color: white;
@@ -674,7 +674,7 @@ alarmOn();
 
 function whichEggcl() {
 
-x = 600;  // x Seconds
+x = 900;  // x Seconds
 
 document.clock.jbEgg.checked = false;
 document.clock.xlEgg.checked = false;
@@ -684,8 +684,8 @@ document.clock.smEgg.checked = false;
 document.clock.clEgg.checked = true;
 document.clock.wmEgg.checked = false;
 document.clock.noEgg.checked = false;
-document.clock.snoozeOptM.value = "10";
-TypeMessage = "10 Minute"
+document.clock.snoozeOptM.value = "15";
+TypeMessage = "15 Minute"
 snooze();
 timer.mode(1);
 timer.start(10);
@@ -698,7 +698,7 @@ whichEggcl(); // execute function
 
 function whichEggsm() {
 
-x = 300;  // x Seconds
+x = 600;  // x Seconds
 
 document.clock.jbEgg.checked = false;
 document.clock.xlEgg.checked = false;
@@ -708,8 +708,8 @@ document.clock.smEgg.checked = true;
 document.clock.clEgg.checked = false;
 document.clock.wmEgg.checked = false;
 document.clock.noEgg.checked = false;
-document.clock.snoozeOptM.value = "5";
-TypeMessage = "5 Minute"
+document.clock.snoozeOptM.value = "10";
+TypeMessage = "10 Minute"
 snooze();
 timer.mode(1);
 timer.start(10);
@@ -721,7 +721,7 @@ whichEggsm(); // execute function
 
 function whichEggme() {
 
-x = 240;  // x Seconds
+x = 300;  // x Seconds
 
 document.clock.jbEgg.checked = false;
 document.clock.xlEgg.checked = false;
@@ -731,8 +731,8 @@ document.clock.smEgg.checked = false;
 document.clock.clEgg.checked = false;
 document.clock.wmEgg.checked = false;
 document.clock.noEgg.checked = false;
-document.clock.snoozeOptM.value = "4";
-TypeMessage = "4 Minute"
+document.clock.snoozeOptM.value = "5";
+TypeMessage = "5 Minute"
 snooze();
 timer.mode(1);
 timer.start(10);
@@ -893,9 +893,9 @@ Choose&nbsp;Preset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input type="radio" name="jbEgg" onClick="whichEggjb()">1 Minute  
 <input type="radio" name="xlEgg" onClick="whichEggxl()">2 Minutes
 <input type="radio" name="lgEgg" onClick="whichEgglg()">3 Minutes 
-<input type="radio" name="meEgg" onClick="whichEggme()">4 Minutes  
-<input type="radio" name="smEgg" onClick="whichEggsm()">5 Minutes   
-<input type="radio" name="clEgg" onClick="whichEggcl()">10 Minutes  
+<input type="radio" name="meEgg" onClick="whichEggme()">5 Minutes  
+<input type="radio" name="smEgg" onClick="whichEggsm()">10 Minutes   
+<input type="radio" name="clEgg" onClick="whichEggcl()">15 Minutes  
 <input type="radio" name="noEgg" onClick="whichEggno()" checked>None 
 </nobr>
 </td>
