@@ -36,15 +36,15 @@ input.btn {
 
 .footer {
     position:absolute;
-    left: 8%;
-    right: 8%;
+    left: 30%;
+    right: 30%;
     padding-top: 0px;
-    padding-bottom:3px;
+    padding-bottom:1px;
     padding-left: 2px;
     background-color: transparent;
     border: 5px;
     border-color: silver;
-    border-radius: 12px;
+    border-radius: 5px;
     border-style: double;
     height:28px;
     font-family: "Arial Narrow", Arial, sans-serif;
@@ -52,7 +52,7 @@ input.btn {
     color: white;
     opacity: .4;
     transition: opacity 3s;
-    bottom: 22%
+    bottom: 2%
 }
 
 .footer:hover {
@@ -205,7 +205,7 @@ input.btn {
 .timercontrol {
     position:absolute;
     background-color: black;
-    border-radius: 12px;
+    border-radius: 5px;
     font-family: "Arial Narrow", Arial, sans-serif;
     font-size: 16px;
     color: white;
@@ -230,23 +230,21 @@ input.btn {
 .timer {
     transition: opacity 6s;
     border:10px #666666 solid;
-    border-radius: 20px;
+    border-radius: 5px;
     border-style:double;
-    line-height:240px;
-    font-size:160px;
+    height:10%;
+    line-height:160px;
+    font-size:120px;
     font-family:"Verdana";
     text-align:center;
     color: white;
-    margin:5px;
-    margin-bottom: 2px;
+    margin:0px;
     position:absolute;
-    padding-top: 0px;
-    left:8%;
-    right: 8%;
-    padding-top: 0px;
+    padding-bottom: 5%;
+    left:20%;
+    right: 20%;
     padding-left: 4px;
-    margin-bottom: 0px;
-    bottom: 27%
+    bottom: 1%
 
 }
 .timer:hover {
@@ -452,7 +450,7 @@ var timer;
 $(document).ready(function(e) 
   { timer = new _timer
     (function(time)
-        {if(time == 60000)
+        {if(time == 360000)
             {timer.start();
                 alert('1 Hour Elapsed');
          }
@@ -460,8 +458,7 @@ $(document).ready(function(e)
    );
     timer.reset(0);
     timer.mode(10);
-}
-
+ }
 );
 
     
@@ -523,6 +520,7 @@ var dayNum;
 var hourNum;
 var minNum;
 var secNum;
+var milliNum;
 var cdayNum;
 var chourNum;
 var cminNum;
@@ -541,10 +539,10 @@ if ((dayTimeR.length) == 2) {
 dayTimeR = "00" + dayTimeR;}
 if ((dayTimeR.length) == 3) {
 dayTimeR = "0" + dayTimeR;}
-//if (dayTimeR.length >= 4) {
-//dayTimeR = dayTimeR.slice(-4);} // right 4 characters
+if (dayTimeR.length >= 4) {
+dayTimeR = dayTimeR.slice(-4);} // right 4 characters
 // end format
-document.clock.local.value = (dayTimeR) + "~" + IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds());
+document.clock.local.value = (dayTimeR) + "~" + IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()) + "." + IfZero(dt.getMilliseconds());
 setTimeout("GetTime()", 1000);
 curTimeD = (IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()));
 //document.clock.DalarmTime.value = alarmTime;
@@ -647,6 +645,9 @@ var dayNumS = parseInt(dayNum).toString();
 var hourNumS = parseInt(hourNum).toString();
 var minNumS = parseInt(minNum).toString();
 var secNumS = parseInt(secNum).toString();
+var milliNumS = parseInt(milliNum).toString();
+if ((milliNumS.length) == 1) {
+milliNumS = "0" + milliNumS;}
 if ((secNumS.length) == 1) {
 secNumS = "0" + secNumS;}
 if ((minNumS.length) == 1) {
@@ -948,4 +949,3 @@ Choose&nbsp;Preset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <SCRIPT LANGUAGE="JavaScript">
    document.write(y0);
 </SCRIPT>
-
