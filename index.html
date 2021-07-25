@@ -445,16 +445,20 @@ function _timer(callback)
 
 // example use
 var timer;
+var snd2 = new Audio("audio/bells1.mp3"); // buffers automatically when created
+
  
 $(document).ready(function(e) 
   { timer = new _timer
     (function(time)
-        {if(time == 360000)
-            {timer.start();
-                alert('1 Hour Elapsed');
-         }
+        {if(time == 360000){
+             snd2.play();
+             timer.start();
+             alert('1 Hour Elapsed');
+          }
         }
    );
+    snd2.stop();
     timer.reset(0);
     timer.mode(10);
  }
@@ -501,9 +505,6 @@ var calculated = Math.round(kilometersperhour * 6214)/10000
 //write in text box
 document.converter.mph.value=calculated
 }
-
-
-
 
 var alarmTime = "0000~00:00:00";
 var aDays = "000";
@@ -693,7 +694,8 @@ timer.start(10);
 
 setTimeout(whichEggcl, x*10001/10);
 }
-whichEggcl(); // execute function
+whichEggcl();
+timer.start(10); // execute function
 
 
 function whichEggsm() {
@@ -717,7 +719,8 @@ timer.start(10);
 
 setTimeout(whichEggsm, x*10001/10);
 }
-whichEggsm(); // execute function
+whichEggsm();
+timer.start(10); // execute function
 
 function whichEggme() {
 
@@ -740,7 +743,8 @@ timer.start(10);
 
 setTimeout(whichEggme, x*10001/10);
 }
-whichEggme(); // execute function
+whichEggme();
+timer.start(10); // execute function
 
 function whichEgglg() {
 
@@ -762,7 +766,8 @@ timer.start(10);
 
 setTimeout(whichEgglg, x*10001/10);
 }
-whichEgglg(); // execute function
+whichEgglg();
+timer.start(10); // execute function
 
 function whichEggxl() {
 
@@ -786,7 +791,7 @@ timer.start(10);
 setTimeout(whichEggxl, x*10001/10);
 }
 whichEggxl(); // execute function
-
+timer.start(10);
 
 
 function whichEggjb() {
@@ -810,7 +815,7 @@ timer.start(10);
 setTimeout(whichEggjb, x*10001/10);
 }
 whichEggjb(); // execute function
-
+timer.start(10);
 
 function whichEggwm() {
 
@@ -835,7 +840,7 @@ setTimeout(whichEggwm, x*10001/10);
 }
 
 whichEggwm(); // execute function
-
+timer.start(10);
 
 function whichEggno() {
 document.clock.jbEgg.checked = false;
@@ -919,7 +924,8 @@ Choose&nbsp;Preset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <td align=left>
 &nbsp;Set Alert Time For</td>
 <td><nobr>D&nbsp;<input type="text" name="snoozeOptD" size="5" maxlength="5" value="0" onFocus="clear_field(this)">
-&nbsp;H&nbsp;<input type="text" name="snoozeOptH" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;M&nbsp;<input type="text" name="snoozeOptM" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;S&nbsp;<input type="text" name="snoozeOptS" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;<input type="button" value=" Start " onClick="snooze()"></nobr></td>
+&nbsp;H&nbsp;<input type="text" name="snoozeOptH" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;M&nbsp;<input type="text" name="snoozeOptM" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;S&nbsp;
+<input type="text" name="snoozeOptS" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;<input type="button" value=" Start " onClick="snooze() + timer.start(10)"></nobr></td>
 </tr>
 <tr align="center" BGCOLOR="silver">
 <td>
@@ -945,6 +951,7 @@ Choose&nbsp;Preset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 -->
 <br /><br />
 
+
 <SCRIPT LANGUAGE="JavaScript">
    document.write(y0);
-</SCRIPT>
+</script>
