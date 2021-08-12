@@ -1,13 +1,13 @@
 <html>
 <head>
     <title>Timer</title>
-	 <link rel='icon' href='pics/favicon.ico' type='image/x-icon'/ >
 </head>
 
    
 <bgSound src="audio/a.mp3" id="sound">
 <font face="Arial,Helvetica,Geneva,Swiss,SunSans-Regular">
 <BODY BGCOLOR=FFFFFF TEXT=000000 LINK=0000FF VLINK=800080 onLoad="GetTime()">
+
 
 <style type="text/css">
 
@@ -674,6 +674,13 @@ document.clock.DalarmTime.value = alarmTime; // sets initially and displays only
 alarmOn();
 }
 
+function audiotrigger()  {
+    snooze();
+    timer.mode(1);
+    timer.start(10);
+}
+
+
 function whichEggcl() {
 
 x = 900;  // x Seconds
@@ -687,7 +694,7 @@ document.clock.clEgg.checked = true;
 document.clock.wmEgg.checked = false;
 document.clock.noEgg.checked = false;
 document.clock.snoozeOptM.value = "15";
-TypeMessage = "15 Minute"
+TypeMessage = "15 Minute";
 snooze();
 timer.mode(1);
 timer.start(10);
@@ -712,7 +719,7 @@ document.clock.clEgg.checked = false;
 document.clock.wmEgg.checked = false;
 document.clock.noEgg.checked = false;
 document.clock.snoozeOptM.value = "10";
-TypeMessage = "10 Minute"
+TypeMessage = "10 Minute";
 snooze();
 timer.mode(1);
 timer.start(10);
@@ -736,13 +743,13 @@ document.clock.clEgg.checked = false;
 document.clock.wmEgg.checked = false;
 document.clock.noEgg.checked = false;
 document.clock.snoozeOptM.value = "5";
-TypeMessage = "5 Minute"
+TypeMessage = "5 Minute";
 snooze();
 timer.mode(1);
 timer.start(10);
 
 
-setTimeout(whichEggme, x*10001/10);
+setTimeout(whichEggme, x*10010/10);
 }
 whichEggme();
 timer.start(10); // execute function
@@ -760,12 +767,12 @@ document.clock.clEgg.checked = false;
 document.clock.wmEgg.checked = false;
 document.clock.noEgg.checked = false;
 document.clock.snoozeOptM.value = "3";
-TypeMessage = "3 Minute"
+TypeMessage = "3 Minute";
 snooze();
 timer.mode(1);
 timer.start(10);
 
-setTimeout(whichEgglg, x*10001/10);
+setTimeout(whichEgglg, x*10010/10);
 }
 whichEgglg();
 timer.start(10); // execute function
@@ -783,13 +790,13 @@ document.clock.clEgg.checked = false;
 document.clock.wmEgg.checked = false;
 document.clock.noEgg.checked = false;
 document.clock.snoozeOptM.value = "2";
-TypeMessage = "2 Minute"
+TypeMessage = "2 Minute ";
 snooze();
 timer.mode(1);
 timer.start(10);
 
 
-setTimeout(whichEggxl, x*10001/10);
+setTimeout(whichEggxl, x*10010/10);
 }
 whichEggxl(); // execute function
 timer.start(10);
@@ -808,12 +815,12 @@ document.clock.clEgg.checked = false;
 document.clock.wmEgg.checked = false;
 document.clock.noEgg.checked = false;
 document.clock.snoozeOptM.value = "1";
-TypeMessage = "1 Minute "
+TypeMessage = "1 Minute ";
 snooze();
 timer.mode(1);
 timer.start(10);
 
-setTimeout(whichEggjb, x*10001/10);
+setTimeout(whichEggjb, x*10010/10);
 }
 whichEggjb(); // execute function
 timer.start(10);
@@ -831,16 +838,17 @@ document.clock.clEgg.checked = false;
 document.clock.wmEgg.checked = true;
 document.clock.noEgg.checked = false;
 document.clock.snoozeOptS.value = "30";
-TypeMessage = "30 Second "
+TypeMessage = "30 Second ";
 snooze();
+timer.mode(1);
 timer.start(10);
+
 
 setTimeout(whichEggwm, x*10010/10);
-
 }
-
 whichEggwm(); // execute function
 timer.start(10);
+
 
 function whichEggno() {
 document.clock.jbEgg.checked = false;
