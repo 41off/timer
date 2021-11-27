@@ -1,0 +1,273 @@
+﻿body {font-family: Tahoma, Verdana;
+      background: url('../pics/silverbars.jpg') no-repeat fixed center;
+      color: white;
+      
+}
+
+input.btn {
+  color:black;
+  font: bold 75% 'tahoma',helvetica,sans-serif;
+  background-color:silver;
+  border: 2px solid;
+  border-color: #c7c5c8;
+ }
+ 
+ input.btn2 {
+  color:black;
+  font: bold 95% 'tahoma',helvetica,sans-serif;
+  background-color:#ffd148;
+  border: 2px solid;
+  border-color: #c7c5c8;
+ 
+}
+
+
+.footer {
+    position:absolute;
+    left: 30%;
+    right: 30%;
+    padding-top: 0px;
+    padding-bottom:1px;
+    padding-left: 2px;
+    background-color: transparent;
+    border: 5px;
+    border-color: silver;
+    border-radius: 5px;
+    border-style: double;
+    height:28px;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    opacity: .4;
+    transition: opacity 3s;
+    bottom: 2.5%
+}
+
+.footer:hover {
+	background-color: #C0C0C0;
+	border-color: red;
+	opacity: 1;
+	color: black;
+}
+
+.timerbutton {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 3px 3px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.timerbutton1 {
+    background-color: black; 
+    color: white; 
+    border: 3px solid orange;
+    border-radius: 20px;
+    width: 80px; height: 30px
+}
+
+.timerbutton1:focus {
+    background-color: yellow; 
+    color: black
+}
+
+.timerbutton1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.timerbutton1:active {
+    background-color: yellow; 
+    color: black
+}
+
+.timerbutton2 {
+    background-color: black; 
+    color: white; 
+    border: 3px solid blue;
+    border-radius: 20px;
+    width: 80px; height: 30px
+}
+
+.timerbutton2:focus {
+    background-color: yellow; 
+    color: black
+}
+
+.timerbutton2:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.timerbutton2:active {
+    background-color: yellow; 
+    color: black
+}
+
+.timerbutton3 {
+    background-color: black; 
+    color: white;
+    border: 3px solid purple;
+    border-radius: 20px;
+    width: 80px; height: 30px
+}
+
+.timerbutton3:focus {
+    background-color: yellow; 
+    color: black
+}
+
+.timerbutton3:hover {
+    background-color: red;
+    color: white;
+}
+
+.timerbutton3:active {
+    background-color: yellow; 
+    color: black
+}
+
+.timerbutton4 {
+    background-color: black; 
+    color: white; 
+    border: 3px solid pink;
+    border-radius: 20px;
+    width: 80px; height: 30px
+}
+
+.timerbutton4:focus {
+    background-color: yellow; 
+    color: black
+}
+
+.timerbutton4:hover {
+    background-color: #e7e7e7; 
+    color: gray
+}
+
+.timerbutton4:active {
+    background-color: yellow; 
+    color: black
+}
+
+.timerbutton5 {
+    background-color: black; 
+    color: white;
+    border: 3px solid orange;
+    border-radius: 20px;
+    width: 100px; height: 30px     
+}
+
+.timerbutton5:focus {
+    background-color: yellow; 
+    color: black
+}
+
+.timerbutton5:hover {
+    background-color: #555555; 
+    color: white;
+}
+
+.timerbutton5:active {
+    background-color: yellow; 
+    color: black
+}
+
+.closebtn2 {
+    margin-right:10px;
+    color: red;
+    font-weight: bold;
+    float: right;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 5s;
+}
+.closebtn2:hover {
+    color: yellow;
+}
+
+.timercontrol {
+    position:absolute;
+    background-color: black;
+    border-radius: 5px;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+    opacity: 1;
+    transition: opacity 3s;
+    border: 2px solid silver;
+    left: 0px;
+    right: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+    margin-bottom: 5px;
+    bottom: 2px
+}
+.timercontrol:hover {
+	background-color: #C0C0C0;
+	border: 5px pink;
+	border-style: dashed;
+	color: black;
+}
+
+
+.timer {
+    transition: opacity 6s;
+    border:10px #666666 solid;
+    border-radius: 5px;
+    border-style:double;
+    height:110px;
+    line-height:100px;
+    font-size:90px;
+    font-family:"Verdana";
+    text-align:center;
+    color: white;
+    margin:0px;
+    position:absolute;    
+    padding-bottom: 2%;
+    left:26%;
+    right: 26%;
+    padding-left: 4px;
+    bottom: 1%
+
+}
+.timer:hover {
+    border:10px red solid;
+    border-radius: 20px;
+    border-style:double;
+    background-color: #555555; 
+    color: black;
+}
+
+.convertor {
+    position:absolute;
+    left: 2px;
+    right: 2px;
+    padding-top: 3px;
+    padding-bottom:1px;
+    padding-left: 15px;
+    background-color: transparent;
+    border: 5px;
+    border-color: silver;
+    border-radius: 12px;
+    border-style: double;
+    height:28px;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 18px;
+    color: white;
+    opacity: .4;
+    transition: opacity 3s;
+    top: 0%;
+    text-align:center;
+}
+
+.convertor:hover {
+	background-color: #C0C0C0;
+	border-color: red;
+	opacity: 1;
+	color: black;
+}

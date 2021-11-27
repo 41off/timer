@@ -1,6 +1,15 @@
-<html>
+﻿<html>
 <head>
     <title>Timer</title>
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-touch-fullscreen" content="yes"/>
+  <meta name="msapplication-tap-highlight" content="no"/>
+
+<link rel='icon' href='favicon.ico' type='image/x-icon'>
+<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
    
@@ -10,280 +19,6 @@
 
 
 <style type="text/css">
-
-body {font-family: Tahoma, Verdana;
-      background: url('pics/silverbars.jpg') no-repeat fixed center;
-      color: white;
-      
-}
-
-input.btn {
-  color:black;
-  font: bold 75% 'tahoma',helvetica,sans-serif;
-  background-color:silver;
-  border: 2px solid;
-  border-color: #c7c5c8;
- }
- 
- input.btn2 {
-  color:black;
-  font: bold 95% 'tahoma',helvetica,sans-serif;
-  background-color:#ffd148;
-  border: 2px solid;
-  border-color: #c7c5c8;
- 
-}
-
-
-.footer {
-    position:absolute;
-    left: 30%;
-    right: 30%;
-    padding-top: 0px;
-    padding-bottom:1px;
-    padding-left: 2px;
-    background-color: transparent;
-    border: 5px;
-    border-color: silver;
-    border-radius: 5px;
-    border-style: double;
-    height:28px;
-    font-family: "Arial Narrow", Arial, sans-serif;
-    font-size: 18px;
-    color: white;
-    opacity: .4;
-    transition: opacity 3s;
-    bottom: 2.5%
-}
-
-.footer:hover {
-	background-color: #C0C0C0;
-	border-color: red;
-	opacity: 1;
-	color: black;
-}
-
-.timerbutton {
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: 16px;
-    margin: 3px 3px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.timerbutton1 {
-    background-color: black; 
-    color: white; 
-    border: 3px solid orange;
-    border-radius: 20px;
-    width: 80px; height: 30px
-}
-
-.timerbutton1:focus {
-    background-color: yellow; 
-    color: black
-}
-
-.timerbutton1:hover {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.timerbutton1:active {
-    background-color: yellow; 
-    color: black
-}
-
-.timerbutton2 {
-    background-color: black; 
-    color: white; 
-    border: 3px solid blue;
-    border-radius: 20px;
-    width: 80px; height: 30px
-}
-
-.timerbutton2:focus {
-    background-color: yellow; 
-    color: black
-}
-
-.timerbutton2:hover {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.timerbutton2:active {
-    background-color: yellow; 
-    color: black
-}
-
-.timerbutton3 {
-    background-color: black; 
-    color: white;
-    border: 3px solid purple;
-    border-radius: 20px;
-    width: 80px; height: 30px
-}
-
-.timerbutton3:focus {
-    background-color: yellow; 
-    color: black
-}
-
-.timerbutton3:hover {
-    background-color: red;
-    color: white;
-}
-
-.timerbutton3:active {
-    background-color: yellow; 
-    color: black
-}
-
-.timerbutton4 {
-    background-color: black; 
-    color: white; 
-    border: 3px solid pink;
-    border-radius: 20px;
-    width: 80px; height: 30px
-}
-
-.timerbutton4:focus {
-    background-color: yellow; 
-    color: black
-}
-
-.timerbutton4:hover {
-    background-color: #e7e7e7; 
-    color: gray
-}
-
-.timerbutton4:active {
-    background-color: yellow; 
-    color: black
-}
-
-.timerbutton5 {
-    background-color: black; 
-    color: white;
-    border: 3px solid orange;
-    border-radius: 20px;
-    width: 100px; height: 30px     
-}
-
-.timerbutton5:focus {
-    background-color: yellow; 
-    color: black
-}
-
-.timerbutton5:hover {
-    background-color: #555555; 
-    color: white;
-}
-
-.timerbutton5:active {
-    background-color: yellow; 
-    color: black
-}
-
-.closebtn2 {
-    margin-right:10px;
-    color: red;
-    font-weight: bold;
-    float: right;
-    font-size: 16px;
-    line-height: 20px;
-    cursor: pointer;
-    transition: 5s;
-}
-.closebtn2:hover {
-    color: yellow;
-}
-
-.timercontrol {
-    position:absolute;
-    background-color: black;
-    border-radius: 5px;
-    font-family: "Arial Narrow", Arial, sans-serif;
-    font-size: 16px;
-    color: white;
-    opacity: 1;
-    transition: opacity 3s;
-    border: 2px solid silver;
-    left: 0px;
-    right: 0px;
-    padding-top: 0px;
-    padding-left: 0px;
-    margin-bottom: 5px;
-    bottom: 2px
-}
-.timercontrol:hover {
-	background-color: #C0C0C0;
-	border: 5px pink;
-	border-style: dashed;
-	color: black;
-}
-
-
-.timer {
-    transition: opacity 6s;
-    border:10px #666666 solid;
-    border-radius: 5px;
-    border-style:double;
-    height:110px;
-    line-height:100px;
-    font-size:90px;
-    font-family:"Verdana";
-    text-align:center;
-    color: white;
-    margin:0px;
-    position:absolute;    
-    padding-bottom: 2%;
-    left:26%;
-    right: 26%;
-    padding-left: 4px;
-    bottom: 1%
-
-}
-.timer:hover {
-    border:10px red solid;
-    border-radius: 20px;
-    border-style:double;
-    background-color: #555555; 
-    color: black;
-}
-
-.convertor {
-    position:absolute;
-    left: 2px;
-    right: 2px;
-    padding-top: 3px;
-    padding-bottom:1px;
-    padding-left: 15px;
-    background-color: transparent;
-    border: 5px;
-    border-color: silver;
-    border-radius: 12px;
-    border-style: double;
-    height:28px;
-    font-family: "Arial Narrow", Arial, sans-serif;
-    font-size: 18px;
-    color: white;
-    opacity: .4;
-    transition: opacity 3s;
-    top: 0%;
-    text-align:center;
-}
-
-.convertor:hover {
-	background-color: #C0C0C0;
-	border-color: red;
-	opacity: 1;
-	color: black;
-}
 
 
 </style>
@@ -308,7 +43,7 @@ input.btn {
        <center>
        <div class="timer">
             <span class="closebtn2">&times;</span>
-            <span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>.<span class="milli">00</span>
+            <span class="day">00</span>:<span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>.<span class="milli">00</span>
        </div>
        
      <div class="footer">
@@ -339,13 +74,16 @@ for (i = 0; i < close.length; i++) {
 <script type="text/javascript" src="js/timer_query.js"></script>
 
 <script>
+
+//timer display at page bottom
 function _timer(callback)
 {
     var time = 0;     //  The default time of the timer
     var mode = 1;     //    Mode: count up or count down
     var status = 0;    //    Status: timer is running or stoped
     var timer_id;    //    This is used by setInterval function
-    
+    var timer2_id;    //    This is used by setInterval function
+
     // this will start the timer ex. start the timer with 1 second interval timer.start(1000) 
     this.start = function(interval)
     {
@@ -429,16 +167,19 @@ function _timer(callback)
         var second = Math.floor(time / 100) % 60;
         var minute = Math.floor(time / 6000) % 60;
         var hour = Math.floor(time / 360000) % 24;
+        var day = Math.floor(time / 360000);
         
         milli = (milli < 10) ? '0'+milli : milli;
         second = (second < 10) ? '0'+second : second;
         minute = (minute < 10) ? '0'+minute : minute;
         hour = (hour < 10) ? '0'+hour : hour;
+        day = (day < 10) ? '0'+day : day;
         
         $('div.timer span.milli').html(milli);
         $('div.timer span.second').html(second);
         $('div.timer span.minute').html(minute);
         $('div.timer span.hour').html(hour);
+        $('div.timer span.day').html(day);
     }
 }
  
@@ -446,24 +187,27 @@ function _timer(callback)
 
 // example use
 var timer;
-var snd2 = new Audio("audio/bells1.mp3"); // buffers automatically when created
+var snd3 = new Audio("audio/bells.mp3"); // buffers automatically when created
+var snd2 = new Audio("audio/dogs.mp3"); // buffers automatically when created
 
- 
 $(document).ready(function(e) 
-  { timer = new _timer
+  { timer = new _timer 
     (function(time)
-        {if(time == 360000){
-             snd2.play();
+        {if(time == 90000){
+             snd3.play();
              timer.start();
-             alert('1 Hour Elapsed');
+             alert('15 Minutes Elapsed');
           }
         }
    );
-    snd2.stop();
+    snd3.stop();
     timer.reset(0);
     timer.mode(10);
  }
 );
+
+
+
 
     
 </script>
@@ -507,6 +251,8 @@ var calculated = Math.round(kilometersperhour * 6214)/10000
 document.converter.mph.value=calculated
 }
 
+
+// alram timer code
 var alarmTime = "0000~00:00:00";
 var aDays = "000";
 var dayTimeR = "0"; // adds days to the current time
@@ -541,13 +287,13 @@ dayTimeR = "00" + dayTimeR;}
 if ((dayTimeR.length) == 3) {
 dayTimeR = "0" + dayTimeR;}
 if (dayTimeR.length >= 4) {
-dayTimeR = dayTimeR.slice(-4);} // right 4 characters
+dayTimeR = dayTimeR.slice(-4);} // left 4 characters
 // end format
-document.clock.local.value = (dayTimeR) + "~" + IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()) + "." + IfZero(dt.getMilliseconds());
-setTimeout("GetTime()", 1000);
+document.clock.local.value = dt.getFullYear() + "~" + IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()) + "." + dt.getMilliseconds();
+setTimeout("GetTime()", 10);
 curTimeD = (IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()));
 //document.clock.DalarmTime.value = alarmTime;
-curTime = (IfZero(aDays) + "~" + IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()));
+curTime = (IfZero(dt.getFullYear) + "~" + IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()));
 if (alarmTime == "0000~00:00:00") {document.clock.Dstatus.value = "Not Set ";}
 if (alarmTime == curTime) {alarmOn();}
 if (alarmTime > curTime) {document.clock.Dstatus.value = "Counting";
@@ -938,7 +684,7 @@ Choose&nbsp;Preset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <tr align="center" BGCOLOR="silver">
 <td>
 &nbsp;Your Local System Alarm Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="text" name="DalarmTime" size="15" maxlength="15" value="0000~00:00:00" readonly></td>
+<input type="text" name="DalarmTime" size="15" maxlength="15" value="0000~00:00:000" readonly></td>
 <td>
 &nbsp;Your&nbsp;Local&nbsp;System&nbsp;Alarm&nbsp;Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="Dstatus" size="8" maxlength="8" value="0" readonly></td>
 </tr>
