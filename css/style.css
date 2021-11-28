@@ -1,6 +1,7 @@
-﻿body {font-family: Tahoma, Verdana;
+﻿body {font-family: Verdana;
       background: url('../pics/silverbars.jpg') no-repeat fixed center;
       color: white;
+      line-height: 26px:
       
 }
 
@@ -245,22 +246,24 @@ input.btn {
 
 .convertor {
     position:absolute;
-    left: 2px;
-    right: 2px;
-    padding-top: 3px;
-    padding-bottom:1px;
-    padding-left: 15px;
+    left: 5px;
+    right: 5px;
+    padding-top: 2px;
+    padding-bottom:2px;
+    padding-left: 10px;
     background-color: transparent;
     border: 5px;
     border-color: silver;
     border-radius: 12px;
     border-style: double;
-    height:28px;
+    height:34px;
     font-family: "Arial Narrow", Arial, sans-serif;
-    font-size: 18px;
+    font-size: 26px;
+    font-weight:bold;
+    line-height:30px;
     color: white;
-    opacity: .4;
-    transition: opacity 3s;
+    opacity: .6;
+    transition: opacity 15s;
     top: 0%;
     text-align:center;
 }

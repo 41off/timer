@@ -15,7 +15,7 @@
 
    
 <bgSound id="sound">
-<body onLoad="GetTime(); timer.reset(0)">
+<body BGCOLOR=FFFFFF TEXT=000000 LINK=0000FF VLINK=800080 onLoad="GetTime()">
 
 
 <style type="text/css">
@@ -27,13 +27,13 @@
      <div class="convertor">
        <span class="closebtn2">&times;</span>
        <form name="converter">
-          Miles Per Hour&nbsp;<input type="text" size="7" maxlength="10" value="0.00"  name="mph">
+          Miles Per Hour&nbsp;<input type="text" size="5" maxlength="5" value="0.00"  name="mph">&nbsp;&nbsp;&nbsp;
           <input type="button" value="Convert MPH to &#x2192;" onclick="javascript:calc(); javascript:calc3()">&nbsp;&nbsp;&nbsp;
           <input type="reset" value="reset" >&nbsp;&nbsp;&nbsp;
-          Meters Per Second&nbsp;<input type="text" size="7" maxlength="10" value="0.00"  name="mps">
-          <input type="button" value="MPH&#x2190;Convert MPS&#x2192;KPH" onclick="javascript:calc2(); javascript:calc6() ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Meters Per Second&nbsp;<input type="text" size="5" maxlength="10" value="0.00"  name="mps">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="button" value="&#x2190;Convert MPS&#x2192;" onclick="javascript:calc2(); javascript:calc6() ">
           <input type="button" value="&#x2190;Convert KPH to" onclick="javascript:calc4(); javascript:calc5() ">         
-          Kilometers Per Hour&nbsp;<input type="text" size="7" maxlength="10" value="0.00"  name="kph">&nbsp;&nbsp;&nbsp;
+          Kilometers Per Hour&nbsp;<input type="text" size="5" maxlength="5" value="0.00"  name="kph">&nbsp;&nbsp;&nbsp;
                 
        </form>
       </div>
@@ -175,26 +175,29 @@ function _timer(callback)
     }
 }
  
+ 
+
 // example use
 var timer;
-var snd2 = new Audio("audio/bells.mp3"); // buffers automatically when created
+var snd2 = new Audio("audio/bells1.mp3"); // buffers automatically when created
 
  
 $(document).ready(function(e) 
   { timer = new _timer
     (function(time)
-        {if(time == 90000){
+        {if(time == 360000){
              snd2.play();
              timer.start();
-             alert('15 Minutes Elapsed');
+             alert('1 Hour Elapsed');
           }
-      }
+        }
    );
+    snd2.stop();
     timer.reset(0);
     timer.mode(10);
-    snd2.stop();
-  }
+ }
 );
+
     
 </script>
 
