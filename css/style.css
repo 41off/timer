@@ -1,15 +1,21 @@
-﻿body {font-family: Verdana;
-      background: url('../pics/silverbars.jpg') no-repeat fixed center;
-      color: white;
-      line-height: 26px:
+﻿
+
+/*
+body {
+  font-family: Verdana;
+  background: url('../pics/silverbars.jpg') no-repeat fixed center;
+  color: white;
+  line-height: 26px;
       
 }
+*/
 
 input.btn {
   color:black;
   font: bold 75% 'tahoma',helvetica,sans-serif;
   background-color:silver;
   border: 2px solid;
+  
   border-color: #c7c5c8;
  }
  
@@ -22,11 +28,23 @@ input.btn {
  
 }
 
+#table {
+    position:absolute;
+    left: 0%;
+    right: 45%;
+    height: 35%;
+    bottom: 3%;
+    overflow:visible;
+    opacity:0.75;
+    z-index:9;
+}
+
 
 .footer {
     position:absolute;
-    left: 30%;
-    right: 30%;
+    left: 1%;
+    right:75%;
+    width:auto;
     padding-top: 0px;
     padding-bottom:1px;
     padding-left: 2px;
@@ -41,7 +59,8 @@ input.btn {
     color: white;
     opacity: .4;
     transition: opacity 3s;
-    bottom: 2.5%
+    top: 8%;
+    z-index:7;
 }
 
 .footer:hover {
@@ -56,7 +75,7 @@ input.btn {
     text-decoration: none;
     display: block;
     font-size: 16px;
-    margin: 3px 3px;
+    margin: 1px 1px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
@@ -66,8 +85,8 @@ input.btn {
     background-color: black; 
     color: white; 
     border: 3px solid orange;
-    border-radius: 20px;
-    width: 80px; height: 30px
+    border-radius: 6px;
+    width: auto; height: 30px
 }
 
 .timerbutton1:focus {
@@ -89,8 +108,8 @@ input.btn {
     background-color: black; 
     color: white; 
     border: 3px solid blue;
-    border-radius: 20px;
-    width: 80px; height: 30px
+    border-radius: 6px;
+    width: auto; height: 30px
 }
 
 .timerbutton2:focus {
@@ -112,8 +131,8 @@ input.btn {
     background-color: black; 
     color: white;
     border: 3px solid purple;
-    border-radius: 20px;
-    width: 80px; height: 30px
+    border-radius: 6px;
+    width: auto; height: 30px
 }
 
 .timerbutton3:focus {
@@ -135,8 +154,8 @@ input.btn {
     background-color: black; 
     color: white; 
     border: 3px solid pink;
-    border-radius: 20px;
-    width: 80px; height: 30px
+    border-radius: 6px;
+    width: auto; height: 30px
 }
 
 .timerbutton4:focus {
@@ -158,8 +177,8 @@ input.btn {
     background-color: black; 
     color: white;
     border: 3px solid orange;
-    border-radius: 20px;
-    width: 100px; height: 30px     
+    border-radius: 6px;
+    width: auto; height: 30px     
 }
 
 .timerbutton5:focus {
@@ -177,69 +196,51 @@ input.btn {
     color: black
 }
 
-.closebtn2 {
-    margin-right:10px;
+.drag {
+    background:transparent;
+    margin-right:2px;
+    margin-left:2px;
     color: red;
     font-weight: bold;
-    float: right;
     font-size: 16px;
-    line-height: 20px;
-    cursor: pointer;
+    line-height: 18px;
+    cursor: move;
     transition: 5s;
+    float:right
 }
-.closebtn2:hover {
+
+.drag:hover {
     color: yellow;
 }
 
-.timercontrol {
-    position:absolute;
-    background-color: black;
-    border-radius: 5px;
-    font-family: "Arial Narrow", Arial, sans-serif;
-    font-size: 16px;
-    color: white;
-    opacity: 1;
-    transition: opacity 3s;
-    border: 2px solid silver;
-    left: 0px;
-    right: 0px;
-    padding-top: 0px;
-    padding-left: 0px;
-    margin-bottom: 5px;
-    bottom: 2px
-}
-.timercontrol:hover {
-	background-color: #C0C0C0;
-	border: 5px pink;
-	border-style: dashed;
-	color: black;
-}
+
 
 
 .timer {
     transition: opacity 6s;
-    border:10px #666666 solid;
-    border-radius: 5px;
+    border:6px #666666 solid;
+    border-radius: 6px;
     border-style:double;
-    height:110px;
-    line-height:100px;
-    font-size:90px;
+    height:38px;
+    width:15%;
+    line-height:36px;
+    font-size:34px;
     font-family:"Verdana";
     text-align:center;
     color: white;
     margin:0px;
     position:absolute;    
-    padding-bottom: 2%;
-    left:26%;
-    right: 26%;
+    padding-top: 2pt;
+    left:1%;
+    right: 85%;
     padding-left: 4px;
-    bottom: 1%
+    top: 1%;
+    z-index:11;
 
 }
 .timer:hover {
-    border:10px red solid;
-    border-radius: 20px;
-    border-style:double;
+    border:6px red solid;
+    border-radius: 6px;
     background-color: #555555; 
     color: black;
 }
@@ -264,8 +265,9 @@ input.btn {
     color: white;
     opacity: .6;
     transition: opacity 15s;
-    top: 0%;
+    bottom: 0%;
     text-align:center;
+    z-index:5;
 }
 
 .convertor:hover {

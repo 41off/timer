@@ -1,0 +1,71 @@
+﻿<html>
+<head>
+    <title>Split Video Player</title>
+    
+<!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-touch-fullscreen" content="yes"/>
+  <meta name="msapplication-tap-highlight" content="no"/>
+
+
+ <link rel='icon' href='favicon.ico' type='image/x-icon'/ > 
+
+ <link href="css/exertime.css" rel="stylesheet" type="text/css">
+ <link href="css/slidebardrop.css" rel="stylesheet" type="text/css">
+                
+ <link rel="stylesheet" href="css/popover.css">
+
+
+ 
+ <script src="js/jquery-3.6.0.js"></script>
+ <script src="js/jquery-ui.js"></script>
+ 
+ 
+ <script src="js/bootstrap_popup.min.js"></script> 
+ 
+
+</head>
+
+
+
+<bgSound id="sound">
+<body onLoad="GetTime(); timer.reset(0)">
+
+
+               <div id="video">
+     
+     
+   
+     <button class="popmenu" title="Click here or anywhere outside gray box to close menu" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls muted loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/j9obcg0lomqi4wl/directions1.mp4?raw=1'></video>">Video1</button>
+             
+     <button class="popmenu" title="Click here or anywhere outside gray box to close menu" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls muted loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/j9obcg0lomqi4wl/directions1.mp4?raw=1'></video>">Video2</button>
+             
+     <button class="popmenu" title="Click here or anywhere outside gray box to close menu" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls muted loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/j9obcg0lomqi4wl/directions1.mp4?raw=1'></video>">Video3</button>
+      
+
+ 
+
+      
+         
+      
+         
+
+
+   <!-- this script must be within wrap   -->
+   
+  <script type="text/javascript" src="plugins/exertimer-drag.popover.closebtn.js"></script>
+        
+ </div>  
+
+   
+</body>
+</html>
+
