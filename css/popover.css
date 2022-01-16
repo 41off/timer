@@ -9,7 +9,7 @@
 
 .popover {
 object-fit:contain;
-display:table;
+
 z-index:1;
 padding:4px;
 font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -93,12 +93,13 @@ margin-right:10%;
   
   -webkit-background-clip:padding-box;
   background-clip:padding-box;
-  column-count: 1;
+ /* column-count: 1;
   column-gap: 16px;
   column-rule-style: groove;
   column-rule-width:2px;
   column-rule: 2px solid red; 
   column-width: 100px; 
+*/
   overflow : visible;
   height: 90%;
   text-align:left;

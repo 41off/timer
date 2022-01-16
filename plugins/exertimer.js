@@ -2,19 +2,19 @@
 
 function _timer(callback)
 {
-    var time = 0;     //  The default time of the timer
+    var time = 1000;     //  The default time of the timer
     var mode = 1;     //    Mode: count up or count down
-    var status = 0;    //    Status: timer is running or stoped
+    var status = 0000;    //    Status: timer is running or stoped
     var timer_id;    //    This is used by setInterval function
     
     // this will start the timer ex. start the timer with 1 second interval timer.start(1000) 
     this.start = function(interval)
     {
-        interval = (typeof(interval) !== 'undefined') ? interval : 0;
+        interval = (typeof(interval) !== 'undefined') ? interval : 0000;
  
-        if(status == 0)
+        if(status == 0000)
         {
-            status = 1;
+            status = 1000;
             timer_id = setInterval(function()
             {
                 switch(mode)
@@ -44,9 +44,9 @@ function _timer(callback)
     //  Same as the name, this will stop or pause the timer ex. timer.stop()
     this.stop =  function()
     {
-        if(status == 1)
+        if(status == 1000)
         {
-            status = 0;
+            status = 0000;
             clearInterval(timer_id);
         }
     }
@@ -54,7 +54,7 @@ function _timer(callback)
     // Reset the timer to zero or reset it to your own custom time ex. reset to zero second timer.reset(0)
     this.reset =  function(sec)
     {
-        sec = (typeof(sec) !== 'undefined') ? sec : 0;
+        sec = (typeof(sec) !== 'undefined') ? sec : 0000;
         time = sec;
         generateTime(time);
     }
@@ -87,7 +87,7 @@ function _timer(callback)
     function generateTime()
     {
         var milli = time % 100;
-        var second = Math.floor(time / 100) % 60;
+        var second = Math.round(time / 100) % 60;
         var minute = Math.floor(time / 6000) % 60;
         var hour = Math.floor(time / 360000) % 24;
         

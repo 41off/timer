@@ -43,7 +43,7 @@ input.btn {
 .footer {
     position:absolute;
     left: 1%;
-    right:75%;
+    min-width:19%;
     width:auto;
     padding-top: 0px;
     padding-bottom:1px;
