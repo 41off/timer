@@ -50,7 +50,7 @@ input.btn {
 .footer {
     position:absolute;
     left: 1%;
-    min-width:19%;
+    display:inline-block;
     width:auto;
     padding-top: 0px;
     padding-bottom:1px;
@@ -61,7 +61,7 @@ input.btn {
     border-radius: 5px;
     border-style: double;
     height:28px;
-    font-family: "Arial Narrow", Arial, sans-serif;
+    
     font-size: 18px;
     color: white;
     opacity: .4;
@@ -78,19 +78,7 @@ input.btn {
 }
 
 .timerbutton {
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: 16px;
-    margin: 1px 1px;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-.timerbutton1 {
     background: -webkit-linear-gradient(top, lightgray, black);
-    color: white;
     font-family:Verdana;
     font-size:16px;
     line-height:16px;
@@ -99,7 +87,31 @@ input.btn {
     border-radius: 4px;
     width: auto; 
     height: 24px;
-    padding-bottom:4px
+    padding-bottom:4px;
+    text-align: center;
+    font-size: 16px;
+    margin: 1px 1px;
+    margin-top:3px;   
+    cursor: pointer;
+}
+
+.timerbutton:hover {
+   -webkit-transition-duration: 1s; /* Safari */
+   transition-duration: 1s;
+   -webkit-animation: fadeout 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadeout 1s; /* Firefox < 16 */
+        -ms-animation: fadeout 1s; /* Internet Explorer */
+         -o-animation: fadeout 1s; /* Opera < 12.1 */
+            animation: fadeout 1s; 
+   text-shadow: 1px 1px red;
+   text-transform:bold;
+
+
+}
+
+
+.timerbutton1 {
+    color: white;
 }
 
 .timerbutton1:focus {
@@ -108,10 +120,9 @@ input.btn {
 }
 
 .timerbutton1:hover {
-    background: -webkit-linear-gradient(top, lightyellow, lightpink);
-    color:black;   /* #4CAF50;  greenish */
-    
+    color:red;   /* #4CAF50;  greenish */
     border-color:yellow;
+    background: -webkit-linear-gradient(top, lightyellow, lightpink);
 }
 
 .timerbutton1:active {
@@ -120,11 +131,7 @@ input.btn {
 }
 
 .timerbutton2 {
-    background-color: black; 
     color: white; 
-    border: 3px solid blue;
-    border-radius: 6px;
-    width: auto; height: 30px
 }
 
 .timerbutton2:focus {
@@ -133,8 +140,8 @@ input.btn {
 }
 
 .timerbutton2:hover {
-    background-color: #4CAF50;
-    color: white;
+    color: black;
+    background: -webkit-linear-gradient(top, lightgreen, lightblue);
 }
 
 .timerbutton2:active {
@@ -143,11 +150,7 @@ input.btn {
 }
 
 .timerbutton3 {
-    background-color: black; 
-    color: white;
-    border: 3px solid purple;
-    border-radius: 6px;
-    width: auto; height: 30px
+   color: white;
 }
 
 .timerbutton3:focus {
@@ -156,8 +159,8 @@ input.btn {
 }
 
 .timerbutton3:hover {
-    background-color: red;
-    color: white;
+    background: -webkit-linear-gradient(top, white, lightpink);    
+    color: red;
 }
 
 .timerbutton3:active {
@@ -166,11 +169,7 @@ input.btn {
 }
 
 .timerbutton4 {
-    background-color: black; 
-    color: white; 
-    border: 3px solid pink;
-    border-radius: 6px;
-    width: auto; height: 30px
+   color: white;    
 }
 
 .timerbutton4:focus {
@@ -179,8 +178,8 @@ input.btn {
 }
 
 .timerbutton4:hover {
-    background-color: #e7e7e7; 
-    color: gray
+    background: -webkit-linear-gradient(top, lightgreen, lightyellow); 
+    color:blue
 }
 
 .timerbutton4:active {
@@ -189,11 +188,7 @@ input.btn {
 }
 
 .timerbutton5 {
-    background-color: black; 
-    color: white;
-    border: 3px solid orange;
-    border-radius: 6px;
-    width: auto; height: 30px     
+   color: white;
 }
 
 .timerbutton5:focus {
@@ -202,8 +197,8 @@ input.btn {
 }
 
 .timerbutton5:hover {
-    background-color: #555555; 
-    color: white;
+    background: -webkit-linear-gradient(top, lightblue, lightred);    
+    color: yellow;
 }
 
 .timerbutton5:active {
@@ -247,7 +242,7 @@ input.btn {
     position:absolute;    
     padding-top: 2pt;
     left:1%;
-    right: 85%;
+    
     padding-left: 4px;
     top: 1%;
     z-index:11;
@@ -320,27 +315,29 @@ input.btn {
 
 .convertor {
     position:absolute;
-    left: 5px;
-    right: 5px;
-    padding-top: 2px;
+    display:inline-block;
+    padding-top: 0px;
     padding-bottom:2px;
-    padding-left: 10px;
+    padding-left: 2px;
     background-color: transparent;
     border: 5px;
     border-color: silver;
     border-radius: 12px;
     border-style: double;
-    height:34px;
+    height:22px;
     font-family: "Arial Narrow", Arial, sans-serif;
-    font-size: 26px;
+    font-size: 18px;
     font-weight:bold;
-    line-height:30px;
+    line-height:22px;
     color: white;
     opacity: .6;
     transition: opacity 15s;
     bottom: 0%;
     text-align:center;
     z-index:5;
+    width:auto;
+    min-width:70%
+   
 }
 
 .convertor:hover {

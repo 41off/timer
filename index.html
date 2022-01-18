@@ -61,6 +61,9 @@
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/odnyngndjwh6utq/XPiriformis.mp4?raw=1'></video>">Piriformis</button>
              
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/q6zbxoifj8bcv2x/XAchillesAlfredson.mp4?raw=1'></video>">Achilles</button>
              
      <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
@@ -100,13 +103,13 @@
        <span class="closebtn2">&times;</span>
        <span title="Drag Timer elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
        <form name="converter">
-          Miles Per Hour&nbsp;<input type="text" size="7" maxlength="10" value="0.00"  name="mph">
+          Miles Per Hour&nbsp;<input type="text" size="4" maxlength="10" value="0.00"  name="mph">
           <input type="button" value="Convert MPH to &#x2192;" onclick="javascript:calc(); javascript:calc3()">&nbsp;&nbsp;&nbsp;
           <input type="reset" value="reset" >&nbsp;&nbsp;&nbsp;
-          Meters Per Second&nbsp;<input type="text" size="7" maxlength="10" value="0.00"  name="mps">
-          <input type="button" value="MPH&#x2190;Convert MPS&#x2192;KPH" onclick="javascript:calc2(); javascript:calc6() ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Meters Per Second&nbsp;<input type="text" size="6" maxlength="10" value="0.00"  name="mps">
+          <input type="button" value="MPH&#x2190;Convert MPS&#x2192;KPH" onclick="javascript:calc2(); javascript:calc6() ">&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="button" value="&#x2190;Convert KPH to" onclick="javascript:calc4(); javascript:calc5() ">         
-          Kilometers Per Hour&nbsp;<input type="text" size="7" maxlength="10" value="0.00"  name="kph">&nbsp;&nbsp;&nbsp;
+          Kilometers Per Hour&nbsp;<nobr><input type="text" size="4" maxlength="10" value="0.00"  name="kph">&nbsp;</nobr>
        </form>
       </div>
 
@@ -128,13 +131,13 @@
      <div class="footer">
             <span class="closebtn2">&times;</span>
             <span title="Drag Timer elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
-            <center>
-            <button class="timerbutton4" onClick="timer.mode(1)">Count up</button>  
-            <button class="timerbutton2" onClick="timer.start(10)">Go</button> 
-            <button class="timerbutton5" onClick="timer.mode(0)">Count down</button>
-            <button class="timerbutton3" onClick="timer.stop()">Stop</button>
-            <button class="timerbutton1" onClick="timer.reset(0000)">Reset</button>
-           </center>
+         
+            <button class="timerbutton timerbutton4" onClick="timer.mode(1)">Count up</button>  
+            <button class="timerbutton timerbutton2" onClick="timer.start(10)">Go</button> 
+            <button class="timerbutton timerbutton5" onClick="timer.mode(0)">Count down</button>
+            <button class="timerbutton timerbutton3" onClick="timer.stop()">Stop</button>
+            <button class="timerbutton timerbutton1" onClick="timer.reset(0000)">Reset</button>
+          
            </div>
 
 
@@ -172,7 +175,7 @@ Choose Repeating Preset&nbsp;&nbsp;&nbsp;&nbsp;
 <input type="radio" name="alarmOnOff" onClick="alarmOff()" checked> On Now <input type="radio" name="alarmOnNow" onClick="alarmNow()"><span title="Drag TimerTable elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span></nobr><!--  Mute <input type="radio" name="muteOn" onClick="muteNow()"> -->
 <tr align="center" BGCOLOR="silver">
 <td align=left style="height: 30px">
-&nbsp;Select Alert Sound&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="timerbutton1" onClick="timer.reset(0)">Reset</button>
+&nbsp;Select Alert Sound&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="timerbutton timerbutton1" onClick="timer.reset(0)">Reset</button>
 </td>
  </td>
 <td style="height: 30px">
