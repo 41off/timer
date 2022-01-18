@@ -39,6 +39,13 @@ input.btn {
     z-index:9;
 }
 
+#table:hover {
+    opacity:1.0; 
+    transition:1s;
+      
+}
+
+
 
 .footer {
     position:absolute;
@@ -82,21 +89,29 @@ input.btn {
 }
 
 .timerbutton1 {
-    background-color: black; 
-    color: white; 
-    border: 3px solid orange;
-    border-radius: 6px;
-    width: auto; height: 30px
+    background: -webkit-linear-gradient(top, lightgray, black);
+    color: white;
+    font-family:Verdana;
+    font-size:16px;
+    line-height:16px;
+    font-weight:500; 
+    border: 3px double pink;
+    border-radius: 4px;
+    width: auto; 
+    height: 24px;
+    padding-bottom:4px
 }
 
 .timerbutton1:focus {
-    background-color: yellow; 
+    background-color: pink; 
     color: black
 }
 
 .timerbutton1:hover {
-    background-color: #4CAF50;
-    color: white;
+    background: -webkit-linear-gradient(top, lightyellow, lightpink);
+    color:black;   /* #4CAF50;  greenish */
+    
+    border-color:yellow;
 }
 
 .timerbutton1:active {
@@ -241,9 +256,67 @@ input.btn {
 .timer:hover {
     border:6px red solid;
     border-radius: 6px;
-    background-color: #555555; 
+    background-color: silver; 
     color: black;
 }
+
+
+.timer2 {
+    transition: opacity 6s;
+    border:6px #666666 solid;
+    border-radius: 6px;
+    border-style:double;
+    height:auto;
+    width:auto;
+    line-height:22px;
+    font-size:20px;
+    font-family:"Verdana";
+    text-align:center;
+    color: white;
+    margin:1px;
+    position:absolute;    
+    padding-top: 0pt;
+    left:1%;
+    padding-left: 2px;
+    padding-right: 2px;
+    top: 15%;
+    z-index:11;
+
+}
+.timer2:hover {
+    border:6px red double;
+    border-radius: 6px;
+    background-color: silver; 
+    color: black;
+}
+
+.timer3 {
+    display:inline-block;
+    transition: opacity 2s;
+    border:3px white double;
+    border-radius: 4px;
+   
+    height:auto;
+    width: auto;
+    line-height:20px;
+    font-size:16px;
+    font-family:"Verdana";
+    text-align:center;
+    color: black;
+    margin-left:4px;
+    padding-top: 0pt;
+    padding-left: 4px;
+    padding-right: 4px;
+    z-index:11;
+
+}
+.timer3:hover {
+    border:3px red double;
+    background-color: silver; 
+    color: white;
+}
+
+
 
 .convertor {
     position:absolute;

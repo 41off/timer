@@ -36,7 +36,7 @@
 
    
 <bgSound id="sound">
-<body onLoad="GetTime(); timer.reset(0)">
+<body onLoad="GetTime(); timer.reset(0); timer2.reset(0)">
 
         <div id="video">
      
@@ -117,6 +117,14 @@
             <span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>.<span class="milli">00</span>
        </div>
        
+       
+        <div class="timer2">
+            <span class="closebtn2">&times;&nbsp;</span>
+            <span title="Drag Timer elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
+            <span class="second">00</span>
+       </div>
+
+       
      <div class="footer">
             <span class="closebtn2">&times;</span>
             <span title="Drag Timer elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
@@ -137,14 +145,13 @@
 
 <form name="clock">
 
-
 <div id="table">
 
 <TABLE ALIGN="left" CELLPADDING=5 BORDER-STYLE="double" BORDER-RADIUS="12px" cellspacing="1" class="auto-style1">
 <tr align="center" BGCOLOR="silver">
-<td colspan="2">
+<td colspan="2" style="height: 30px">
 <nobr>
-Choose&nbsp;Preset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Choose Repeating Preset&nbsp;&nbsp;&nbsp;&nbsp;
 <input type="radio" name="wmSlalom" onClick="whichSlalomwm()">30 Seconds  
 <input type="radio" name="jbSlalom" onClick="whichSlalomjb()">1 Minute  
 <input type="radio" name="xlSlalom" onClick="whichSlalomxl()">2 Minutes
@@ -157,48 +164,48 @@ Choose&nbsp;Preset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </td>
 </tr>
 <tr align="center" BGCOLOR="silver">
-<td>
+<td style="height: 30px">
 &nbsp;Your&nbsp;Local&nbsp;System&nbsp;Clock&nbsp;Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input size="15" maxlength="15" name="local" readonly>
 </td>
-<td>
+<td style="height: 30px">
 <nobr>Alert On <input type="radio" name="alarmOnOff" onClick="alarmOn()"> Alert Off  
 <input type="radio" name="alarmOnOff" onClick="alarmOff()" checked> On Now <input type="radio" name="alarmOnNow" onClick="alarmNow()"><span title="Drag TimerTable elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span></nobr><!--  Mute <input type="radio" name="muteOn" onClick="muteNow()"> -->
 <tr align="center" BGCOLOR="silver">
-<td align=left>
+<td align=left style="height: 30px">
 &nbsp;Select Alert Sound&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="timerbutton1" onClick="timer.reset(0)">Reset</button>
 </td>
  </td>
-<td>
+<td style="height: 30px">
 <input type="file" size="40" name="alarmSound"></td>
 </tr>
 
 
 <tr align="center" BGCOLOR="silver">
-<td align=left>
+<td align=left style="height: 30px">
 &nbsp;Set Alert Time For</td>
-<td><nobr>D&nbsp;<input type="text" name="snoozeOptD" size="5" maxlength="5" value="0" onFocus="clear_field(this)">
-&nbsp;H&nbsp;<input type="text" name="snoozeOptH" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;M&nbsp;<input type="text" name="snoozeOptM" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;S&nbsp;
-<input type="text" name="snoozeOptS" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;<input type="button" value=" Start " onClick="snooze() + timer.start(10)"></nobr></td>
+<td style="height: 30px"><nobr>D&nbsp;<input type="text" name="snoozeOptD" size="5" maxlength="5" value="0" onFocus="clear_field(this)">
+&nbsp;H&nbsp;<input type="text" name="snoozeOptH" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;M&nbsp;<input type="text" name="snoozeOptM" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;S&nbsp;<input type="text" name="snoozeOptS" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;<input type="button" value=" Start " onClick="snooze() + timer.start(10)"></nobr></td>
 </tr>
 <tr align="center" BGCOLOR="silver">
-<td>
+<td style="height: 30px">
 &nbsp;Your Local System Alarm Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <input type="text" name="DalarmTime" size="15" maxlength="15" value="0000~00:00:00" readonly></td>
-<td>
+<td style="height: 30px">
 &nbsp;Your&nbsp;Local&nbsp;System&nbsp;Alarm&nbsp;Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="Dstatus" size="8" maxlength="8" value="0" readonly></td>
 </tr>
 <tr align="center" BGCOLOR="silver">
-<td colspan="2" align=center>
+<td colspan="2" align=center style="height: 30px">
 <nobr>Messages <input type="text" name="messagesD" size="103" readonly></nobr>
 </td>
 </tr>
-<tr align="center" BGCOLOR="silver">
-<td colspan="2" align=center>
-<nobr>Elapsed Ticks <input type="text" name="secctrRD" size="19" readonly> Day Ticks <input type="text" name="dayTimeRD" size="19" readonly> Remaining Ticks <input type="text" name="RemainingTimeRD" size="19" readonly></nobr>
+<tr align="left" BGCOLOR="silver">
+<td colspan="2" style="height: 30px">
+<nobr>Elapsed Ticks<input type="text" name="secctrRD" size="2" readonly>&nbsp;&nbsp;Day Ticks<input type="text" name="dayTimeRD" size="10" readonly></nobr><nobr>&nbsp;&nbsp;Ticks Setting<input type="text" name="RemainingTimeRD" size="10" readonly></nobr>
+<nobr>Remaining Ticks<div class="timer3"><span class="second">00</span></div></nobr>
 </td>
 </tr>
 <tr align="center" BGCOLOR="silver">
-<td colspan="2" align=center>
+<td colspan="2" align=center style="height: 30px">
 Exercise Stretching Audible Alert Timer<span title="Drag TimerTable elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
 </td>
 </tr>

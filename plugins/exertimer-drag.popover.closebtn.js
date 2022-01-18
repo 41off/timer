@@ -29,7 +29,7 @@
     $(".timer").draggable();
 } );
    $( function() {
-    $(".timerR").draggable();
+    $(".timer2").draggable();
 } );
    $( function() {
     $(".popover").draggable();
