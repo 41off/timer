@@ -32,10 +32,10 @@ input.btn {
     position:absolute;
     left: 0%;
     right: 45%;
-    height: 35%;
-    bottom: 3%;
+    height: 25%;
+    bottom: 2%;
     overflow:visible;
-    opacity:0.75;
+    opacity:0.5;
     z-index:9;
 }
 
@@ -44,7 +44,6 @@ input.btn {
     transition:.2s;
       
 }
-
 
 
 .footer {
@@ -60,13 +59,12 @@ input.btn {
     border-color: silver;
     border-radius: 5px;
     border-style: double;
-    height:28px;
-    
+    height:auto;
     font-size: 18px;
     color: white;
     opacity: .4;
     transition: opacity 3s;
-    top: 8%;
+    top: 6%;
     z-index:7;
 }
 
@@ -215,15 +213,13 @@ input.btn {
     font-size: 16px;
     line-height: 18px;
     cursor: move;
-    transition: 5s;
+    transition: 3s;
     float:right
 }
 
 .drag:hover {
-    color: yellow;
+    color: lime;
 }
-
-
 
 
 .timer {
@@ -231,19 +227,19 @@ input.btn {
     border:6px #666666 solid;
     border-radius: 6px;
     border-style:double;
-    height:38px;
-    width:15%;
-    line-height:36px;
-    font-size:34px;
+    height:auto;
+    width:auto;
+    line-height:30px;
+    font-size:28px;
     font-family:"Verdana";
     text-align:center;
     color: white;
-    margin:0px;
+    margin:1px;
     position:absolute;    
-    padding-top: 2pt;
+    padding-top: 0pt;
     left:1%;
-    
-    padding-left: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
     top: 1%;
     z-index:11;
 
@@ -263,18 +259,18 @@ input.btn {
     border-style:double;
     height:auto;
     width:auto;
-    line-height:22px;
-    font-size:20px;
+    line-height:30px;
+    font-size:28px;
     font-family:"Verdana";
     text-align:center;
     color: white;
     margin:1px;
     position:absolute;    
     padding-top: 0pt;
-    left:1%;
+    left:14%;
     padding-left: 2px;
     padding-right: 2px;
-    top: 15%;
+    top: 1%;
     z-index:11;
 
 }
