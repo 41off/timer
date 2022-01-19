@@ -65,7 +65,7 @@ input.btn {
     opacity: .4;
     transition: opacity 3s;
     top: 6%;
-    z-index:7;
+    z-index:17;
 }
 
 .footer:hover {
@@ -223,7 +223,8 @@ input.btn {
 
 
 .timer {
-    transition: opacity 6s;
+    background-color: black;
+    transition: opacity 3s;
     border:6px #666666 solid;
     border-radius: 6px;
     border-style:double;
@@ -241,7 +242,7 @@ input.btn {
     padding-left: 2px;
     padding-right: 2px;
     top: 1%;
-    z-index:11;
+    z-index:19;
 
 }
 .timer:hover {
@@ -253,7 +254,8 @@ input.btn {
 
 
 .timer2 {
-    transition: opacity 6s;
+    background-color: black;
+    transition: opacity 3s;
     border:6px #666666 solid;
     border-radius: 6px;
     border-style:double;
@@ -271,7 +273,7 @@ input.btn {
     padding-left: 2px;
     padding-right: 2px;
     top: 1%;
-    z-index:11;
+    z-index:21;
 
 }
 .timer2:hover {
