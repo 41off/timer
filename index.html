@@ -1,0 +1,223 @@
+﻿<html>
+<head>
+    <title>Timer</title>
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-touch-fullscreen" content="yes"/>
+  <meta name="msapplication-tap-highlight" content="no"/>
+
+<link rel='icon' href='pics/favicon.ico' type='image/x-icon'>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/exertime.css" rel="stylesheet" type="text/css">
+<link href="css/slidebardrop.css" rel="stylesheet" type="text/css">
+                
+ <link rel="stylesheet" href="css/popover.css">
+
+ 
+ <script src="js/jquery-3.6.0.js"></script>
+ <script src="js/jquery-ui.js"></script>
+ <script src="js/popper.min.js"></script> 
+ <script src="js/bootstrap_popup.min.js"></script> 
+ 
+ <script type="text/javascript" src="plugins/exertimer.js"></script>
+ 
+ <script type="text/javascript" src="plugins/exertimer-drag.popover.closebtn.js"></script>
+
+	<style type="text/css">
+	.auto-style1 {
+		border-style: solid;
+		border-width: 3px;
+	}
+	</style>
+
+</head>
+
+<bgSound id="sound">
+
+<body onLoad="GetTime(); timer.reset(0000); timer2.reset(0)">
+
+        <div id="video">
+     
+       <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop volume='0.4' onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/3iezsqiaolub43g/XNeck1.mp4?raw=1'></video>">Neck</button>
+             
+       <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop volume='0.4' onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/en3jex3gpfqk0pm/XStiffNeck.mp4?raw=1'></video>">Stiff Neck</button>
+
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/cutfo76owr1shin/X2BackStretches.mp4?raw=1'></video>">Back</button>
+             
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/cqo8bktmhbzatzv/XQuadratusLumborumStretch.mp4?raw=1'></video>">Quadratus</button>
+             
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/odnyngndjwh6utq/XPiriformis.mp4?raw=1'></video>">Piriformis</button>
+             
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/q6zbxoifj8bcv2x/XAchillesAlfredson.mp4?raw=1'></video>">Achilles</button>
+             
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/76ie7lw8412m2lb/X4MustStretches.mp4?raw=1'></video>">4 Must Stretches</button>
+             
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/bhyj2t3o02szyo1/XProneDecompression.mp4?raw=1'></video>">Prone</button>
+
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/2hrwt41hu737jo1/XStaticLunge.mp4?raw=1'></video>">Static Lunge</button>
+
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/e006shc7j8msq5d/XYogaDude.mp4?raw=1'></video>">Balance Yoga</button>
+         
+
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/i8mn7t1q8bkttqv/XFoundationTrainingHelpingPain.mp4?raw=1'></video>">Foundation vs Pain</button>
+
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/qccjjb8ix4wkbas/XBasicFoundationTraining.mp4?raw=1'></video>">Basic Foundation</button>
+
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/jw2glcg9yr05ojv/X4MinuteFoundation.mp4?raw=1'></video>">4 Minute Foundation</button>
+
+            
+     <div class="convertor">
+       <span class="closebtn2">&times;</span>
+       <span title="Drag Speed Calculator elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
+       <form name="converter">
+          Miles Per Hour&nbsp;<input type="text" size="4" maxlength="10" value="0.00"  name="mph">
+          <input type="button" value="Convert MPH to &#x2192;" onclick="javascript:calc(); javascript:calc3()">&nbsp;&nbsp;&nbsp;
+          <input type="reset" value="reset" >&nbsp;&nbsp;&nbsp;
+          Meters Per Second&nbsp;<input type="text" size="6" maxlength="10" value="0.00"  name="mps">
+          <input type="button" value="MPH&#x2190;Convert MPS&#x2192;KPH" onclick="javascript:calc2(); javascript:calc6() ">&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="button" value="&#x2190;Convert KPH to" onclick="javascript:calc4(); javascript:calc5() ">         
+          Kilometers Per Hour&nbsp;<nobr><input type="text" size="4" maxlength="10" value="0.00"  name="kph">&nbsp;</nobr>
+       </form>
+      </div>
+
+       
+       <div class="timer">
+            <span class="closebtn2">&times;</span>
+            <span title="Drag Timer elsewhere as needed" class="drag">&nbsp;&#10016;</span>
+            <span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>.<span class="milli">00</span>
+       </div>
+       
+       
+        <div class="timer2">
+            <span class="closebtn2">&times;&nbsp;</span>
+            <span title="Drag Timer elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
+            <span class="second">00</span>
+       </div>
+
+       
+     <div class="footer">
+            <span class="closebtn2">&times;</span>
+            <span title="Drag Timer Control bar elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
+            <button class="timerbutton timerbutton4" onClick="timer.mode(1)">Count up</button>  
+            <button class="timerbutton timerbutton2" onClick="timer.start(10)">Go</button> 
+            <button class="timerbutton timerbutton5" onClick="timer.mode(0)">Count down</button>
+            <button class="timerbutton timerbutton3" onClick="timer.stop()">Stop</button>
+            <button class="timerbutton timerbutton1" onClick="timer.reset(0000)">Reset</button>
+        </div>
+
+
+<form name="clock">
+
+<div id="table">
+
+<TABLE ALIGN="left" CELLPADDING=5 BORDER-STYLE="double" BORDER-RADIUS="12px" cellspacing="1" class="auto-style1">
+
+<tr align="center" BGCOLOR="gray">
+<td colspan="2" style="height: 30px">
+<nobr>
+Choose Repeating Preset&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="wmSlalom" onClick="whichSlalomwm()">30 Seconds  
+<input type="radio" name="jbSlalom" onClick="whichSlalomjb()">1 Minute  
+<input type="radio" name="xlSlalom" onClick="whichSlalomxl()">2 Minutes
+<input type="radio" name="lgSlalom" onClick="whichSlalomlg()">3 Minutes 
+<input type="radio" name="meSlalom" onClick="whichSlalomme()">5 Minutes  
+<input type="radio" name="smSlalom" onClick="whichSlalomsm()">10 Minutes   
+<input type="radio" name="clSlalom" onClick="whichSlalomcl()">15 Minutes  
+<input type="radio" name="noSlalom" onClick="whichSlalomno()" checked>None 
+</nobr>
+</td>
+</tr>
+
+<tr align="center" BGCOLOR="gray">
+<td style="height: 30px">
+&nbsp;Your&nbsp;Local&nbsp;System&nbsp;Clock&nbsp;Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input size="15" maxlength="15" name="local" readonly>
+</td>
+
+<td style="height: 30px">
+<nobr>Alert On <input type="radio" name="alarmOnOff" onClick="alarmOn()"> Alert Off  
+<input type="radio" name="alarmOnOff" onClick="alarmOff()" checked> On Now <input type="radio" name="alarmOnNow" onClick="alarmNow()"><span title="Drag TimerTable elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span></nobr><!--  Mute <input type="radio" name="muteOn" onClick="muteNow()"> -->
+</tr>
+
+<tr align="center" BGCOLOR="gray">
+<td colspan="2" align="centert" style="height: 30">
+&nbsp;Set Alert Time For<nobr>&nbsp;&nbsp;&nbsp;Days&nbsp;<input type="text" name="snoozeOptD" size="5" maxlength="5" value="0" onFocus="clear_field(this)">
+&nbsp;Hours&nbsp;<input type="text" name="snoozeOptH" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;Minutes&nbsp;<input type="text" name="snoozeOptM" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;Seconds&nbsp;<input type="text" name="snoozeOptS" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;<input type="button" value=" Start " onClick="snooze() + timer.start(10)"></nobr></td>
+</tr>
+
+<tr align="center" BGCOLOR="gray">
+<td style="height: 30px">
+&nbsp;Your Local System Alarm Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<nobr>
+<input type="text" name="DalarmTime" size="15" maxlength="15" value="0000~00:00:00" readonly></nobr></td>
+<td style="height: 30px">
+&nbsp;Your&nbsp;Local&nbsp;System&nbsp;Alarm&nbsp;Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<nobr><input type="text" name="Dstatus" size="8" maxlength="8" value="0" readonly></nobr></td>
+</tr>
+
+<tr align="center" BGCOLOR="gray">
+<td colspan="2" align=center style="height: 30px">
+<nobr>Messages <input type="text" name="messagesD" size="103" readonly></nobr>
+</td>
+</tr>
+
+<tr align="left" BGCOLOR="gray">
+<td colspan="2" style="height: 30px">
+<nobr>Elapsed Ticks<input type="text" name="secctrRD" size="2" readonly>&nbsp;&nbsp;Day Ticks<input type="text" name="dayTimeRD" size="10" readonly></nobr><nobr>&nbsp;&nbsp;Ticks Setting<input type="text" name="RemainingTimeRD" size="10" readonly></nobr>
+<nobr>Remaining Ticks<div class="timer3"><span class="second">00</span></div></nobr>
+</td>
+</tr>
+
+<tr align="center" BGCOLOR="darkred">
+<td colspan="2" align=center style="height: 30px">
+Exercise Stretching Audible Alert Timer&nbsp;&nbsp;&nbsp;<nobr><button class="timerbutton timerbutton1" onClick="timer.reset(0)">Reset</button><span title="Drag TimerTable elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span></nobr>
+</td>
+</tr>
+
+</TABLE>
+
+  </div>
+
+ </form>
+
+</div>
+
+<script>
+var close = document.getElementsByClassName('closebtn2');
+var i;
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 1200);
+    }
+}
+</script>
+
+</body>
+</html>
