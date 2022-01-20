@@ -298,6 +298,26 @@ $(document).ready(function(e)
 );
 
 
+var timer2;
+var snd2 = new Audio("audio/bells.mp3"); // buffers automatically when created
+
+$(document).ready(function(e) 
+  { timer2 = new _timer
+    (function(time)
+        {if(time == 86400000){
+             snd2.play();
+             timer2.start();
+             alert('24 Hours Elapsed');
+          }
+      }
+   );
+    timer2.reset(0);
+    timer2.mode(10);
+    snd2.stop();
+  }
+);
+
+
 
 //calculate function
 function calc(){
