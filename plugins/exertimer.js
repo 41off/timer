@@ -265,8 +265,8 @@ function _timer2(callback)
         
         milli = (milli < 10) ? '0'+milli : milli;
         second = (second < 1000) ? RemainingTime-second : second;
-        minute = (minute < 10) ? '0'+minute : minute;
-        hour = (hour < 10) ? '0'+hour : hour;
+        minute = (minute < 10) ? RemainingTime-minute : minute;
+        hour = (hour < 10) ? RemainingTime-hour : hour;
         
        $('div.timer2 span.milli').html(milli);
        $('div.timer2 span.second').html(second);
