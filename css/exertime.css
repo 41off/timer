@@ -9,7 +9,8 @@ body {
   font-family: Verdana;
   background: url('../pics/silverbars.jpg') no-repeat fixed center;
   color: white;
-  line-height: 24px:
+  line-height: 24px;
+  font-size: 2vmin;
   
 }
 
