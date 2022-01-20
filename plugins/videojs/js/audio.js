@@ -197,6 +197,7 @@
             console.log("0 ended");
             audio_index = 0;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
                        
         var btn = document.getElementById("modalA");
       
@@ -219,6 +220,7 @@
             console.log("1 ended");
             audio_index = 1;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
            
          var btn = document.getElementById("modalA");
               
@@ -239,6 +241,7 @@
             console.log("2 ended");
             audio_index = 2;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
             
           var btn = document.getElementById("modalA");
       
@@ -261,6 +264,7 @@
             console.log("3 ended");
             audio_index = 3;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
             
            var btn = document.getElementById("modalA");
       
@@ -283,6 +287,7 @@
             console.log("4 ended");
             audio_index = 4;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
                         
            var btn = document.getElementById("modalA");
       
@@ -305,6 +310,7 @@
             console.log("5 ended");
             audio_index = 5;            
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
                         
           var btn = document.getElementById("modalA");
       
@@ -327,6 +333,7 @@
             console.log("6 ended");
             audio_index = 6;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
                         
           var btn = document.getElementById("modalA");
       
@@ -349,6 +356,7 @@
             console.log("7 ended");
             audio_index = 7;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
                         
            var btn = document.getElementById("modalA");
       
@@ -417,212 +425,193 @@
            console.log("10 ended");
            audio_index = 10;
            audio_player.setAttribute("src", audio_directory[audio_index]);
-                      
-          var btn = document.getElementById("modalA");
-      
-            if (btn.value == "Clip 11") {
-              btn.value = "";
-              btn.innerHTML = '<button id="modtextA">Clip 11</button>';
-            
-              audio_player.play();
-              
-              }
-            else {
-              btn.value = "Clip 11";
-              btn.innerHTML = '<button id="modtextA">Click Twice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8665;</button>';
-              
-              audio_player.pause();
-              }
-       }
+           audio_player.play();       
+}
        
           function on11A(){
             console.log("11 ended");
             audio_index = 11;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
                         
-          var btn = document.getElementById("modalA");
-      
-            if (btn.value == "Clip 12") {
-              btn.value = "";
-              btn.innerHTML = '<button id="modtextA">Clip 12</button>';
-             
-              audio_player.play();
-             
-              }
-            else {
-              btn.value = "Clip 12";
-              btn.innerHTML = '<button id="modtextA">Click Twice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8665;</button>';
-              
-              audio_player.pause();
-              }
-        }
+         
+}
         
         
            function on12A(){
             console.log("12 ended");
             audio_index = 12;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
                         
-          var btn = document.getElementById("modalA");
-      
-            if (btn.value == "Clip 13") {
-              btn.value = "";
-              btn.innerHTML = '<button id="modtextA">Clip 13</button>';
-              
-              audio_player.play();
-              
-              }
-            else {
-              btn.value = "Clip 13";
-              btn.innerHTML = '<button id="modtextA">Click Twice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8665;</button>';
-             
-              audio_player.pause();
-              }
-        }
-
+}      
 
    function on13A(){
             console.log("13 ended");
             audio_index = 13;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on14A(){
             console.log("14 ended");
             audio_index = 14;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on15A(){
             console.log("15 ended");
             audio_index = 15;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on16A(){
             console.log("16 ended");
             audio_index = 16;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on17A(){
             console.log("17 ended");
             audio_index = 17;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on18A(){
             console.log("18 ended");
             audio_index = 18;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on19A(){
             console.log("19 ended");
             audio_index = 19;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on20A(){
             console.log("20 ended");
             audio_index = 20;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on21A(){
             console.log("21 ended");
             audio_index = 21;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on22A(){
             console.log("22 ended");
             audio_index = 22;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on23A(){
             console.log("23 ended");
             audio_index = 23;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on24A(){
             console.log("24 ended");
             audio_index = 24;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on25A(){
             console.log("25 ended");
             audio_index = 25;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on26A(){
             console.log("26 ended");
             audio_index = 26;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on27A(){
             console.log("27 ended");
             audio_index = 27;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on28A(){
             console.log("28 ended");
             audio_index = 28;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on29A(){
             console.log("29 ended");
             audio_index = 29;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on30A(){
             console.log("30 ended");
             audio_index = 30;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on31A(){
             console.log("31 ended");
             audio_index = 31;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on32A(){
             console.log("32 ended");
             audio_index = 32;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on33A(){
             console.log("33 ended");
             audio_index = 33;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on34A(){
             console.log("34 ended");
             audio_index = 34;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on35A(){
             console.log("35 ended");
             audio_index = 35;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
    function on36A(){
             console.log("36 ended");
             audio_index = 36;
             audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
 }
 
 
