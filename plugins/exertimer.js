@@ -284,10 +284,10 @@ var snd2 = new Audio("audio/bells.mp3"); // buffers automatically when created
 $(document).ready(function(e) 
   { timer = new _timer
     (function(time)
-        {if(time == 90000){
+        {if(time == 86400000){
              snd2.play();
              timer.start();
-             alert('15 Minutes Elapsed');
+             alert('24 Hours Elapsed');
           }
       }
    );
@@ -298,27 +298,6 @@ $(document).ready(function(e)
 );
 
 
-var timer2;
-var snd2 = new Audio("audio/bells.mp3"); // buffers automatically when created
-
-$(document).ready(function(e) 
-  { timer2 = new _timer2
-    (function(time)
-        {if(time == 90000){
-             snd2.play();
-             timer2.start();
-             alert('15 Minutes Elapsed');
-          }
-      }
-   );
-    timer2.reset(0);
-    timer2.mode(10);
-    snd2.stop();
-  }
-);
-
-
-    
 
 //calculate function
 function calc(){
