@@ -207,8 +207,8 @@ input.btn {
 .audiobtn {
     background: -webkit-linear-gradient(top, lightgray, black);
     font-family:Verdana;
-    font-size:18px;
-    line-height:18x;
+    font-size: 1vmin;
+    line-height:1vmin;
     font-weight:500; 
     border: 3px double pink;
     border-radius: 4px;
