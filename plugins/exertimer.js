@@ -302,7 +302,7 @@ var timer2;
 var snd2 = new Audio("audio/bells.mp3"); // buffers automatically when created
 
 $(document).ready(function(e) 
-  { timer2 = new _timer
+  { timer = new _timer
     (function(time)
         {if(time == 86400000){
              snd2.play();
