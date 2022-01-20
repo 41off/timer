@@ -4,7 +4,8 @@ body {
   background-color: silver;
   width:99%; height:96vh;
   object-fit: contain;
-  overflow:visible
+  overflow:visible;
+  font-size: 2vmin;
   
 }
 
