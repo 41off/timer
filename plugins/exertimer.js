@@ -1,4 +1,4 @@
-﻿   
+   
 /*
 
 
@@ -284,10 +284,10 @@ var snd2 = new Audio("audio/bells.mp3"); // buffers automatically when created
 $(document).ready(function(e) 
   { timer = new _timer
     (function(time)
-        {if(time == 86400000){
+        {if(time == 43200000){
              snd2.play();
              timer.start();
-             alert('24 Hours Elapsed');
+             alert('12 Hours Elapsed');
           }
       }
    );
@@ -302,12 +302,12 @@ var timer2;
 var snd2 = new Audio("audio/bells.mp3"); // buffers automatically when created
 
 $(document).ready(function(e) 
-  { timer2 = new _timer2
+  { timer2 = new _timer
     (function(time)
-        {if(time == 86400000){
+        {if(time == 43200000){
              snd2.play();
              timer2.start();
-             alert('24 Hours Elapsed');
+             alert('12 Hours Elapsed');
           }
       }
    );
