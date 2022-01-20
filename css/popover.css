@@ -85,9 +85,8 @@ margin-right:10%;
     overflow: visible;
     white-space:pre-wrap;
     width:98%;
-    
-    float:left;
-    
+    height:85%;
+    float:left;   
    
 }
 
@@ -106,6 +105,8 @@ margin-right:10%;
   text-indent:0px;
   text-decoration:none;
   font-weight:500;
+  height:80%;
+ 
 
 }
 
@@ -113,17 +114,7 @@ margin-right:10%;
   color: red;
   font-size:10pt;
   text-align:left;
-  margin-top:1px;
-  margin-bottom:1px;
-  
-  padding-right:0px;
-  padding-top:0px;
-  padding-bottom:0px;
-  padding-left:0px;
-  border: 2px;
-  border-radius: 4px;
-  border-color:silver;
-  border-style:outset
+ 
 }
 
 /* Change color of dropdown links on hover */
@@ -179,5 +170,73 @@ border-bottom-width:0
   border-left-color:#fff
 }
 
+
+ul.a {
+    list-style-type: circle;
+}
+
+ul.b {
+  list-style-type: square;
+}
+
+ul.p {
+  list-style-image: url('../images/bluesm.png');
+}
+
+ol.c {
+  list-style-type: upper-roman;
+}
+
+ol.d {
+  list-style-type: lower-alpha;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: blink; }
+
+
+a:hover { text-decoration: underline; }
+
+
+a:active { text-decoration: none; }
+
+
+li {
+list-style-image: url('../images/bluesm.png');
+
+ 
+} 
+
+li span {
+  list-style-image: url('../images/bluesm.png');
+
+} 
+
+
+uk {
+  text-decoration:none;
+  list-style-image: url('../images/bluesm.png');
+  margin-left:100px;
+  margin-bottom:25px;
+
+}
+
+.ukcont {
+  height:98%;
+  width:97%;
+  bottom:2%;
+  column-count: 5;
+  column-gap: 16px;
+  column-rule-style: groove;
+  column-rule-width:2px;
+  column-rule: 2px solid red; 
+  column-width: 20%;
+  display:inline-block;
+  margin-left:2%;
+
+	
+}
 
 

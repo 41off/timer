@@ -52,8 +52,6 @@ body {
 
 
 
-
-
 .closebtn2 {
     padding-right:3px;
     padding-left:3px;
@@ -86,5 +84,24 @@ body {
   overflow:hidden;
 }
 
+
+.aud {
+  position: absolute;
+  border: 2px;
+  border-color:gold;
+  border-style:double;
+  border-radius: 36px;
+  right:1%;
+  bottom:1%;
+  padding-bottom: 0px;
+  margin-right:0.25%;
+  margin-top: 0%;
+  overflow:hidden;
+  background: -webkit-linear-gradient(top, lightgray, black);
+  
+
+	
+	
+}
 
 

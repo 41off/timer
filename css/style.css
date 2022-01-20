@@ -204,6 +204,41 @@ input.btn {
     color: black
 }
 
+.audiobtn {
+    background: -webkit-linear-gradient(top, lightgray, black);
+    font-family:Verdana;
+    font-size:18px;
+    line-height:18x;
+    font-weight:500; 
+    border: 3px double pink;
+    border-radius: 4px;
+    width: auto; 
+    height: auto;
+    padding-bottom:4px;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top:12px;   
+    cursor: pointer;
+    color:white;
+	
+}
+
+.audiobtn:hover {
+    color:red;   /* #4CAF50;  greenish */
+    border-color:yellow;
+    background: -webkit-linear-gradient(top, lightyellow, lightpink);
+}
+
+.audiobtn:focus {
+  background: -webkit-linear-gradient(top, lightyellow, lime);
+  color: black;
+  text-shadow: 1px 1px silver;
+  border-color:red;
+
+}
+	
+	
 .drag {
     background:transparent;
     margin-right:2px;

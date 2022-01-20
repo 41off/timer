@@ -36,6 +36,13 @@
 
 <bgSound id="sound">
 
+<script>
+
+window.addEventListener("load", function B() { onloadA() })
+
+</script>
+
+
 <body onLoad="GetTime(); timer.reset(0000); timer2.reset(0)">
 
         <div id="video">
@@ -92,6 +99,54 @@
      <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/jw2glcg9yr05ojv/X4MinuteFoundation.mp4?raw=1'></video>">4 Minute Foundation</button>
+             
+     <button class="popmenu" title="SprayMakers Podcast Episodes. Seasons 2020 and 2021 by Chris Rossi and Trent Finlayson. Presented by Radar Skis" data-toggle="popover" data-placement="right" data-html="true" 
+     data-content="<div class='ukcont'>
+<li><button class='audiobtn' onClick='on1A()'>S1-Core Fundamentals</button></li>
+<li><button class='audiobtn' onClick='on2A()'>S1-Strengths-Weaknesses</button></li>
+<li><button class='audiobtn' onClick='on3A()'>S1-Stacked</button></li>
+<li><button class='audiobtn' onClick='on4A()'>S1-Ski-Setup</button></li>
+<li><button class='audiobtn' onClick='on5A()'>S1-LineLengthProgression</button></li>
+<li><button class='audiobtn' onClick='on6A()'>S1-Gates</button></li>
+<li><button class='audiobtn' onClick='on7A()'>S1-Edge Change</button></li>
+<li><button class='audiobtn' onClick='on8A()'>S1-Handle Control</button></li>
+<li><button class='audiobtn' onClick='on9A()'>S1-LightontheLine</button></li>
+<li><button class='audiobtn' onClick='on10A()'>S1-Onside Turns</button></li>
+<li><button class='audiobtn' onClick='on11A()'>S1-Offside Turns</button></li>
+<li><button class='audiobtn' onClick='on12A()'>S1-CounterRotation</button></li>
+<li><button class='audiobtn' onClick='on13A()'>S1-Boots</button></li>
+<li><button class='audiobtn' onClick='on14A()'>S1-Left Behind</button></li>
+<li><button class='audiobtn' onClick='on15A()'>S1-RecurringThemes</button></li>
+<li><button class='audiobtn' onClick='on16A()'>S1-OffSeason</button></li>
+
+<li><button class='audiobtn' onClick='on17A()'>S2E1-Boy Are Back</button></li>
+<li><button class='audiobtn' onClick='on18A()'>S2E2-TakeItToTheWater</button></li>
+<li><button class='audiobtn' onClick='on19A()'>S2E3-Vision</button></li>
+<li><button class='audiobtn' onClick='on20A()'>S2E4-Planning</button></li>
+<li><button class='audiobtn' onClick='on21A()'>S2E5-OnTheWater</button></li>
+<li><button class='audiobtn' onClick='on22A()'>S2E6-Fatal Flaws</button></li>
+<li><button class='audiobtn' onClick='on23A()'>S2E7-WorkZone</button></li>
+<li><button class='audiobtn' onClick='on24A()'>S2E8-Training Regimen</button></li>
+<li><button class='audiobtn' onClick='on25A()'>S2E9-Perfect Path</button></li>
+<li><button class='audiobtn' onClick='on26A()'>S2E10-Turning</button></li>
+<li><button class='audiobtn' onClick='on27A()'>S2E11-Gates</button></li>
+<li><button class='audiobtn' onClick='on28A()'>S2E12-Fin Setup</button></li>
+<li><button class='audiobtn' onClick='on29A()'>S2E13-Unwritten Rules</button></li>
+<li><button class='audiobtn' onClick='on30A()'>S2E14-Tournaments</button></li>
+<li><button class='audiobtn' onClick='on31A()'>S2E15-Speed</button></li>
+<li><button class='audiobtn' onClick='on32A()'>S2E16-The Handle</button></li>
+<li><button class='audiobtn' onClick='on33A()'>S2E17-Vision</button></li>
+
+
+</div>
+
+
+     
+     
+     
+     
+     ">Podcasts</button>
+
 
             
      <div class="convertor">
@@ -204,8 +259,23 @@ Exercise Stretching Audible Alert Timer&nbsp;&nbsp;&nbsp;<nobr><button class="ti
   </div>
 
  </form>
+ 
+ 
+<div class="aud">
+
+<audio controls autoplay loop>
+  <source src="" type="audio/ogg">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
 
 </div>
+
+
+
+</div>
+
+<script type="text/javascript" src="plugins/videojs/js/audio.js"></script>
 
 <script>
 var close = document.getElementsByClassName('closebtn2');
