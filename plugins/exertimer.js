@@ -1,42 +1,4 @@
-   
-/*
-
-
-    var timer, time = 0, start_time = 0;
-    function startstoptimer() {
-        if (timer) {
-            time += new Date().getTime() - start_time;
-            start_time = 0;
-         
-
-            clearInterval(timer);
-            timer = null;
-        } else {
-            start_time = new Date().getTime();
-            timer = setInterval(function () {
-                document.d.d2.value = dt.getFullYear() + "~" + IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()) + "." + IfZero(dt.getMilliseconds());
-            }, 10);
-        }
-    }
-    
-    function resettimer() {
-        time = 0;
-        start_time = new Date().getTime();
-        document.d.d2.value = "0";
-        
-
-    }
-
-
-    <form name="d">
-        <input type="text" size="8" name="d2"/>
-        <input type="button" value="Start/Stop" onclick="startstoptimer()"/>
-        <input type="reset" onclick="resettimer()" />
-    </form>
-
-*/
-
-
+﻿
 
 var alarmTime = "0000~00:00:00";
 var aDays = "000";
@@ -259,14 +221,14 @@ function _timer2(callback)
     function generateTime2()
     {
         var milli = time % 100;
-        var second = Math.round(time / 100) % 60;
+        var second = Math.round(time / 100);
         var minute = Math.floor(time / 6000) % 60;
         var hour = Math.floor(time / 360000) % 24;
         
         milli = (milli < 10) ? '0'+milli : milli;
         second = (second < 1000) ? RemainingTime-second : second;
-        minute = (minute < 10) ? RemainingTime-minute : minute;
-        hour = (hour < 10) ? RemainingTime-hour : hour;
+        minute = (minute < 10) ? '0'+minute : minute;
+        hour = (hour < 10) ? '0'+hour : hour;
         
        $('div.timer2 span.milli').html(milli);
        $('div.timer2 span.second').html(second);
@@ -284,10 +246,10 @@ var snd2 = new Audio("audio/bells.mp3"); // buffers automatically when created
 $(document).ready(function(e) 
   { timer = new _timer
     (function(time)
-        {if(time == 43200000){
+        {if(time == 90000){
              snd2.play();
              timer.start();
-             alert('12 Hours Elapsed');
+             alert('15 Minutes Elapsed');
           }
       }
    );
@@ -304,10 +266,10 @@ var snd2 = new Audio("audio/bells.mp3"); // buffers automatically when created
 $(document).ready(function(e) 
   { timer2 = new _timer2
     (function(time)
-        {if(time == 43200000){
+        {if(time == 90000){
              snd2.play();
              timer2.start();
-             alert('12 Hours Elapsed');
+             alert('15 Minutes Elapsed');
           }
       }
    );
@@ -318,6 +280,7 @@ $(document).ready(function(e)
 );
 
 
+    
 
 //calculate function
 function calc(){
