@@ -144,8 +144,22 @@
                                'https://www.dropbox.com/s/sd8d1etuert1en3/S2E14-Tournaments.mp3?raw=1',
                                'https://www.dropbox.com/s/aos3nvxz780g4wz/S2E15-Speed.mp3?raw=1',
                                'https://www.dropbox.com/s/9lehtp7r1betpim/S2E16-TheHandle.mp3?raw=1',
-                               'https://www.dropbox.com/s/0h77j5a4bwpbxw1/S2E17-Vision.mp3?raw=1',      
+                               'https://www.dropbox.com/s/0h77j5a4bwpbxw1/S2E17-Vision.mp3?raw=1',
                                
+                               'https://www.dropbox.com/s/38jphq204u093m1/S2E18-Roadblocks.mp3?raw=1',
+                               'https://www.dropbox.com/s/0kgi5xq32cbuw3q/S2E19-MaximizeCoaching.mp3?raw=1',
+                               'https://www.dropbox.com/s/r1djjbzcivku218/S2E20-Plateaus.mp3?raw=1',
+                               'https://www.dropbox.com/s/0ht6j9zc5f92aqs/S2E21-WearandTear.mp3?raw=1',
+                               'https://www.dropbox.com/s/az6l1tpjs7g65rp/S2E22-Slack.mp3?raw=1',
+                               'https://www.dropbox.com/s/a2ca8cgaxtxscie/S2E23-Housekeeping.mp3?raw=1',
+                               'https://www.dropbox.com/s/zlr5v5a50x4528k/S2E24-MakingMistakes.mp3?raw=1',
+                               'https://www.dropbox.com/s/n8otph06sr7514o/S2E25-SettingUpForSuccess.mp3?raw=1',
+                               'https://www.dropbox.com/s/w92qfioyhh72u5e/S2E26-ChangingDirection.mp3?raw=1',
+                               'https://www.dropbox.com/s/isokr8t4sz89r70/S2E27-ListernerFeedback.mp3?raw=1',
+                               'https://www.dropbox.com/s/dkm0uc3lj7wa7q6/S2E28-ListernerQuestions.mp3?raw=1',
+                               'https://www.dropbox.com/s/l3rvc0u1hpg1i67/S2E29-QuestionsRd3.mp3?raw=1',
+                               'https://www.dropbox.com/s/psqh3nf8t225rx4/S2E30-Season2End.mp3?raw=1',
+                                                     
                                ];                      
  
   
@@ -610,6 +624,91 @@
    function on36A(){
             console.log("36 ended");
             audio_index = 36;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+
+   function on37A(){
+            console.log("37 ended");
+            audio_index = 37;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on38A(){
+            console.log("38 ended");
+            audio_index = 38;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on39A(){
+            console.log("39 ended");
+            audio_index = 39;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on40A(){
+            console.log("40 ended");
+            audio_index = 40;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on41A(){
+            console.log("41 ended");
+            audio_index = 41;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on42A(){
+            console.log("42 ended");
+            audio_index = 42;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on43A(){
+            console.log("43 ended");
+            audio_index = 43;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on44A(){
+            console.log("44 ended");
+            audio_index = 44;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on45A(){
+            console.log("45 ended");
+            audio_index = 45;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on46A(){
+            console.log("46 ended");
+            audio_index = 46;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on47A(){
+            console.log("47 ended");
+            audio_index = 47;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on48A(){
+            console.log("48 ended");
+            audio_index = 48;
             audio_player.setAttribute("src", audio_directory[audio_index]);
             audio_player.play();
 }

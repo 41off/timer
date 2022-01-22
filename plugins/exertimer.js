@@ -28,9 +28,9 @@ var snd = new Audio("audio/dogs.mp3"); // buffers automatically when created
 
 function _timer(callback)
 {
-    var time = 1000;     //  The default time of the timer
+    var time = Date.now();     //  The default time of the timer
     var mode = 1;     //    Mode: count up or count down
-    var status = 0000;    //    Status: timer is running or stoped
+    var status = 0;    //    Status: timer is running or stoped
     var timer_id;    //    This is used by setInterval function
     
     // this will start the timer ex. start the timer with 1 second interval timer.start(1000) 
@@ -38,9 +38,9 @@ function _timer(callback)
     {
         interval = (typeof(interval) !== 'undefined') ? interval : 0000;
  
-        if(status == 0000)
+        if(status == 0)
         {
-            status = 1000;
+            status = 1;
             timer_id = setInterval(function()
             {
                 switch(mode)
@@ -70,9 +70,9 @@ function _timer(callback)
     //  Same as the name, this will stop or pause the timer ex. timer.stop()
     this.stop =  function()
     {
-        if(status == 1000)
+        if(status == 1)
         {
-            status = 0000;
+            status = 0;
             clearInterval(timer_id);
         }
     }
@@ -80,7 +80,7 @@ function _timer(callback)
     // Reset the timer to zero or reset it to your own custom time ex. reset to zero second timer.reset(0)
     this.reset =  function(sec)
     {
-        sec = (typeof(sec) !== 'undefined') ? sec : 0000;
+        sec = (typeof(sec) !== 'undefined') ? sec : 0;
         time = sec;
         generateTime(time);
     }
@@ -132,40 +132,94 @@ function _timer(callback)
 }
 
 
+//   dt.getFullYear() + "~" + IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()) + "." + IfZero(dt.getMilliseconds());
+// example use
+var timer;
+var snd2 = new Audio("audio/bells.mp3"); // buffers automatically when created
+
+$(document).ready(function(e) 
+  { timer = new _timer
+    (function(time)
+        {if(time == 43200000){
+             snd2.play();
+             timer.start();
+             alert('12 Hours Elapsed');
+          }
+      }
+   );
+    timer.reset(0);
+    timer.mode(10);
+    snd2.stop();
+  }
+);
+
+
+
+
+
+/*
+let start = new Date();
+let intervalRef = null;
+
+intervalRef = setInterval(_ => {
+  let current = new Date();
+  let count = +current - +start;
+  
+  let ms = count % 1000;
+  let s = Math.floor((count /  1000)) % 60;
+  let m = Math.floor((count / 60000)) % 60;
+
+  $('#timer').text(m + ":" + s + ":" + ms);
+}, 10);
+
+function hangTheBrowser() {
+  let val = "";
+
+    for(let i=0; i<10000; i++){
+      for(let j=0; j<10000; j++) {
+        val = "Loop returned: " + i + j;
+      }
+    }
+}
+
+*/
 function _timer2(callback)
-{
-    var time = 1000;     //  The default time of the timer
-    var mode = 0;     //    Mode: count up or count down
-    var status = 0000;    //    Status: timer is running or stoped
+{  
+
+// var d=new Date();
+//    d.getTime();
+    var time2 =  Date.now() - Date.now();  //  The default time of the timer
+    var mode = 1;     //    Mode: count up or count down
+    var status = 0;    //    Status: timer is running or stoped
     var timer2_id;    //    This is used by setInterval function
     
     // this will start the timer ex. start the timer with 1 second interval timer.start(1000) 
     this.start = function(interval)
     {
-        interval = (typeof(interval) !== 'undefined') ? interval : 0000;
+        interval = (typeof(interval) !== 'undefined') ? interval : 0;
  
-        if(status == 0000)
+        if(status == 0)
         {
-            status = 1000;
+            status = 1;
             timer2_id = setInterval(function()
             {
                 switch(mode)
                 {
                     default:
-                    if(time)
+                    if(time2)
                     {
-                        time--;
+                        time2--;
                         generateTime2();
-                        if(typeof(callback) === 'function') callback(time);
+                        if(typeof(callback) === 'function') callback(time2);
                     }
                     break;
                     
                     case 1:
-                    if(time < 86400000)
+                    if(time2 < 86400000)
                     {
-                        time++;
+                        time2++;
                         generateTime2();
-                        if(typeof(callback) === 'function') callback(time);
+                        if(typeof(callback) === 'function') callback(time2);
                     }
                     break;
                 }
@@ -176,9 +230,9 @@ function _timer2(callback)
     //  Same as the name, this will stop or pause the timer ex. timer.stop()
     this.stop =  function()
     {
-        if(status == 1000)
+        if(status == 1)
         {
-            status = 0000;
+            status = 0;
             clearInterval(timer2_id);
         }
     }
@@ -186,9 +240,9 @@ function _timer2(callback)
     // Reset the timer to zero or reset it to your own custom time ex. reset to zero second timer.reset(0)
     this.reset =  function(sec)
     {
-        sec = (typeof(sec) !== 'undefined') ? sec : 0000;
-        time = sec;
-        generateTime2(time);
+        sec = ((Date.now() + 1) - Date.now())/1000 ? sec : 0;
+        time2 = sec;
+        generateTime2(time2);
     }
     
     // Change the mode of the timer, count-up (1) or countdown (0)
@@ -200,7 +254,7 @@ function _timer2(callback)
     // This methode return the current value of the timer
     this.getTime = function()
     {
-        return time;
+        return time2;
     }
     
     // This methode return the current mode of the timer count-up (1) or countdown (0)
@@ -215,18 +269,37 @@ function _timer2(callback)
         return status;
     }
 
+/// experiment //
 
-    
+// this example takes 10 seconds to run
+const start = Date.now();
+
+console.log('starting timer...');
+// expected output: starting timer...
+
+setTimeout(() => {
+  const millis = Date.now() - start;
+  $('div.timer3 span.second').html(millis);
+
+  console.log(`seconds elapsed = ${Math.floor(millis / 1000)}`);
+  // expected output: seconds elapsed = 10
+}, 10000);
+
+
+
+//  var start = new Date();
+//  var _timer2 = null;
+  
     // This methode will render the time variable to hour:minute:second format
     function generateTime2()
-    {
-        var milli = time % 100;
-        var second = Math.round(time / 100);
-        var minute = Math.floor(time / 6000) % 60;
-        var hour = Math.floor(time / 360000) % 24;
+       {
+        var milli =  time2;
+        var second = Math.floor(time2 / 100);
+        var minute = Math.floor(time2 / 6000) % 60;
+        var hour = Math.floor(time2 / 360000) % 24;
         
         milli = (milli < 10) ? '0'+milli : milli;
-        second = (second < 1000) ? RemainingTime-second : second;
+        second = (second < 1000) ?  RemainingTime - second: second;
         minute = (minute < 10) ? '0'+minute : minute;
         hour = (hour < 10) ? '0'+hour : hour;
         
@@ -239,37 +312,19 @@ function _timer2(callback)
 }
 
  
+
+
 // example use
-var timer;
-var snd2 = new Audio("audio/bells.mp3"); // buffers automatically when created
-
-$(document).ready(function(e) 
-  { timer = new _timer
-    (function(time)
-        {if(time == 90000){
-             snd2.play();
-             timer.start();
-             alert('15 Minutes Elapsed');
-          }
-      }
-   );
-    timer.reset(0);
-    timer.mode(10);
-    snd2.stop();
-  }
-);
-
-
 var timer2;
 var snd2 = new Audio("audio/bells.mp3"); // buffers automatically when created
 
 $(document).ready(function(e) 
   { timer2 = new _timer2
-    (function(time)
-        {if(time == 90000){
+    (function(time2)
+        {if(time == 43200000){
              snd2.play();
              timer2.start();
-             alert('15 Minutes Elapsed');
+             alert('12 Hours Elapsed');
           }
       }
    );
@@ -278,6 +333,8 @@ $(document).ready(function(e)
     snd2.stop();
   }
 );
+
+
 
 
     

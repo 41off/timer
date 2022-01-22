@@ -60,7 +60,8 @@ input.btn {
     border-radius: 5px;
     border-style: double;
     height:auto;
-    font-size: 18px;
+    font-size: 1vmin;
+    line-height:1vmin;
     color: white;
     opacity: .4;
     transition: opacity 3s;
@@ -78,16 +79,15 @@ input.btn {
 .timerbutton {
     background: -webkit-linear-gradient(top, lightgray, black);
     font-family:Verdana;
-    font-size:16px;
-    line-height:16px;
+    font-size: 1.5vmin;
+    line-height:1.5vmin;    
     font-weight:500; 
     border: 3px double pink;
     border-radius: 4px;
     width: auto; 
-    height: 24px;
-    padding-bottom:4px;
+    height: auto;
+    padding-bottom:3px;
     text-align: center;
-    font-size: 16px;
     margin: 1px 1px;
     margin-top:3px;   
     cursor: pointer;
@@ -265,14 +265,14 @@ input.btn {
     border-style:double;
     height:auto;
     width:auto;
-    line-height:30px;
-    font-size:28px;
+    font-size:2vmin;
+    line-height:2vmin;
     font-family:"Verdana";
     text-align:center;
     color: white;
     margin:1px;
     position:absolute;    
-    padding-top: 0pt;
+    padding-top:0.5vmin;
     left:1%;
     padding-left: 2px;
     padding-right: 2px;
@@ -296,14 +296,14 @@ input.btn {
     border-style:double;
     height:auto;
     width:auto;
-    line-height:30px;
-    font-size:28px;
+    font-size: 2vmin;
+    line-height:2vmin;
     font-family:"Verdana";
     text-align:center;
     color: white;
     margin:1px;
     position:absolute;    
-    padding-top: 0pt;
+    padding-top:0.5vmin;
     left:14%;
     padding-left: 2px;
     padding-right: 2px;
@@ -360,11 +360,11 @@ input.btn {
     border-color: silver;
     border-radius: 12px;
     border-style: double;
-    height:22px;
+    height:2vmin;
     font-family: "Arial Narrow", Arial, sans-serif;
-    font-size: 18px;
-    font-weight:bold;
-    line-height:22px;
+    font-size: 1.5vmin;
+    line-height:1.5vmin;
+    font-weight:bold;    
     color: white;
     opacity: .6;
     transition: opacity 15s;
@@ -372,7 +372,9 @@ input.btn {
     text-align:center;
     z-index:5;
     width:auto;
-    min-width:70%
+    margin-right:5px;
+    min-width:65%
+    
    
 }
 

@@ -105,7 +105,7 @@ margin-right:10%;
   text-indent:0px;
   text-decoration:none;
   font-weight:500;
-  height:80%;
+  height:90%;
  
 
 }
@@ -205,6 +205,7 @@ a:active { text-decoration: none; }
 
 li {
 list-style-image: url('../images/bluesm.png');
+margin-left:10px;
 
  
 } 
@@ -227,12 +228,12 @@ uk {
   height:98%;
   width:97%;
   bottom:2%;
-  column-count: 5;
+  column-count: 4;
   column-gap: 10px;
   column-rule-style: groove;
   column-rule-width:2px;
   column-rule: 2px solid red; 
-  column-width: 20%;
+  column-width: 25%;
   display:inline-block;
   margin-left:2%;
 

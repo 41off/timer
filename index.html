@@ -43,10 +43,10 @@ window.addEventListener("load", function B() { onloadA() })
 </script>
 
 
-<body onLoad="GetTime(); timer.reset(0000); timer2.reset(0)">
+<body onLoad="GetTime(); timer.reset(0000); timer2.reset(0); _timer2(callback)">
 
         <div id="video">
-        
+       <div class="popdiv"> 
          <button class="popmenu" title="SprayMakers Podcast Episodes. Seasons 2020 and 2021 by Chris Rossi and Trent Finlayson. Presented by Radar Skis" data-toggle="popover" data-placement="right" data-html="true" 
      data-content="<div class='ukcont'>
 <li><button class='audiobtn' onClick='on1A()'>S1-Core Fundamentals</button></li>
@@ -62,11 +62,13 @@ window.addEventListener("load", function B() { onloadA() })
 <li><button class='audiobtn' onClick='on11A()'>S1-Offside Turns</button></li>
 <li><button class='audiobtn' onClick='on12A()'>S1-CounterRotation</button></li>
 <li><button class='audiobtn' onClick='on13A()'>S1-Boots</button></li>
-<li><button class='audiobtn' onClick='on14A()'>S1-Left Behind</button></li>
+
 <li><button class='audiobtn' onClick='on15A()'>S1-RecurringThemes</button></li>
 <li><button class='audiobtn' onClick='on16A()'>S1-OffSeason</button></li>
-
-<li><button class='audiobtn' onClick='on17A()'>S2E1-Boy Are Back</button></li>
+<br>
+<li><button class='audiobtn' onClick='on14A()'>Season 2 Next&#8595;&#8595;</button></li>
+<br>
+<li><button class='audiobtn' onClick='on17A()'>S2E1-Boys Are Back</button></li>
 <li><button class='audiobtn' onClick='on18A()'>S2E2-TakeItToTheWater</button></li>
 <li><button class='audiobtn' onClick='on19A()'>S2E3-Vision</button></li>
 <li><button class='audiobtn' onClick='on20A()'>S2E4-Planning</button></li>
@@ -84,6 +86,21 @@ window.addEventListener("load", function B() { onloadA() })
 <li><button class='audiobtn' onClick='on32A()'>S2E16-The Handle</button></li>
 <li><button class='audiobtn' onClick='on33A()'>S2E17-Vision</button></li>
 
+<li><button class='audiobtn' onClick='on34A()'>S2E18-RoadBlocks</button></li>
+<li><button class='audiobtn' onClick='on35A()'>S2E19-Max Coaching</button></li>
+<li><button class='audiobtn' onClick='on36A()'>S2E29-Plateaus</button></li>
+<li><button class='audiobtn' onClick='on37A()'>S2E21-Wear & Tear</button></li>
+<li><button class='audiobtn' onClick='on38A()'>S2E22-Slack</button></li>
+<li><button class='audiobtn' onClick='on39A()'>S2E23-HouseKeeping</button></li>
+<li><button class='audiobtn' onClick='on40A()'>S2E24-MakingMistakes</button></li>
+<li><button class='audiobtn' onClick='on41A()'>S2E25-SetUp Success</button></li>
+<li><button class='audiobtn' onClick='on42A()'>S2E26-Changing Direction</button></li>
+<li><button class='audiobtn' onClick='on43A()'>S2E27-ListenerFeedback</button></li>
+<li><button class='audiobtn' onClick='on44A()'>S2E28-Questions2</button></li>
+<li><button class='audiobtn' onClick='on45A()'>S2E29-Questions3</button></li>
+<li><button class='audiobtn' onClick='on46A()'>S2E30-EndSeason2</button></li>
+
+
 
 </div>
 
@@ -95,60 +112,60 @@ window.addEventListener("load", function B() { onloadA() })
      ">Podcasts</button>
      
      
-       <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop volume='0.4' onclick='this.paused? ClickPauseR():ClickStartR();            
+       <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;' controls autoplay loop volume='0.4' onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/3iezsqiaolub43g/XNeck1.mp4?raw=1'></video>">Neck</button>
              
-       <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop volume='0.4' onclick='this.paused? ClickPauseR():ClickStartR();            
+       <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;' controls autoplay loop volume='0.4' onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/en3jex3gpfqk0pm/XStiffNeck.mp4?raw=1'></video>">Stiff Neck</button>
 
-     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;' style='width: 99.5%; height: 90%;' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/cutfo76owr1shin/X2BackStretches.mp4?raw=1'></video>">Back</button>
              
-     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;'controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/cqo8bktmhbzatzv/XQuadratusLumborumStretch.mp4?raw=1'></video>">Quadratus</button>
              
-     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/odnyngndjwh6utq/XPiriformis.mp4?raw=1'></video>">Piriformis</button>
              
-     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/q6zbxoifj8bcv2x/XAchillesAlfredson.mp4?raw=1'></video>">Achilles</button>
              
-     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/76ie7lw8412m2lb/X4MustStretches.mp4?raw=1'></video>">4 Must Stretches</button>
              
-     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/bhyj2t3o02szyo1/XProneDecompression.mp4?raw=1'></video>">Prone</button>
 
-     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/2hrwt41hu737jo1/XStaticLunge.mp4?raw=1'></video>">Static Lunge</button>
 
-     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/e006shc7j8msq5d/XYogaDude.mp4?raw=1'></video>">Balance Yoga</button>
          
 
-     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/i8mn7t1q8bkttqv/XFoundationTrainingHelpingPain.mp4?raw=1'></video>">Foundation vs Pain</button>
 
-     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/qccjjb8ix4wkbas/XBasicFoundationTraining.mp4?raw=1'></video>">Basic Foundation</button>
 
-     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
+     <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/jw2glcg9yr05ojv/X4MinuteFoundation.mp4?raw=1'></video>">4 Minute Foundation</button>
              
-   
+   </div>
 
 
             
@@ -266,7 +283,7 @@ Exercise Stretching Audible Alert Timer&nbsp;&nbsp;&nbsp;<nobr><button class="ti
  
 <div class="aud">
 
-<audio controls loop>
+<audio controls  onended="onaudioNextA();">
   <source src="" type="audio/ogg">
   <source src="" type="audio/mpeg">
   Your browser does not support the audio tag.
