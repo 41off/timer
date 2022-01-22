@@ -1,6 +1,7 @@
 ﻿
 
-var alarmTime = "0000~00:00:00";
+//var alarmTime = "0000~00:00:00";
+var alarmTime = "00:00:00";
 var aDays = "000";
 var dayTimeR = "0"; // adds days to the current time
 var dayTimeRD = 0; // Displays counter
@@ -26,9 +27,10 @@ var snd = new Audio("audio/dogs.mp3"); // buffers automatically when created
 
 
 
+
 function _timer(callback)
 {
-    var time = Date.now();     //  The default time of the timer
+    var time = Date.now('YYYY-MM-DDTHH:mm:ss.SSS');     //  The default time of the timer
     var mode = 1;     //    Mode: count up or count down
     var status = 0;    //    Status: timer is running or stoped
     var timer_id;    //    This is used by setInterval function
@@ -124,10 +126,12 @@ function _timer(callback)
         minute = (minute < 10) ? '0'+minute : minute;
         hour = (hour < 10) ? '0'+hour : hour;
         
+        
         $('div.timer span.milli').html(milli);
         $('div.timer span.second').html(second);
         $('div.timer span.minute').html(minute);
         $('div.timer span.hour').html(hour);
+       
     }
 }
 
@@ -394,6 +398,8 @@ document.converter.kph.value=calculated
 
 function GetTime() {
 var dt = new Date();
+var clock = document.clock.local.value;
+var alarm = document.clock.DalarmTime.value;
 // format the years
 if ((dayTimeR.length) == 1) {
 dayTimeR = "000" + dayTimeR;}
@@ -404,14 +410,26 @@ dayTimeR = "0" + dayTimeR;}
 if (dayTimeR.length >= 4) {
 dayTimeR = dayTimeR.slice(-4);} // right 4 characters
 // end format
-document.clock.local.value = dt.getFullYear() + "~" + IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()) + "." + IfZero(dt.getMilliseconds());
+document.clock.local.value = dt.getFullYear() + "~" + IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()) + "." + IfZero(dt.getMilliseconds().toString().slice(0, 2));  //  
+
+clock = (clock < 10) ? '0'+clock : clock;
+
+$('div.dispclock span.clock').html(clock);
+
 setTimeout("GetTime()", 10);
 curTimeD = (IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()));
 document.clock.DalarmTime.value = alarmTime;
+
+$('div.dispclock span.alarm').html(alarm);
+
+
 curTime = (IfZero(aDays) + "~" + IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()));
 if (alarmTime == "0000~00:00:00") {document.clock.Dstatus.value = "Not Set ";}
 if (alarmTime == curTime) {alarmOn();}
 if (alarmTime > curTime) {document.clock.Dstatus.value = "Counting";
+
+
+
 secctrR = secctrR + 1;
  
 document.clock.secctrRD.value = secctrR; // Display up to 24 hours of Elapsed Ticks
@@ -444,6 +462,7 @@ document.clock.messagesD.value = "The " + TypeMessage + "selected time has been 
 document.clock.DalarmTime.value = document.clock.DalarmTime.value + " ON  "; // Displays when alarm turns on and stays on
 document.all.sound.src = document.clock.alarmSound.value;
 document.clock.alarmOnNow.checked = true;
+document.clock.alarmOnOff[1].checked = false;
 if (document.clock.alarmSound.value == "") {document.all.sound.src = "";}
      
   }
@@ -458,8 +477,17 @@ function alarmOff() {
 snd.removeEventListener("ended", onEvent);
         snd = null;
 snd.currentTime=0;
-document.clock.alarmOnOff[1].checked = true;
+document.clock.alarmOnOff[2].checked = true;
 document.clock.alarmOnNow.checked = false;
+document.clock.jbSlalom.checked = false;
+document.clock.xlSlalom.checked = false;
+document.clock.lgSlalom.checked = false;
+document.clock.meSlalom.checked = false;
+document.clock.smSlalom.checked = false;
+document.clock.clSlalom.checked = false;
+document.clock.wmSlalom.checked = false;
+document.clock.noSlalom.checked = false;
+
 document.all.sound.src = "";
 document.clock.snoozeOptD.value = "0";
 document.clock.snoozeOptH.value = "0";
@@ -508,8 +536,8 @@ var dayNumS = parseInt(dayNum).toString();
 var hourNumS = parseInt(hourNum).toString();
 var minNumS = parseInt(minNum).toString();
 var secNumS = parseInt(secNum).toString();
-var milliNumS = parseInt(milliNum).toString();
-if ((milliNumS.length) == 1) {
+var milliNumS = parseInt(milliNum).toString(4);      //   toString( date.getMilliseconds(), 3 )
+if ((milliNumS.length) == 3) {
 milliNumS = "0" + milliNumS;}
 if ((secNumS.length) == 1) {
 secNumS = "0" + secNumS;}
@@ -554,7 +582,7 @@ function audiotrigger()  {
 function whichSlalomcl() {
 
 x = 900;  // x Seconds
-
+document.clock.alarmOnOff[1].checked = false;
 document.clock.jbSlalom.checked = false;
 document.clock.xlSlalom.checked = false;
 document.clock.lgSlalom.checked = false;
@@ -584,7 +612,7 @@ timer2.reset(00);
 function whichSlalomsm() {
 
 x = 600;  // x Seconds
-
+document.clock.alarmOnOff[1].checked = false;
 document.clock.jbSlalom.checked = false;
 document.clock.xlSlalom.checked = false;
 document.clock.lgSlalom.checked = false;
@@ -613,7 +641,7 @@ timer2.reset(00);
 function whichSlalomme() {
 
 x = 300;  // x Seconds
-
+document.clock.alarmOnOff[1].checked = false;
 document.clock.jbSlalom.checked = false;
 document.clock.xlSlalom.checked = false;
 document.clock.lgSlalom.checked = false;
@@ -643,7 +671,7 @@ timer2.reset(00);
 function whichSlalomlg() {
 
 x = 180;  // x Seconds
-
+document.clock.alarmOnOff[1].checked = false;
 document.clock.jbSlalom.checked = false;
 document.clock.xlSlalom.checked = false;
 document.clock.lgSlalom.checked = true;
@@ -672,7 +700,7 @@ timer2.reset(00);
 function whichSlalomxl() {
 
 x = 120;  // x Seconds
-
+document.clock.alarmOnOff[1].checked = false;
 document.clock.jbSlalom.checked = false;
 document.clock.xlSlalom.checked = true;
 document.clock.lgSlalom.checked = false;
@@ -703,7 +731,7 @@ timer2.reset(00);
 function whichSlalomjb() {
 
 x = 60;  // x Seconds
-
+document.clock.alarmOnOff[1].checked = false;
 document.clock.jbSlalom.checked = true;
 document.clock.xlSlalom.checked = false;
 document.clock.lgSlalom.checked = false;
@@ -732,7 +760,7 @@ timer2.reset(00);
 function whichSlalomwm() {
 
 x = 30;  // x Seconds
-
+document.clock.alarmOnOff[1].checked = false;
 document.clock.jbSlalom.checked = false;
 document.clock.xlSlalom.checked = false;
 document.clock.lgSlalom.checked = false;

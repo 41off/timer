@@ -45,8 +45,13 @@
 } );
 
    $( function() {
-    $(".dropdownR").draggable();
+    $(".dispclock").draggable();
 } );
+
+  $( function() {
+    $(".dispalarm").draggable();
+} );
+
 
 $( function() {
     $( ".dirbtn" ).draggable();

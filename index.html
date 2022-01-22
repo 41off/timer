@@ -66,7 +66,8 @@ window.addEventListener("load", function B() { onloadA() })
 <li><button class='audiobtn' onClick='on15A()'>S1-RecurringThemes</button></li>
 <li><button class='audiobtn' onClick='on16A()'>S1-OffSeason</button></li>
 <br>
-<li><button class='audiobtn' onClick='on14A()'>Season 2 Next&#8595;&#8595;</button></li>
+<button class='audiobtn' onClick='on14A()'>Season 2 Next&#8595;&#8595;</button>
+<br>
 <br>
 <li><button class='audiobtn' onClick='on17A()'>S2E1-Boys Are Back</button></li>
 <li><button class='audiobtn' onClick='on18A()'>S2E2-TakeItToTheWater</button></li>
@@ -167,8 +168,6 @@ window.addEventListener("load", function B() { onloadA() })
              
    </div>
 
-
-            
      <div class="convertor">
        <span class="closebtn2">&times;</span>
        <span title="Drag Speed Calculator elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
@@ -183,22 +182,20 @@ window.addEventListener("load", function B() { onloadA() })
        </form>
       </div>
 
-       
-       <div class="timer">
+      <div class="dispclock" name="local">
             <span class="closebtn2">&times;</span>
-            <span title="Drag Timer elsewhere as needed" class="drag">&nbsp;&#10016;</span>
-            <span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>.<span class="milli">00</span>
+            <span title="Drag Clock elsewhere as needed" class="drag">&nbsp;&#10016;</span>
+            <span class="clock" class="milli"></span><br>
+            <span class="alarm"></span>
+       </div>
+  <!--
+       <div class="dispalarm">
+            <span class="closebtn2">&times;</span>
+            <span title="Drag Alarm Time Bar elsewhere as needed" class="drag">&nbsp;&#10016;</span>
+            <span class="alarm"></span>
        </div>
        
-       
-        <div class="timer2">
-            <span class="closebtn2">&times;&nbsp;</span>
-            <span title="Drag Timer elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
-            <span class="second">00</span>
-       </div>
-
-       
-     <div class="footer">
+       <div class="footer">
             <span class="closebtn2">&times;</span>
             <span title="Drag Timer Control bar elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
             <button class="timerbutton timerbutton4" onClick="timer.mode(1)">Count up</button>  
@@ -207,6 +204,22 @@ window.addEventListener("load", function B() { onloadA() })
             <button class="timerbutton timerbutton3" onClick="timer.stop()">Stop</button>
             <button class="timerbutton timerbutton1" onClick="timer.reset(0000)">Reset</button>
         </div>
+   -->
+       
+       <div class="timer">
+            <span class="closebtn2">&times;</span>
+            <span title="Drag Timer elsewhere as needed" class="drag">&nbsp;&#10016;</span>
+            <span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>.<span class="milli">00</span>
+       </div>
+       
+       <div class="timer2">
+            <span class="closebtn2">&times;&nbsp;</span>
+            <span title="Drag Timer elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
+            <span class="second">00</span>
+       </div>
+
+       
+     
 
 
 <form name="clock">
@@ -219,7 +232,7 @@ window.addEventListener("load", function B() { onloadA() })
 <td colspan="2" style="height: 30px">
 <nobr>
 Choose Repeating Preset&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="radio" name="wmSlalom" onClick="whichSlalomwm()">30 Seconds  
+<input type="radio" name="wmSlalom" onClick="whichSlalomwm()">30 Seconds
 <input type="radio" name="jbSlalom" onClick="whichSlalomjb()">1 Minute  
 <input type="radio" name="xlSlalom" onClick="whichSlalomxl()">2 Minutes
 <input type="radio" name="lgSlalom" onClick="whichSlalomlg()">3 Minutes 
@@ -227,18 +240,21 @@ Choose Repeating Preset&nbsp;&nbsp;&nbsp;&nbsp;
 <input type="radio" name="smSlalom" onClick="whichSlalomsm()">10 Minutes   
 <input type="radio" name="clSlalom" onClick="whichSlalomcl()">15 Minutes  
 <input type="radio" name="noSlalom" onClick="whichSlalomno()" checked>None 
+
 </nobr>
 </td>
 </tr>
 
 <tr align="center" BGCOLOR="gray">
 <td style="height: 30px">
-&nbsp;Your&nbsp;Local&nbsp;System&nbsp;Clock&nbsp;Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input size="15" maxlength="15" name="local" readonly>
-</td>
+&nbsp;Your&nbsp;Local&nbsp;System&nbsp;Alarm&nbsp;Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<nobr><input type="text" name="Dstatus" size="8" maxlength="8" value="0" readonly></nobr></td>
+
 
 <td style="height: 30px">
-<nobr>Alert On <input type="radio" name="alarmOnOff" onClick="alarmOn()"> Alert Off  
-<input type="radio" name="alarmOnOff" onClick="alarmOff()" checked> On Now <input type="radio" name="alarmOnNow" onClick="alarmNow()"><span title="Drag TimerTable elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span></nobr><!--  Mute <input type="radio" name="muteOn" onClick="muteNow()"> -->
+Alert On <input type="checkbox" name="alarmOnOff" onClick="alarmOn()"> 
+Alert Off <input type="radio" name="alarmOnOff" onClick="alarmOff()"> 
+On Now <input type="radio" name="alarmOnNow" onClick="alarmNow()">
+<span title="Drag TimerTable elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span><!--  Mute <input type="radio" name="muteOn" onClick="muteNow()"> -->
 </tr>
 
 <tr align="center" BGCOLOR="gray">
@@ -252,7 +268,8 @@ Choose Repeating Preset&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;Your Local System Alarm Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<nobr>
 <input type="text" name="DalarmTime" size="15" maxlength="15" value="0000~00:00:00" readonly></nobr></td>
 <td style="height: 30px">
-&nbsp;Your&nbsp;Local&nbsp;System&nbsp;Alarm&nbsp;Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<nobr><input type="text" name="Dstatus" size="8" maxlength="8" value="0" readonly></nobr></td>
+&nbsp;Your&nbsp;Local&nbsp;System&nbsp;Clock&nbsp;Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input size="15" maxlength="15" name="local" readonly>
+</td>
 </tr>
 
 <tr align="center" BGCOLOR="gray">
