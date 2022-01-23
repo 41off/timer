@@ -240,4 +240,21 @@ uk {
 	
 }
 
+.ukcont2 {
+  height:98%;
+  width:97%;
+  bottom:2%;
+  column-count: 5;
+  column-gap: 0.25vmin;
+  column-rule-style: groove;
+  column-rule-width:0.5vmin;
+  column-rule: 0.2vmin solid red; 
+  column-width: 20%;
+  display:inline-block;
+  margin-left:2%;
+
+	
+}
+
+
 

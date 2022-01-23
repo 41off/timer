@@ -159,7 +159,106 @@
                                'https://www.dropbox.com/s/dkm0uc3lj7wa7q6/S2E28-ListernerQuestions.mp3?raw=1',
                                'https://www.dropbox.com/s/l3rvc0u1hpg1i67/S2E29-QuestionsRd3.mp3?raw=1',
                                'https://www.dropbox.com/s/psqh3nf8t225rx4/S2E30-Season2End.mp3?raw=1',
-                                                     
+                               
+                               'https://www.dropbox.com/s/rbihmngpmtslxcx/001.mp3?raw=1',
+                               'https://www.dropbox.com/s/ujdla2fgay6rkks/002.mp3?raw=1',
+                               'https://www.dropbox.com/s/lseekrhq1ukfklk/003.mp3?raw=1',
+                               'https://www.dropbox.com/s/r2bxwm3tgud2f6q/004.mp3?raw=1',
+                               'https://www.dropbox.com/s/yud3ls27rum493x/005.mp3?raw=1',
+                               'https://www.dropbox.com/s/4i792o4w8u3vj94/006.mp3?raw=1',
+                               'https://www.dropbox.com/s/mcwhfzc3h5f2a2l/007.mp3?raw=1',
+                               'https://www.dropbox.com/s/lyp22ce3nrflg6a/008.mp3?raw=1',
+                               'https://www.dropbox.com/s/zorhcgykhjwon4r/009.mp3?raw=1',
+                               'https://www.dropbox.com/s/yfqmkj1k60nhuhp/010.mp3?raw=1',
+                               'https://www.dropbox.com/s/iqlpp1dw1e1kph6/011.mp3?raw=1',
+                               'https://www.dropbox.com/s/dtkjklgp8dbiuok/012.mp3?raw=1',
+                               'https://www.dropbox.com/s/5a5rjt6oypujw1y/013.mp3?raw=1',
+                               'https://www.dropbox.com/s/g6ch59mcxdk3fjf/014.mp3?raw=1',
+                               'https://www.dropbox.com/s/4txi0ee6e8pef3z/015.mp3?raw=1',
+                               'https://www.dropbox.com/s/id3bz8sz40inq56/016.mp3?raw=1',
+                               'https://www.dropbox.com/s/rbnzbypsir0koei/017.mp3?raw=1',
+                               'https://www.dropbox.com/s/1iqak7tnwkrt74e/018.mp3?raw=1',
+                               'https://www.dropbox.com/s/vfz8myjaoq92bm1/019.mp3?raw=1',
+                               'https://www.dropbox.com/s/sut10mf7sc43tsa/020.mp3?raw=1',
+                               'https://www.dropbox.com/s/ycupbxw680nky25/021.mp3?raw=1',
+                               'https://www.dropbox.com/s/7g92qjekukpphqo/022.mp3?raw=1',
+                               'https://www.dropbox.com/s/1lm7gjec9dbzm19/023.mp3?raw=1',
+                               'https://www.dropbox.com/s/ek1wvzsk8stbib5/024.mp3?raw=1',
+                               'https://www.dropbox.com/s/qoe1pxuq3y1zczr/025.mp3?raw=1',
+                               'https://www.dropbox.com/s/iqd7hmt2kjznmu9/026.mp3?raw=1',
+                               'https://www.dropbox.com/s/aqor65ee109nkhf/027.mp3?raw=1',
+                               'https://www.dropbox.com/s/z8uzhg8s0n6ttpw/028.mp3?raw=1',
+                               'https://www.dropbox.com/s/6ua2whj3a6yz411/029.mp3?raw=1',
+                               'https://www.dropbox.com/s/nhuzzu7j19ex2yz/030.mp3?raw=1',
+                               'https://www.dropbox.com/s/ukbjthn1g2a8z54/031.mp3?raw=1',
+                               'https://www.dropbox.com/s/5ciltwf7s8ybqos/032.mp3?raw=1',
+                               'https://www.dropbox.com/s/a8890qzhg8mrenv/033.mp3?raw=1',
+                               'https://www.dropbox.com/s/epfjhimdgus4vg9/034.mp3?raw=1',
+                               'https://www.dropbox.com/s/4n25ewxjmlhiiiv/035.mp3?raw=1',
+                               'https://www.dropbox.com/s/dyd1ntb0jahu3vl/036.mp3?raw=1',
+                               'https://www.dropbox.com/s/xuwgzwaubm8sbaw/037.mp3?raw=1',
+                               'https://www.dropbox.com/s/7en89784qzus1qt/038.mp3?raw=1',
+                               'https://www.dropbox.com/s/6uur1rqmsx3fcbw/039.mp3?raw=1',
+                               'https://www.dropbox.com/s/2uhe0fnrdoztoa1/040.mp3?raw=1',
+                               'https://www.dropbox.com/s/z1zacvputwbgau4/041.mp3?raw=1',
+                               'https://www.dropbox.com/s/gtnqxbdo8ooyzbr/042.mp3?raw=1',
+                               'https://www.dropbox.com/s/a6rvvihluutvkw4/043.mp3?raw=1',
+                               'https://www.dropbox.com/s/j65eu9kwv6jqpno/044.mp3?raw=1',
+                               'https://www.dropbox.com/s/wsbpm5l9mog580s/045.mp3?raw=1',
+                               'https://www.dropbox.com/s/ulielujosei62iu/046.mp3?raw=1',
+                               'https://www.dropbox.com/s/12yw7gy9fn74vk7/047.mp3?raw=1',
+                               'https://www.dropbox.com/s/gl1xofsq24o666e/048.mp3?raw=1',
+                               'https://www.dropbox.com/s/mnw6joyo9tosktm/049.mp3?raw=1',
+                               'https://www.dropbox.com/s/1kt2tajqtqojk50/050.mp3?raw=1',
+                               'https://www.dropbox.com/s/s3fq0pcqf5pcf6p/051.mp3?raw=1',
+                               'https://www.dropbox.com/s/gjnsljmts8t8ido/052.mp3?raw=1',
+                               'https://www.dropbox.com/s/gjnsljmts8t8ido/052.mp3?raw=1',
+                               'https://www.dropbox.com/s/qfijq9lcttje67b/054.mp3?raw=1',
+                               'https://www.dropbox.com/s/uehsfedof3f7mzu/055.mp3?raw=1',
+                               'https://www.dropbox.com/s/koedkqsjbpt9ns9/056.mp3?raw=1',
+                               'https://www.dropbox.com/s/bbrns41k1nud1f5/057.mp3?raw=1',
+                               'https://www.dropbox.com/s/5y8xli6z6fn6aae/058.mp3?raw=1',
+                               'https://www.dropbox.com/s/9esodkvh97ls67h/059.mp3?raw=1',
+                               'https://www.dropbox.com/s/kpmw6d0yizaju7d/060.mp3?raw=1',
+                               'https://www.dropbox.com/s/qn2y80c2gl1tzmm/061.mp3?raw=1',
+                               'https://www.dropbox.com/s/fowe172exjplwjx/062.mp3?raw=1',
+                               'https://www.dropbox.com/s/9ompi913c4w8dnw/063.mp3?raw=1',
+                               'https://www.dropbox.com/s/lyx6zcwo36tc1mq/064.mp3?raw=1',
+                               'https://www.dropbox.com/s/monq12o1kk0y10o/065.mp3?raw=1',
+                               'https://www.dropbox.com/s/xxvmo8mgu11vscr/066.mp3?raw=1',
+                               'https://www.dropbox.com/s/taimbd46vejydo8/067.mp3?raw=1',
+                               'https://www.dropbox.com/s/oqu9my2fj0u8sar/068.mp3?raw=1',
+                               'https://www.dropbox.com/s/2w7hdcfwohwz7xb/069.mp3?raw=1',
+                               'https://www.dropbox.com/s/wj3ucy0tsibxcdo/070.mp3?raw=1',
+                               'https://www.dropbox.com/s/urlj8xhyntocleh/071.mp3?raw=1',
+                               'https://www.dropbox.com/s/mhap7yps0s1njhg/072.mp3?raw=1',
+                               'https://www.dropbox.com/s/j1ju5r7jcahpq5v/073.mp3?raw=1',
+                               'https://www.dropbox.com/s/t0b6bowheouusmp/074.mp3?raw=1',
+                               'https://www.dropbox.com/s/ifs2o86vri76u56/075.mp3?raw=1',
+                               'https://www.dropbox.com/s/w0orunqmdkwhvwv/076.mp3?raw=1',
+                               'https://www.dropbox.com/s/tsdd8pucg5ev5v7/077.mp3?raw=1',
+                               'https://www.dropbox.com/s/8pc328lpd0pfby3/078.mp3?raw=1',
+                               'https://www.dropbox.com/s/u6d41g4bhge4osw/079.mp3?raw=1',
+                               'https://www.dropbox.com/s/kw2h3h6k3x633ap/080.mp3?raw=1',
+                               'https://www.dropbox.com/s/igi8r3s9xw1fgyq/081.mp3?raw=1',
+                               'https://www.dropbox.com/s/4mai77qepkcsnfe/082.mp3?raw=1',
+                               'https://www.dropbox.com/s/5dzsnv2n5wv2t2k/083.mp3?raw=1',
+                               'https://www.dropbox.com/s/pi21c6mnfla7ub3/084.mp3?raw=1',
+                               'https://www.dropbox.com/s/8i9soqptctjaizx/085.mp3?raw=1',
+                               'https://www.dropbox.com/s/wyrt05v46v32oo1/086.mp3?raw=1',
+                               'https://www.dropbox.com/s/chi547f46t75hci/087.mp3?raw=1',
+                               'https://www.dropbox.com/s/fu1yy34iqz6p6da/088.mp3?raw=1',
+                               'https://www.dropbox.com/s/7wjb21frg7gc3la/089.mp3?raw=1',
+                               'https://www.dropbox.com/s/ll7oukg4l1hxy09/090.mp3?raw=1',
+                               'https://www.dropbox.com/s/ujqoc8aerpxaq6p/091.mp3?raw=1',
+                               'https://www.dropbox.com/s/5kvpu94gnyu8nyb/092.mp3?raw=1',
+                               'https://www.dropbox.com/s/o3t7snjvih7h139/093.mp3?raw=1',
+                               'https://www.dropbox.com/s/29b3mqkxw3875d5/094.mp3?raw=1',
+                               'https://www.dropbox.com/s/1fypmcujbmujqs1/095.mp3?raw=1',
+                               'https://www.dropbox.com/s/0g7d047tq323xed/096.mp3?raw=1',
+                               'https://www.dropbox.com/s/ofm1fgd716ved90/097.mp3?raw=1',
+                               'https://www.dropbox.com/s/sxgcdmqjniyoxtv/098.mp3?raw=1',
+                               'https://www.dropbox.com/s/37x0tlwxivm95rx/099.mp3?raw=1',
                                ];                      
  
   
@@ -712,6 +811,692 @@
             audio_player.setAttribute("src", audio_directory[audio_index]);
             audio_player.play();
 }
+
+
+
+
+   function on49A(){
+            console.log("49 ended");
+            audio_index = 49;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on50A(){
+            console.log("50 ended");
+            audio_index = 50;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on51A(){
+            console.log("51 ended");
+            audio_index = 51;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on52A(){
+            console.log("52 ended");
+            audio_index = 52;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on53A(){
+            console.log("53 ended");
+            audio_index = 53;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on54A(){
+            console.log("54 ended");
+            audio_index = 54;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on55A(){
+            console.log("55 ended");
+            audio_index = 55;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on56A(){
+            console.log("56 ended");
+            audio_index = 56;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on57A(){
+            console.log("57 ended");
+            audio_index = 57;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on58A(){
+            console.log("58 ended");
+            audio_index = 58;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on59A(){
+            console.log("59 ended");
+            audio_index = 59;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on60A(){
+            console.log("60 ended");
+            audio_index = 60;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+
+
+          function on61A(){
+           console.log("61 ended");
+           audio_index = 61;
+           audio_player.setAttribute("src", audio_directory[audio_index]);
+           audio_player.play();       
+}
+       
+          function on62A(){
+            console.log("62 ended");
+            audio_index = 62;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+                        
+         
+}
+        
+        
+           function on63A(){
+            console.log("63 ended");
+            audio_index = 63;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+                        
+}      
+
+   function on64A(){
+            console.log("64 ended");
+            audio_index = 64;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on65A(){
+            console.log("65 ended");
+            audio_index = 65;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on66A(){
+            console.log("66 ended");
+            audio_index = 67;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on67A(){
+            console.log("67 ended");
+            audio_index = 67;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on68A(){
+            console.log("68 ended");
+            audio_index = 68;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on69A(){
+            console.log("69 ended");
+            audio_index = 69;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on70A(){
+            console.log("70 ended");
+            audio_index = 70;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on71A(){
+            console.log("71 ended");
+            audio_index = 71;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on72A(){
+            console.log("72 ended");
+            audio_index = 72;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on73A(){
+            console.log("73 ended");
+            audio_index = 73;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on74A(){
+            console.log("74 ended");
+            audio_index = 74;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on75A(){
+            console.log("75 ended");
+            audio_index = 75;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on76A(){
+            console.log("76 ended");
+            audio_index = 76;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on77A(){
+            console.log("77 ended");
+            audio_index = 77;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on78A(){
+            console.log("78 ended");
+            audio_index = 78;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on79A(){
+            console.log("79 ended");
+            audio_index = 79;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on80A(){
+            console.log("80 ended");
+            audio_index = 80;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on81A(){
+            console.log("81 ended");
+            audio_index =81;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on82A(){
+            console.log("82 ended");
+            audio_index = 82;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on83A(){
+            console.log("83 ended");
+            audio_index = 83;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on84A(){
+            console.log("84 ended");
+            audio_index = 84;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on85A(){
+            console.log("85 ended");
+            audio_index = 85;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on86A(){
+            console.log("86 ended");
+            audio_index = 86;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on87A(){
+            console.log("87 ended");
+            audio_index = 87;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+
+   function on88A(){
+            console.log("88 ended");
+            audio_index = 88;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on89A(){
+            console.log("89 ended");
+            audio_index = 89;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on90A(){
+            console.log("90 ended");
+            audio_index = 90;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on91A(){
+            console.log("91 ended");
+            audio_index = 91;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on92A(){
+            console.log("92 ended");
+            audio_index = 92;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on93A(){
+            console.log("93 ended");
+            audio_index = 93;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on94A(){
+            console.log("94 ended");
+            audio_index = 94
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on95A(){
+            console.log("95 ended");
+            audio_index = 95;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on96A(){
+            console.log("96 ended");
+            audio_index = 96;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on97A(){
+            console.log("97 ended");
+            audio_index = 97;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on98A(){
+            console.log("98 ended");
+            audio_index = 98;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on99A(){
+            console.log("99 ended");
+            audio_index = 99;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+
+   function on100A(){
+            console.log("100 ended");
+            audio_index = 100;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on101A(){
+            console.log("101 ended");
+            audio_index = 101;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on102A(){
+            console.log("102 ended");
+            audio_index = 102;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on103A(){
+            console.log("103 ended");
+            audio_index = 103;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on104A(){
+            console.log("104 ended");
+            audio_index = 104;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on105A(){
+            console.log("105 ended");
+            audio_index = 105;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on106A(){
+            console.log("106ended");
+            audio_index = 106;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on107A(){
+            console.log("107 ended");
+            audio_index = 107;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on108A(){
+            console.log("108 ended");
+            audio_index = 108;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on109A(){
+            console.log("109 ended");
+            audio_index = 109
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on110A(){
+            console.log("110 ended");
+            audio_index =110;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on111A(){
+            console.log("111 ended");
+            audio_index = 111;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+  function on112A(){
+            console.log("112 ended");
+            audio_index = 112;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on113A(){
+            console.log("113 ended");
+            audio_index = 113;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on114A(){
+            console.log("114 ended");
+            audio_index = 114;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on115A(){
+            console.log("115 ended");
+            audio_index = 115;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on116A(){
+            console.log("116 ended");
+            audio_index = 116;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on117A(){
+            console.log("117 ended");
+            audio_index = 117;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on118A(){
+            console.log("118 ended");
+            audio_index = 118;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on119A(){
+            console.log("119 ended");
+            audio_index = 119;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on120A(){
+            console.log("120 ended");
+            audio_index = 120
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on121A(){
+            console.log("121 ended");
+            audio_index =121;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on122A(){
+            console.log("122 ended");
+            audio_index = 122;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+
+
+   function on123A(){
+            console.log("123 ended");
+            audio_index = 123;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on124A(){
+            console.log("124 ended");
+            audio_index = 124;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on125A(){
+            console.log("125 ended");
+            audio_index = 125;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on126A(){
+            console.log("126 ended");
+            audio_index = 126;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on127A(){
+            console.log("127 ended");
+            audio_index = 127;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on128A(){
+            console.log("105 ended");
+            audio_index = 128;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on129A(){
+            console.log("129 ended");
+            audio_index = 129;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on130A(){
+            console.log("130 ended");
+            audio_index = 130;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on131A(){
+            console.log("131 ended");
+            audio_index = 131;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on132A(){
+            console.log("32 ended");
+            audio_index = 132
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on133A(){
+            console.log("133 ended");
+            audio_index =133;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on134A(){
+            console.log("34 ended");
+            audio_index = 134;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+  function on135A(){
+            console.log("135 ended");
+            audio_index = 135;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on136A(){
+            console.log("136 ended");
+            audio_index = 136;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on137A(){
+            console.log("137 ended");
+            audio_index = 137;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on138A(){
+            console.log("138 ended");
+            audio_index = 138;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on139A(){
+            console.log("139 ended");
+            audio_index = 139;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on140A(){
+            console.log("140 ended");
+            audio_index = 140;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on141A(){
+            console.log("141 ended");
+            audio_index = 141;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on142A(){
+            console.log("142 ended");
+            audio_index = 142;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on143A(){
+            console.log("143 ended");
+            audio_index = 143
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
+   function on144A(){
+            console.log("144 ended");
+            audio_index =144;
+            audio_player.setAttribute("src", audio_directory[audio_index]);
+            audio_player.play();
+}
+
 
 
 
