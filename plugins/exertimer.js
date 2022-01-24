@@ -626,7 +626,6 @@ function whichSlalomsm() {
 
 x = 600;  // x Seconds
 document.clock.alarmOnOff[1].checked = true;
-document.clock.alarmOnOff[2].checked = fals;
 document.clock.jbSlalom.checked = false;
 document.clock.xlSlalom.checked = false;
 document.clock.lgSlalom.checked = false;
