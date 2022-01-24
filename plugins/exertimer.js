@@ -192,7 +192,7 @@ function _timer2(callback)
 
 // var d=new Date();
 //    d.getTime();
-    var time2 =  Date.now() - Date.now();  //  The default time of the timer
+    var time2 =  Date.now() - Date.now(new Date());  //  The default time of the timer
     var mode = 1;     //    Mode: count up or count down
     var status = 0;    //    Status: timer is running or stoped
     var timer2_id;    //    This is used by setInterval function
@@ -244,7 +244,7 @@ function _timer2(callback)
     // Reset the timer to zero or reset it to your own custom time ex. reset to zero second timer.reset(0)
     this.reset =  function(sec)
     {
-        sec = ((Date.now() + 1) - Date.now())/1000 ? sec : 0;
+        sec = (Date.now() - Date.now(new Date()))/1000 ? sec : 0;
         time2 = sec;
         generateTime2(time2);
     }
@@ -283,7 +283,7 @@ console.log('starting timer...');
 
 setTimeout(() => {
   const millis = Date.now() - start;
-  $('div.timer3 span.second').html(millis);
+ // $('div.timer3 span.millis').html(millis);
 
   console.log(`seconds elapsed = ${Math.floor(millis / 1000)}`);
   // expected output: seconds elapsed = 10
@@ -298,9 +298,9 @@ setTimeout(() => {
     function generateTime2()
        {
         var milli =  time2;
-        var second = Math.floor(time2 / 100);
-        var minute = Math.floor(time2 / 6000) % 60;
-        var hour = Math.floor(time2 / 360000) % 24;
+        var second = Math.floor((time2/100) % 60 );
+        var minute = Math.floor((time2 / 6000) % 60);
+        var hour = Math.floor((time2 / 360000) % 24);
         
         milli = (milli < 10) ? '0'+milli : milli;
         second = (second < 1000) ?  RemainingTime - second: second;
@@ -400,6 +400,7 @@ function GetTime() {
 var dt = new Date();
 var clock = document.clock.local.value;
 var alarm = document.clock.DalarmTime.value;
+//var RT = document.clock.RT.value;
 // format the years
 if ((dayTimeR.length) == 1) {
 dayTimeR = "000" + dayTimeR;}
@@ -412,7 +413,8 @@ dayTimeR = dayTimeR.slice(-4);} // right 4 characters
 // end format
 document.clock.local.value = dt.getFullYear() + "~" + IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()) + "." + IfZero(dt.getMilliseconds().toString().slice(0, 2));  //  
 
-clock = (clock < 10) ? '0'+clock : clock;
+//   clock = (clock < 10) ? '0'+clock : clock;
+
 
 $('div.dispclock span.clock').html(clock);
 
@@ -421,6 +423,12 @@ curTimeD = (IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero
 document.clock.DalarmTime.value = alarmTime;
 
 $('div.dispclock span.alarm').html(alarm);
+
+//remT = (IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()));
+//document.clock.RT.value = RT;
+
+//$('div.timer2 span.RT').html(RT);
+
 
 
 curTime = (IfZero(aDays) + "~" + IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()));
@@ -439,6 +447,9 @@ document.clock.secctrRD.value = secctrR; // Display up to 24 hours of Elapsed Ti
 	secctrR = 0; // reset Elapsed Ticks
 	}
   }
+
+ 
+  
 }
 
 
@@ -493,7 +504,7 @@ document.clock.snoozeOptD.value = "0";
 document.clock.snoozeOptH.value = "0";
 document.clock.snoozeOptM.value = "0";
 document.clock.snoozeOptS.value = "0";
-document.clock.messagesD.value = "The Alert Off button has been clicked and the ALERT player deactivated! You should not hear it!        ";
+document.clock.messagesD.value = "The Alert Off button has been clicked and the ALERT player deactivated! You should not hear it!";
 secctrR = 0; // reset
 RemainingTime = 0; // reset
 dayTimeR = 0; // reset
@@ -561,6 +572,8 @@ document.clock.messagesD.value = "days "+dayNum+" hours "+hourNum+" minutes "+mi
 // var snoozeM = set up the input
 //
 //var snooze = new Date();
+
+
 alarmOn();
 timer2.reset(00);
 timer.mode(1);
@@ -570,11 +583,11 @@ timer2.start(10);
 
 }
 
+
 function audiotrigger()  {
     snooze();
     timer.mode(1);
     timer.start(10);
-    
 
 }
 
@@ -594,6 +607,8 @@ document.clock.noSlalom.checked = false;
 document.clock.snoozeOptM.value = "15";
 TypeMessage = "15 Minute ";
 snooze();
+RemainingTime = 900;
+
 timer2.reset(00);
 timer.mode(1);
 timer.start(10);
@@ -604,15 +619,14 @@ timer2.start(10);
 setTimeout(whichSlalomcl, x*10000/10);
 }
 whichSlalomcl();
-timer.start(10); // execute function
-timer2.start(10);
-timer2.reset(00);
+             // execute function
 
 
 function whichSlalomsm() {
 
 x = 600;  // x Seconds
-document.clock.alarmOnOff[1].checked = false;
+document.clock.alarmOnOff[1].checked = true;
+document.clock.alarmOnOff[2].checked = fals;
 document.clock.jbSlalom.checked = false;
 document.clock.xlSlalom.checked = false;
 document.clock.lgSlalom.checked = false;
@@ -624,6 +638,8 @@ document.clock.noSlalom.checked = false;
 document.clock.snoozeOptM.value = "10";
 TypeMessage = "10 Minute ";
 snooze();
+RemainingTime = 600;
+
 timer2.reset(00);
 timer.mode(1);
 timer.start(10);
@@ -634,9 +650,7 @@ timer2.start(10);
 setTimeout(whichSlalomsm, x*10000/10);
 }
 whichSlalomsm();
-timer.start(10); // execute function
-timer2.start(10);
-timer2.reset(00);
+         // execute function
 
 function whichSlalomme() {
 
@@ -653,6 +667,8 @@ document.clock.noSlalom.checked = false;
 document.clock.snoozeOptM.value = "5";
 TypeMessage = "5 Minute ";
 snooze();
+RemainingTime = 300;
+
 timer2.reset(00);
 timer.mode(1);
 timer.start(10);
@@ -663,9 +679,6 @@ timer2.start(10);
 setTimeout(whichSlalomme, x*10000/10);
 }
 whichSlalomme();
-timer.start(10); // execute function
-timer2.start(10);
-timer2.reset(00);
 
 
 function whichSlalomlg() {
@@ -683,6 +696,8 @@ document.clock.noSlalom.checked = false;
 document.clock.snoozeOptM.value = "3";
 TypeMessage = "3 Minute ";
 snooze();
+RemainingTime = 180;
+
 timer2.reset(00);
 timer.mode(1);
 timer.start(10);
@@ -692,9 +707,6 @@ timer2.start(10);
 setTimeout(whichSlalomlg, x*10000/10);
 }
 whichSlalomlg();
-timer.start(10); // execute function
-timer2.start(10);
-timer2.reset(00);
 
 
 function whichSlalomxl() {
@@ -712,6 +724,8 @@ document.clock.noSlalom.checked = false;
 document.clock.snoozeOptM.value = "2";
 TypeMessage = "2 Minute ";
 snooze();
+
+
 timer2.reset(00);
 timer.mode(1);
 timer.start(10);
@@ -722,9 +736,6 @@ timer2.start(10);
 setTimeout(whichSlalomxl, x*10000/10);
 }
 whichSlalomxl(); // execute function
-timer.start(10);
-timer2.start(10);
-timer2.reset(00);
 
 
 
@@ -742,7 +753,9 @@ document.clock.wmSlalom.checked = false;
 document.clock.noSlalom.checked = false;
 document.clock.snoozeOptM.value = "1";
 TypeMessage = "1 Minute ";
+
 snooze();
+
 timer2.reset(00);
 timer.mode(1);
 timer.start(10);
@@ -752,14 +765,13 @@ timer2.start(10);
 setTimeout(whichSlalomjb, x*10000/10);
 }
 whichSlalomjb(); // execute function
-timer.start(10);
-timer2.start(10);
-timer2.reset(00);
 
 
 function whichSlalomwm() {
 
 x = 30;  // x Seconds
+
+
 document.clock.alarmOnOff[1].checked = false;
 document.clock.jbSlalom.checked = false;
 document.clock.xlSlalom.checked = false;
@@ -769,25 +781,29 @@ document.clock.smSlalom.checked = false;
 document.clock.clSlalom.checked = false;
 document.clock.wmSlalom.checked = true;
 document.clock.noSlalom.checked = false;
-document.clock.snoozeOptS.value = "30";
 TypeMessage = "30 Second ";
-snooze();
+document.clock.snoozeOptS.value = "30";
+
+
 timer2.reset(00);
 timer.mode(1);
 timer.start(10);
 timer2.mode(1);
 timer2.start(10);
 
-
+snooze();
 
 setTimeout(whichSlalomwm, x*10000/10);
 }
 whichSlalomwm(); // execute function
-timer.start(10);
-timer2.start(10);
-timer2.reset(00);
+
+
 
 function whichSlalomno() {
+
+
+
+document.clock.alarmOnOff[1].checked = false;
 document.clock.jbSlalom.checked = false;
 document.clock.xlSlalom.checked = false;
 document.clock.lgSlalom.checked = false;
@@ -795,11 +811,20 @@ document.clock.meSlalom.checked = false;
 document.clock.smSlalom.checked = false;
 document.clock.clSlalom.checked = false;
 document.clock.wmSlalom.checked = false;
-document.clock.noSlalom.checked = true;
+document.clock.noSlalom.clicked = true;
 document.clock.snoozeOptS.value = "0";
-document.clock.messagesD.value = "";
-TypeMessage = "Time Select Seconds"
-alarmOff();
+document.clock.snoozeOptM.value = "0";
+document.clock.messagesD.value = "The None button has been clicked and the ALERT player deactivated! You should not hear it!";
+secctrR = 0; // reset
+RemainingTime = 0; // reset
+dayTimeR = 0; // reset
+alarmTime="0000~00:00:00"; // reset
+
+timer.stop();
+timer2.stop();
+timer.reset(0);
+timer2.reset(0);
+
 }
 
 
