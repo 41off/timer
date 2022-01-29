@@ -62,16 +62,21 @@ $( function() {
   } );
 
 $( function() {
-    $( ".timer" ).resizable();
+    $( ".timer5" ).resizable();
   } );
  
 $( function() {
-    $( "#table" ).resizable({axis :"x"});
+    $( "#table2" ).resizable({axis :"x"});
   } );
   
 $( function() {
     $( ".popover" ).resizable();
   } );
+  
+  $( function() {
+    $( ".timer6" ).resizable();
+  } );
+
  
 
   

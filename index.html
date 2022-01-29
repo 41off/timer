@@ -25,14 +25,6 @@
  
  <script type="text/javascript" src="plugins/exertimer-drag.popover.closebtn.js"></script>
 
-	<style type="text/css">
-	.auto-style1 {
-		border-style: solid;
-		border-width: 3px;
-	background-color: #8B0000;
-}
-	</style>
-
 </head>
 
 <bgSound id="sound">
@@ -44,7 +36,7 @@ window.addEventListener("load", function B() { onloadA() })
 </script>
 
 
-<body onLoad="GetTime(); timer.reset(0000); timer2.reset(0); _timer2(callback)">
+<body onLoad="GetTime();">
 
         <div id="video">
        <div class="popdiv"> 
@@ -303,7 +295,7 @@ window.addEventListener("load", function B() { onloadA() })
             <span class="closebtn2">&times;</span>
             <span title="Drag Clock elsewhere as needed" class="drag">&nbsp;&#10016;</span>
             <span class="clock" class="milli"></span><br>
-            <span class="alarm"></span>
+            <span class="aDays">Days<b>&#8620;</b></span><span class="alarm"></span>
        </div>
   <!--
        <div class="dispalarm">
@@ -331,8 +323,8 @@ window.addEventListener("load", function B() { onloadA() })
        
        <div class="timer2">
             <span class="closebtn2">&times;&nbsp;</span>
-            <span title="Drag Timer elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
-            <span class="second"></span>
+            <span title="Drag Counter elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
+            <span class="hour"></span><span class="minute"></span><span class="second">00</span>
 
        </div>
 
@@ -344,9 +336,9 @@ window.addEventListener("load", function B() { onloadA() })
 
 <div id="table">
 
-<TABLE ALIGN="left" CELLPADDING=2 BORDER-STYLE="double" BORDER-RADIUS="10vmin" cellspacing="1" class="auto-style1">
+<TABLE ALIGN="left" BORDER-STYLE="double" BORDERRADIUS="5vmin" BORDERCOLOR="transparent" cellspacing="1" class="auto-style1" style="width: 80%">
 
-<tr align="center" BGCOLOR="gray">
+<tr align="center" BGCOLOR="transparent">
 <td colspan="2" style="height: 30px">
 <nobr>
 Choose Repeating Preset&nbsp;&nbsp;&nbsp;&nbsp;
@@ -362,7 +354,17 @@ Choose Repeating Preset&nbsp;&nbsp;&nbsp;&nbsp;
 </td>
 </tr>
 
-<tr align="center" BGCOLOR="gray">
+<tr align="center" BGCOLOR="transparent">
+<td colspan="2" align="center" style="height: 30">
+&nbsp;Set Alert Time For<nobr>&nbsp;&nbsp;&nbsp;Days&nbsp;<input type="text" name="snoozeOptD" size="5" maxlength="5" value="0" onFocus="clear_field(this)">
+&nbsp;Hours&nbsp;<input type="text" name="snoozeOptH" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;Minutes&nbsp;<input type="text" name="snoozeOptM" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;Seconds&nbsp;<input type="text" name="snoozeOptS" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;<input type="button" value=" Start " onClick="snooze() + timer.start(10)"></nobr>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="timerbutton timerbutton1" onClick="timer.reset(0)">Reset</button>
+<span title="Drag TimerTable elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;&nbsp;&nbsp;</span>
+</td>
+</tr>
+
+
+<tr align="center" BGCOLOR="transparent">
 <td style="height: 30px">
 &nbsp;Your&nbsp;Local&nbsp;System&nbsp;Alarm&nbsp;Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<nobr><input type="text" name="Dstatus" size="8" maxlength="8" value="0" readonly></nobr></td>
 
@@ -370,17 +372,11 @@ Choose Repeating Preset&nbsp;&nbsp;&nbsp;&nbsp;
 <td style="height: 30px">
 Alert On <input type="checkbox" name="alarmOnOff" onClick="alarmOn()"> 
 Alert Off <input type="radio" name="alarmOnOff" onClick="alarmOff()"> 
-On Now <input type="radio" name="alarmOnNow" onClick="alarmNow()">
-<span title="Drag TimerTable elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span><!--  Mute <input type="radio" name="muteOn" onClick="muteNow()"> -->
+On Now <input type="radio" name="alarmOnNow" onClick="alarmNow()">  <!--  Mute <input type="radio" name="muteOn" onClick="muteNow()"> -->
 </tr>
 
-<tr align="center" BGCOLOR="gray">
-<td colspan="2" align="centert" style="height: 30">
-&nbsp;Set Alert Time For<nobr>&nbsp;&nbsp;&nbsp;Days&nbsp;<input type="text" name="snoozeOptD" size="5" maxlength="5" value="0" onFocus="clear_field(this)">
-&nbsp;Hours&nbsp;<input type="text" name="snoozeOptH" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;Minutes&nbsp;<input type="text" name="snoozeOptM" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;Seconds&nbsp;<input type="text" name="snoozeOptS" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;<input type="button" value=" Start " onClick="snooze() + timer.start(10)"></nobr></td>
-</tr>
 
-<tr align="center" BGCOLOR="gray">
+<tr align="center" BGCOLOR="transparent">
 <td style="height: 30px">
 &nbsp;Your Local System Alarm Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<nobr>
 <input type="text" name="DalarmTime" size="15" maxlength="15" value="0000~00:00:00" readonly></nobr></td>
@@ -389,20 +385,20 @@ On Now <input type="radio" name="alarmOnNow" onClick="alarmNow()">
 </td>
 </tr>
 
-<tr align="center" BGCOLOR="gray">
+<tr align="center" BGCOLOR="transparent">
 <td colspan="2" align=center style="height: 30px">
 <nobr>Messages <input type="text" name="messagesD" size="103" readonly></nobr>
 </td>
 </tr>
 
-<tr align="left" BGCOLOR="gray">
+<tr align="left" BGCOLOR="transparent">
 <td colspan="2" style="height: 30px">
 <nobr>Elapsed Ticks<input type="text" name="secctrRD" size="2" readonly>&nbsp;&nbsp;Day Ticks<input type="text" name="dayTimeRD" size="10" readonly>&nbsp;&nbsp;Ticks Setting<input type="text" name="RemainingTimeRD" size="10" readonly></nobr>
 <nobr>Remaining Ticks<div class="timer3"><span class="second">00</span></div></nobr>
 </td>
 </tr>
 
-<tr align="center" BGCOLOR="darkred">
+<tr align="center" BGCOLOR="transparent">
 <td colspan="2" align=center style="height: 30px">
 Exercise Stretching Audible Alert Timer&nbsp;&nbsp;&nbsp;<nobr><button class="timerbutton timerbutton1" onClick="timer.reset(0)">Reset</button><span title="Drag TimerTable elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span></nobr>
 </td>
