@@ -211,8 +211,8 @@ table {
 #table {
     position:absolute;
     left: 0%;
-    width:auto;
-    height: 25vmin;
+    width:55vw;
+    height: 25vh;
     bottom:3%;
     overflow:visible;
     opacity:0.35;
