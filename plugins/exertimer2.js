@@ -1,4 +1,30 @@
 ﻿
+//var alarmTime = "0000~00:00:00";
+var alarmTime = "0000~00:00:00";
+var aDays = "000";
+var dayTimeR = "0"; // adds days to the current time
+var dayTimeRD = 0; // Displays counter
+var secctrR = 0;  // daily seconds counter
+var secctrRD = 0;  // Displays counter
+var RemainingTime = 0; // countdown timer
+var RemainingTimeRD = 0; // Displays countdown timer
+var curTime;
+var check = new Date();
+var dayNum;
+var hourNum;
+var minNum;
+var secNum;
+var milliNum;
+var cdayNum;
+var chourNum;
+var cminNum;
+var csecNum;
+var cmilliNum;
+var Message = "";
+var TypeMessage = "";
+var snd = new Audio("audio/dogs.mp3"); // buffers automatically when created
+
+
 
 function _timer(callback)
 {
@@ -89,9 +115,9 @@ function _timer(callback)
     function generateTime()
     {
         var milli = time % 100;
-        var second = Math.round(time / 100) % 60;
-        var minute = Math.floor(time / 6000) % 60;
-        var hour = Math.floor(time / 360000) % 24;
+        var second = Math.round((time / 100) % 60);
+        var minute = Math.floor((time / 6000) % 60);
+        var hour = Math.floor((time / 360000) % 24);
         
         milli = (milli < 10) ? '0'+milli : milli;
         second = (second < 10) ? '0'+second : second;
@@ -191,7 +217,7 @@ function _timer2(callback)
                     break;
                     
                     case 1:
-                    if(time2 < 86400000)
+                    if(time2 < 864000)
                     {
                         time2++;
                         generateTime2();
@@ -268,11 +294,12 @@ setTimeout(() => {
 //  var start = new Date();
 //  var _timer2 = null;
   
+ 
     // This methode will render the time variable to hour:minute:second format
     function generateTime2()
        {
         var milli =  time2;
-        var second = Math.floor(time2/100);
+        var second = Math.floor((time2/100) % 86400000 );
         var minute = Math.floor((time2 / 60) % 60);
         var hour = Math.floor((time2 / 3600) % 24);
         
@@ -289,7 +316,6 @@ setTimeout(() => {
     }
 }
 
- 
 
 
 // example use
@@ -369,30 +395,6 @@ document.converter.kph.value=calculated
 
 
 
-//var alarmTime = "0000~00:00:00";
-var alarmTime = "00:00:00";
-var aDays = "000";
-var dayTimeR = "0"; // adds days to the current time
-var dayTimeRD = 0; // Displays counter
-var secctrR = 0;  // daily seconds counter
-var secctrRD = 0;  // Displays counter
-var RemainingTime = 0; // countdown timer
-var RemainingTimeRD = 0; // Displays countdown timer
-var curTime;
-var check = new Date();
-var dayNum;
-var hourNum;
-var minNum;
-var secNum;
-var milliNum;
-var cdayNum;
-var chourNum;
-var cminNum;
-var csecNum;
-var cmilliNum;
-var Message = "";
-var TypeMessage = "";
-var snd = new Audio("audio/dogs.mp3"); // buffers automatically when created
 
 function GetTime() {
 var dt = new Date();
@@ -437,7 +439,7 @@ if (alarmTime > curTime) {document.clock.Dstatus.value = "Counting";
 secctrR = secctrR + 1;
  
 document.clock.secctrRD.value = secctrR; // Display up to 24 hours of Elapsed Ticks
-	if (secctrR == 86399){
+	if (secctrR == 86399000){
 	dayTimeR = dayTimeR + 1; // add a day to Day Ticks
 	document.clock.dayTimeRD.value = dayTimeR; // Display
 	secctrR = 0; // reset Elapsed Ticks
@@ -471,7 +473,7 @@ if (document.clock.alarmSound.value == "") {document.all.sound.src = "";}
   }
  
 else {
-setTimeout("alarmOn()", 1000)
+setTimeout("alarmOn()", 100)
    }
 }
 
@@ -500,7 +502,7 @@ document.clock.messagesD.value = "The Alert Off button has been clicked and the 
 secctrR = 0; // reset
 RemainingTime = 0; // reset
 dayTimeR = 0; // reset
-alarmTime="0000~00:00:00"; // reset
+alarmTime="Days &#8620; 0000~00:00:00"; // reset
 }
 
 function alarmNow() {
@@ -543,7 +545,7 @@ var dayNumS = parseInt(dayNum).toString();
 var hourNumS = parseInt(hourNum).toString();
 var minNumS = parseInt(minNum).toString();
 var secNumS = parseInt(secNum).toString();
-var milliNumS = parseInt(milliNum).toString(2);      //   toString( date.getMilliseconds(), 3 )
+var milliNumS = parseInt(milliNum).toString();      //   toString( date.getMilliseconds(), 3 )
 if ((milliNumS.length) == 3) {
 milliNumS = "0" + milliNumS;}
 if ((secNumS.length) == 1) {
@@ -760,7 +762,7 @@ timer.start(10);
 timer2.mode(1);
 timer2.start(10);
 
-setTimeout(whichSlalomjb, 60000);
+setTimeout(whichSlalomjb,  x*1000);
 }
 whichSlalomjb(); // execute function
 timer.start(10);
@@ -791,7 +793,7 @@ timer2.start(10);
 
 
 
-setTimeout(whichSlalomwm, 30000);
+setTimeout(whichSlalomwm,  x*1000);
 }
 whichSlalomwm(); // execute function
 timer.start(10);
@@ -808,12 +810,13 @@ document.clock.clSlalom.checked = false;
 document.clock.wmSlalom.checked = false;
 document.clock.noSlalom.checked = true;
 document.clock.snoozeOptS.value = "0";
-document.clock.messagesD.value = "";
+document.clock.messagesD.value = "Stop";
 TypeMessage = "Time Select Seconds"
 alarmOff();
 }
 
 
+var repeatTimes = 20000;
 
 function XTimes(callback, interval, repeatTimes) {
     let repeated = 0;
@@ -833,8 +836,8 @@ function XTimes(callback, interval, repeatTimes) {
 function clear_field(field) {
                 if (field.value==field.defaultValue) {
                         field.value=''
-                }
-        }
+    }
+}
 
 // -->
 
