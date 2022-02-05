@@ -489,7 +489,7 @@ table {
     left:1%;
     padding-left: 0.5vmin;
     padding-right: 0.5vmin;
-    top: 0.5%;
+    top: 8%;
     z-index:31;
     
 /*   column-count:2;
@@ -563,7 +563,7 @@ table {
     left:1%;
     padding-left: 2px;
     padding-right: 2px;
-    top: 6%;
+    top:4%;
     z-index:19;
 
 }
@@ -594,7 +594,7 @@ table {
     left:1%;
     padding-left: 2px;
     padding-right: 2px;
-    top: 10%;
+    top: 0%;
     z-index:21;
 
 }
