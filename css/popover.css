@@ -368,7 +368,7 @@ a:active { text-decoration: none; }
 
 li {
 list-style-image: url('../images/bluesm.png');
-margin-left:10px;
+margin-left:1.5vmin;
 
  
 } 
@@ -377,6 +377,19 @@ li span {
   list-style-image: url('../images/bluesm.png');
 
 } 
+
+li3 {
+  height:96%;
+  width:100%;
+  bottom:2%;
+  margin-left:0vmin;
+  column-count: 3;
+ 
+  column-width: 33%;
+  display:inline-block;
+
+} 
+
 
 
 uk {
@@ -415,9 +428,23 @@ uk {
   column-width: 20%;
   display:inline-block;
   margin-left:2%;
-
-	
 }
+
+.ukcont3 {
+  height:98%;
+  width:100%;
+  top:0.5%;
+  bottom:1.5%;
+  column-count: 3;
+  column-gap: 0vmin;
+  column-rule-style: groove;
+  column-rule-width:0.5vmin;
+  column-rule: 0.5vmin solid red; 
+  column-width: 33%;  
+  margin-left:2vmin;
+  
+}
+
 
 
 

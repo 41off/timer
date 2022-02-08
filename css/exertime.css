@@ -136,34 +136,34 @@
 
 embed {
   position: absolute;
-  border: 2px;
+  border: 0.6vmin;
   border-color:transparent;
   border-style:solid;
-  border-radius: 4px;
-  float:left;
-  width: 100%;
-  height:99%;
-  padding-bottom: 0px;
-  margin-right:1%;
-  margin-left:0%;
-  margin-top: 0.25%;
-  margin-bottom:0.25%;
+  border-radius: 0.6vmin;  
+  width: 30%;
+  height:85%;
+  padding-bottom: 0vmin;
+  padding-left:0vmin;
+  margin-right:0.4;
+  margin-left:0.8%;
+  margin-top: 1%;
+  margin-bottom:1%;
   overflow:hidden;
 
 }
 
 iframe {
   position: absolute;
-  border: 0.2vmin;
+  border: 0.6vmin;
   border-color:transparent;
   border-style:solid;
-  border-radius: 0.6vmin;
-  float:left;
-  width: 84%;
+  border-radius: 0.6vmin;  
+  width: 30%;
   height:85%;
   padding-bottom: 0vmin;
-  margin-right:8%;
-  margin-left:8%;
+  padding-left:0vmin;
+  margin-right:0.4;
+  margin-left:0.8%;
   margin-top: 1%;
   margin-bottom:1%;
   overflow:hidden;
