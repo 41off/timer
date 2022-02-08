@@ -125,10 +125,10 @@ function _timer(callback)
         hour = (hour < 10) ? '0'+hour : hour;
         
         
-        $('div.timer span.milli').html(milli);
-        $('div.timer span.second').html(second);
-        $('div.timer span.minute').html(minute);
-        $('div.timer span.hour').html(hour);
+        $('div.dispclock span.milli').html(milli);
+        $('div.dispclock span.second').html(second);
+        $('div.dispclock span.minute').html(minute);
+        $('div.dispclock span.hour').html(hour);
        
     }
 }
@@ -308,8 +308,8 @@ setTimeout(() => {
         minute = (minute < 90) ? '0'+minute : minute;
         hour = (hour < 10) ? '0'+hour : hour;
         
-       $('div.timer2 span.milli').html(milli);
-       $('div.timer2 span.second').html(second);
+       $('div.timer4 span.milli').html(milli);
+       $('div.timer4 span.second').html(second);
        $('div.timer3 span.second').html(second);
        $('div.timer3 span.minute').html(minute);
        $('div.timer3 span.hour').html(hour);
@@ -338,10 +338,6 @@ $(document).ready(function(e)
   }
 );
 
-
-
-
-    
 
 //calculate function
 function calc(){
@@ -391,9 +387,6 @@ var calculated = Math.round(meterspersecond * 36)/10
 //write in text box
 document.converter.kph.value=calculated
 }
-
-
-
 
 
 function GetTime() {

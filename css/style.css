@@ -211,30 +211,27 @@ table {
 #table {
     position:absolute;
     left: 0%;
-    width:55vw;
-    height: 25vh;
+    width:auto;
+    height: auto;
+    max-height:20%;
     bottom:3%;
     overflow:visible;
     opacity:0.35;
     z-index:9;
     font-size: 1vmin;
-    line-height:1vmin;
     border:0.5vmin;
     border-style:double;
     border-color:transparent;
     border-radius:1.5vmin;
-    
-   
-
-
+    padding-bottom:1.5vmin;
+    padding: 1vmin 1vmin;
 }
 
 #table:hover {
     opacity:1.0; 
     transition:1s;
     background-color:#F8B229;
-    border-color:silver;
-   
+    border-color:silver;   
     animation: fadeout 8s;
    -webkit-animation: fadeout 8s;
    -moz-animation: fadeout 8s;
@@ -451,13 +448,10 @@ table {
 	
 	
 .drag {
-    background:transparent;
-    margin-right:2px;
-    margin-left:2px;
+    padding-left:0.2vmin;
     color: red;
     font-weight: bold;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 2vmin;
     cursor: move;
     transition: 3s;
     float:right
@@ -469,27 +463,29 @@ table {
 
 
 .dispclock {
-    content:"0000~00:00:00:000";
+    background: -webkit-linear-gradient(top, gray, black);
+    text-shadow: 0.1vmin 0.1vmin black;
+    display:inline-block;   
     background-color: black;
     transition: opacity 3s;
-    border:5px #666666 solid;
-    border-radius: 6px;
-    border-style:double;
+    border-width:0.8vmin;
+    border: #999;
+    border-radius: .8vmin;
+    border-style:groove;
     height:auto;
-    width:auto;
-    min-width:14%;
+    width:auto;   
     font-size:2vmin;
-    line-height:2vmin;
+    line-height:3vmin;
     font-family:"Verdana";
     text-align:center;
     color: white;
-    margin:1px;
+    margin:0.1vmin;
     position:absolute;    
-    padding-top:0.5vmin;
-    left:1%;
-    padding-left: 0.5vmin;
-    padding-right: 0.5vmin;
-    top: 8%;
+    padding-top:0vmin;
+    padding-left:0.5vmin;
+    padding-right:0.5vmin;
+    left:0%;    
+    top: 58%;
     z-index:31;
     
 /*   column-count:2;
@@ -505,10 +501,10 @@ table {
 
 }
 .dispclock:hover {
-    border:5px red solid;
-    border-radius: 6px;
-    background-color: silver; 
-    color: black;
+  border: red double;
+  background: -webkit-linear-gradient(top, lightyellow, lightpink);
+  text-shadow: 0.1vmin 0.1vmin silver;
+  color:black;
 }
 
 .dispalarm {
@@ -610,7 +606,6 @@ table {
     transition: opacity 2s;
     border:2px white double;
     border-radius: 4px;
-    
     height:auto;
     width: auto;
     line-height:20px;
@@ -634,6 +629,18 @@ table {
 
 }
 
+.timer4 {
+color:yellow;
+font-weight:800;
+font-size:2.75vmin;
+text-shadow: 0.15vmin 0.15vmin silver;
+padding: 0.75vmin 0.75vmin;
+}
+
+
+.timer4:hover {
+color:red;   
+}
 
 
 .convertor {

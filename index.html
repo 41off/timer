@@ -146,7 +146,7 @@ window.addEventListener("load", function B() { onloadA() })
 </div>
 ">IAD</button>
      
-     
+<!--     
   <button class="popmenu" title="Spotify New Jack Swing...&#8608;&nbsp;requires Spotify login credentials" data-toggle="popover" data-placement="right" data-html="true" 
      data-content= "<iframe style='border-radius:12px' src='https://open.spotify.com/embed/playlist/37i9dQZF1E4kPvQC1s4IDt?utm_source=generator' width='100%' height='96%' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media;      
         fullscreen; picture-in-picture'></iframe>">Spot1</button>
@@ -155,12 +155,12 @@ window.addEventListener("load", function B() { onloadA() })
   <button class="popmenu" title="Spotify Steely Dan Genre...&#8608;&nbsp;requires Spotify login credentials" data-toggle="popover" data-placement="right" data-html="true" 
      data-content= "<iframe style='border-radius:12px' src='https://open.spotify.com/embed/playlist/37i9dQZF1E4ljikG4oUmEm?utm_source=generator' width='100%' height='96%' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media;      
         fullscreen; picture-in-picture'></iframe>">Spot2</button>
+--> 
         
    <button class="popmenu" title="Spotify Electronic...&#8608;&nbsp;requires Spotify login credentials" data-toggle="popover" data-placement="right" data-html="true" 
-     data-content= "<iframe style='border-radius:12px' src='https://open.spotify.com/embed/playlist/37i9dQZF1E4Dkho0ly3TuR?utm_source=generator' width='100%' height='96%' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media;      
-        fullscreen; picture-in-picture'></iframe>">Spot3</button>       
-     
-     
+     data-content= "<iframe style='border-radius:12px' src='https://open.spotify.com/embed/playlist/0BgubprX6y5VZIy1sydXSI?utm_source=generator' width='100%' height='96%' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media;      
+        fullscreen; picture-in-picture'></iframe>">Playlist</button>  
+        
   <button class="popmenu" title="The Waterski Podcast Hosted by Matteo Luzzerri...&#8608;&nbsp;requires Spotify login credentials" data-toggle="popover" data-placement="right" data-html="true" 
      data-content= "<iframe style='border-radius:12px' src='https://open.spotify.com/embed/playlist/6wjhQO7cD0sKIkfqxYaG4X?utm_source=generator' width='100%' height='96%' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media;      
         fullscreen; picture-in-picture'></iframe>">WSP</button>
@@ -297,70 +297,55 @@ window.addEventListener("load", function B() { onloadA() })
    </div>
 
      <div class="convertor">
-       <span class="closebtn2">&times;</span>
+       <span class="closebtn2" title="Click to close this calculator box">&times;</span>
        <span title="Drag Speed Calculator elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
        <form name="converter">
-          Miles Per Hour&nbsp;<input type="text" size="4" maxlength="10" value="0.00"  name="mph">
+          Miles Per Hour&nbsp;<input type="text" size="3" maxlength="10" value="0.00"  name="mph">
           <input type="button" value="Convert MPH to &#x2192;" onclick="calc(); calc3()">&nbsp;&nbsp;&nbsp;
           <input type="reset" value="reset" >&nbsp;&nbsp;&nbsp;
-          Meters Per Second&nbsp;<input type="text" size="6" maxlength="10" value="0.00"  name="mps">
+          Meters Per Second&nbsp;<input type="text" size="4" maxlength="10" value="0.00"  name="mps">
           <input type="button" value="MPH&#x2190;Convert MPS&#x2192;KPH" onclick="javascript:calc2(); javascript:calc6() ">&nbsp;&nbsp;&nbsp;&nbsp;
           <input type="button" value="&#x2190;Convert KPH to" onclick="javascript:calc4(); javascript:calc5() ">         
-          Kilometers Per Hour&nbsp;<nobr><input type="text" size="4" maxlength="10" value="0.00"  name="kph">&nbsp;</nobr>
+          Kilometers Per Hour&nbsp;<nobr><input type="text" size="3" maxlength="10" value="0.00"  name="kph">&nbsp;</nobr>
        </form>
       </div>
 
-      <div class="dispclock" name="local">
-            <span class="closebtn2">&times;</span>
+      <div class="dispclock">
+            <span class="closebtn2" title="Click to close this timer box">&times;</span>
             <span title="Drag Clock elsewhere as needed" class="drag">&nbsp;&#10016;</span>
-            <span class="clock" class="milli"></span><br>
-              Days&nbsp;<strong>&#8620;</strong>&nbsp;<span class="aDays"></span><span class="alarm"></span>
-       </div>
-  <!--
-       <div class="dispalarm">
-            <span class="closebtn2">&times;</span>
-            <span title="Drag Alarm Time Bar elsewhere as needed" class="drag">&nbsp;&#10016;</span>
-            <span class="alarm"></span>
-       </div>
-       
-       <div class="footer">
-            <span class="closebtn2">&times;</span>
-            <span title="Drag Timer Control bar elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
-            <button class="timerbutton timerbutton4" onClick="timer.mode(1)">Count up</button>  
-            <button class="timerbutton timerbutton2" onClick="timer.start(10)">Go</button> 
-            <button class="timerbutton timerbutton5" onClick="timer.mode(0)">Count down</button>
-            <button class="timerbutton timerbutton3" onClick="timer.stop()">Stop</button>
-            <button class="timerbutton timerbutton1" onClick="timer.reset(0000)">Reset</button>
-        </div>
-   -->
-       
-       <div class="timer">
+            Clock&nbsp;&#8620;&nbsp;<span class="clock" class="milli"></span><br>
+            Days~HH:MM:SS&nbsp;&#8620;&nbsp;<span class="aDays"></span><span class="alarm"></span><br>
+            Counting&nbsp;&#8620;&nbsp;<span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>.<span class="milli">00</span>
+         <div class="timer4">
+          T-Minus&nbsp;&#8620;&nbsp;<span class="second">0</span>"
+         </div>
+      </div>
+      
+<!-- 
+     <div class="timer">
             <span class="closebtn2">&times;</span>
             <span title="Drag Timer elsewhere as needed" class="drag">&nbsp;&#10016;</span>
             <span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>.<span class="milli">00</span>
-       </div>
+     </div>
        
-       <div class="timer2">
+     <div class="timer2">
             <span class="closebtn2">&times;&nbsp;</span>
             <span title="Drag Counter elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
             <span class="hour"></span><span class="minute"></span><span class="second">0</span>
+     </div>
+-->
 
-       </div>
-
-       
-     
-
-
-<form name="clock">
 
 <div id="table">
+
+<form name="clock">
 
 <TABLE ALIGN="left" BORDER-STYLE="double" BORDERRADIUS="5vmin" BORDERCOLOR="transparent" cellspacing="1" class="auto-style1" style="width: 100%">
 
 <tr align="center" BGCOLOR="transparent">
 <td colspan="2" style="height: 30px">
 <nobr>
-Choose Repeating Preset&nbsp;&nbsp;&nbsp;&nbsp;
+Choose Repeating Preset&nbsp;&nbsp;
 <input type="radio" name="wmSlalom" onClick="whichSlalomwm()">30 Seconds
 <input type="radio" name="jbSlalom" onClick="whichSlalomjb()">1 Minute  
 <input type="radio" name="xlSlalom" onClick="whichSlalomxl()">2 Minutes
@@ -368,7 +353,7 @@ Choose Repeating Preset&nbsp;&nbsp;&nbsp;&nbsp;
 <input type="radio" name="meSlalom" onClick="whichSlalomme()">5 Minutes  
 <input type="radio" name="smSlalom" onClick="whichSlalomsm()">10 Minutes   
 <input type="radio" name="clSlalom" onClick="whichSlalomcl()">15 Minutes  
-<input type="radio" name="noSlalom" onClick="whichSlalomno();" checked>Delay Fx() 
+<input type="checkbox" name="noSlalom" onClick="whichSlalomno();" checked>Delay Fx() 
 </nobr>
 </td>
 </tr>
@@ -397,16 +382,16 @@ On Now <input type="radio" name="alarmOnNow" onClick="alarmNow()">  <!--  Mute <
 
 <tr align="center" BGCOLOR="transparent">
 <td style="height: 30px">
-&nbsp;Your Local System Alarm Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<nobr>
-<input type="text" name="DalarmTime" size="15" maxlength="15" value="0000~00:00:00" readonly></nobr></td>
+&nbsp;Your Local System Alarm Time&nbsp;&nbsp;&nbsp;<nobr>
+<input name="DalarmTime" ></nobr></td>
 <td style="height: 30px">
-&nbsp;Your&nbsp;Local&nbsp;System&nbsp;Clock&nbsp;Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input size="15" maxlength="15" name="local" readonly>
+&nbsp;Your&nbsp;Local&nbsp;System&nbsp;Clock&nbsp;Time&nbsp;&nbsp;&nbsp;<input name="local" >
 </td>
 </tr>
 
 <tr align="center" BGCOLOR="transparent">
 <td colspan="2" align=center style="height: 30px">
-<nobr>Messages <input type="text" name="messagesD" size="103" readonly></nobr>
+<nobr>Messages <input type="text" name="messagesD" size="90" readonly></nobr>
 </td>
 </tr>
 
@@ -417,18 +402,19 @@ On Now <input type="radio" name="alarmOnNow" onClick="alarmNow()">  <!--  Mute <
 </td>
 </tr>
 
+<!--
 <tr align="center" BGCOLOR="transparent">
 <td colspan="2" align=center style="height: 30px">
 Exercise Stretching Audible Alert Timer&nbsp;&nbsp;&nbsp;<nobr><button class="timerbutton timerbutton1" onClick="timer.reset(0)">Reset</button><span title="Drag TimerTable elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span></nobr>
 </td>
 </tr>
+-->
 
 </TABLE>
 
-  </div>
+</form>
 
- </form>
- 
+</div>
  
 <div class="aud">
 
