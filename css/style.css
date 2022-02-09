@@ -668,7 +668,7 @@ table {
   border: #999;
   border-radius: 1vmin;
   border-style:groove;
-  z-index:29; 
+ 
  
 }
 
@@ -676,8 +676,10 @@ table {
 .timer5:hover {
   color:silver;
   text-shadow: 0.1vmin 0.1vmin red;
-  opacity: 1;
-  transition: opacity 2s  
+  opacity:1;
+  transition: opacity 2s;
+  z-index:33;  
+ 
 }
 
 

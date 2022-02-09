@@ -9,8 +9,8 @@
 
 .popover {
 object-fit:contain;
+z-index:33;
 
-z-index:1;
 padding-right:10px;
 padding-left:0px;
 font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -79,9 +79,11 @@ margin-right:10%;
   height:auto;
   opacity:1.0;
   cursor:move;
+  z-index:33;  
 }
 
 .popover-body {
+    z-index:33;
     overflow: visible;
     white-space:pre-wrap;
     width:98%;
@@ -108,6 +110,7 @@ margin-right:10%;
   height:90%;
   width:98%;
   overflow-x:scroll;
+  z-index:33;
  
 
 }
@@ -128,6 +131,7 @@ margin-right:10%;
   border-color:lime;
   transition:1s;
   border-style:groove;
+  z-index:33;
 
 }
 
