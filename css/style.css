@@ -4,6 +4,7 @@ font-size:1.5vmin;
 
 } 
 
+
 /*
 body {
     min-height: 100vh;
@@ -31,6 +32,19 @@ body {
   
 }
 
+
+/* fallback for IE */
+.gradient-text {
+  color: red;
+}
+/* gradient text for modern browsers */
+@supports (background-clip: text) {
+  .gradient-text {
+    background-image: linear-gradient(60deg, #E21143, #FFB03A);
+    background-clip: text;
+    color: transparent;
+  }
+}
 
 @keyframes fadein {
     from { opacity: 0; transition: 2s; }
@@ -219,7 +233,7 @@ table {
     bottom:3%;
     overflow:visible;
     opacity:0.35;
-    z-index:9;
+    z-index:33;
     font-size: 1vmin;
     border:0.5vmin;
     border-style:double;
@@ -489,7 +503,7 @@ table {
     padding-right:0.5vmin;
     left:52.5%;    
     top: 82%;
-    z-index:31;
+    z-index:33;
     
 /*   column-count:2;
     column-width:25%;
@@ -675,6 +689,7 @@ table {
 .timer5:hover {
   color:silver;
   text-shadow: 0.1vmin 0.1vmin red;
+  text-decoration:blink; 
   opacity:1;
   transition: opacity 2s;
   z-index:33;  
