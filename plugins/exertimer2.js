@@ -309,6 +309,7 @@ setTimeout(() => {
         hour = (hour < 10) ? '0'+hour : hour;
         
        $('div.timer4 span.milli').html(milli);
+       $('div.timer5 span.second').html(second);
        $('div.timer4 span.second').html(second);
        $('div.timer3 span.second').html(second);
        $('div.timer3 span.minute').html(minute);
@@ -495,7 +496,7 @@ document.clock.messagesD.value = "The " + TypeMessage + "timer has been delayed!
 
 
 secctrR = 0; // reset
-RemainingTime = 0; // reset
+RemainingTime = 000; // reset
 dayTimeR = 0; // reset
 alarmTime="Days &#8620; 0000~00:00:00"; // reset
 }

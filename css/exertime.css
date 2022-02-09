@@ -93,6 +93,7 @@
     line-height:2vmin;
     cursor:progress;
     transition: 2s;
+    text-shadow: 0.1vmin 0.1vmin black;
 }
 
 .closebtn2:hover {
