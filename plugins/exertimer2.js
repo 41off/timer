@@ -453,10 +453,10 @@ document.clock.messagesD.value = "The " + TypeMessage + "timer has been started 
 if (alarmTime == curTime) {
 snd.play();
 snd.currentTime=0;
-document.clock.Dstatus.value = "Complete";
-document.clock.RemainingTimeRD.value = "Complete";
-document.clock.secctrRD.value = "Complete";
-document.clock.dayTimeRD.value = "Complete";
+document.clock.Dstatus.value = "Pending";
+document.clock.RemainingTimeRD.value = "Zero";
+document.clock.secctrRD.value = "Done";
+document.clock.dayTimeRD.value = "None";
 document.clock.messagesD.value = "The " + TypeMessage + "selected time has been reached and the ALERT player activated! You should hear it!  ";
 document.clock.DalarmTime.value = document.clock.DalarmTime.value + " ON  "; // Displays when alarm turns on and stays on
 document.all.sound.src = document.clock.alarmSound.value;

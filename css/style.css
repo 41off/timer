@@ -301,6 +301,7 @@ table {
 }
 
 .timerbutton {
+    contains: "Running";
     background: -webkit-linear-gradient(top, lightgray, black);
     font-family:Verdana;
     font-size: 1.5vmin;
