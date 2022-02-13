@@ -354,7 +354,7 @@ window.addEventListener("load", function B() { onloadA() })
 <TABLE ALIGN="left" BORDER-STYLE="double" BORDERRADIUS="5vmin" BORDERCOLOR="transparent" cellspacing="1" class="auto-style1" style="width: 100%">
 
 <tr align="center" BGCOLOR="transparent">
-<td colspan="2" style="height: 30px">
+<td colspan="2" style="height: 3vmin">
 <nobr>
 Choose Repeating Preset&nbsp;&nbsp;
 <input type="radio" name="wmSlalom" onClick="whichSlalomwm()">30 Seconds
@@ -369,47 +369,58 @@ Choose Repeating Preset&nbsp;&nbsp;
 </td>
 </tr>
 
-<tr align="center" BGCOLOR="transparent">
-<td colspan="2" align="center" style="height: 30">
-&nbsp;Set Alert Time For<nobr>&nbsp;&nbsp;&nbsp;Days&nbsp;<input type="text" name="snoozeOptD" size="5" maxlength="5" value="0" onFocus="clear_field(this)">
-&nbsp;Hours&nbsp;<input type="text" name="snoozeOptH" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;Minutes&nbsp;<input type="text" name="snoozeOptM" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;Seconds&nbsp;<input type="text" name="snoozeOptS" size="5" maxlength="5" value="0" onFocus="clear_field(this)">&nbsp;<input type="button" value=" Start " onClick="snooze() + timer.start(10)"></nobr>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="timerbutton timerbutton1" onClick="timer.reset(0)">Reset</button>
+<tr align="left" BGCOLOR="transparent">
+<td colspan="2" style="height: 3vmin">
+Set Alert Time For<nobr>&nbsp;&nbsp;&nbsp;Days&#8620;<input type="text" name="snoozeOptD" size="2" maxlength="3" class="timerbutton timerbutton1" value="0" onFocus="clear_field(this)">&nbsp;
+Hours&#8620;<input type="text" name="snoozeOptH" size="2" maxlength="2" class="timerbutton timerbutton1" value="0" onFocus="clear_field(this)">&nbsp;
+Minutes&#8620;<input type="text" name="snoozeOptM" size="2" maxlength="2" class="timerbutton timerbutton1" value="0" onFocus="clear_field(this)">&nbsp;
+Seconds&#8620;<input type="text" name="snoozeOptS" size="2" maxlength="3" class="timerbutton timerbutton1" value="0" onFocus="clear_field(this)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" value="Start"  class="timerbutton timerbutton1" onClick="snooze() + timer.start(10)"></nobr>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="timerbutton timerbutton1" onClick="timer.reset(0)">Reset</button>
 <span title="Drag TimerTable elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;&nbsp;&nbsp;</span>
 </td>
 </tr>
 
 
-<tr align="center" BGCOLOR="transparent">
-<td style="height: 30px">
-&nbsp;Your&nbsp;Local&nbsp;System&nbsp;Alarm&nbsp;Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<nobr><input type="text" name="Dstatus" size="8" maxlength="8" value="0" readonly></nobr></td>
+<tr align="left" BGCOLOR="transparent">
+<td style="height: 3vmin">
+Client&nbsp;Alarm&nbsp;Status&#8620;<input type="text" name="Dstatus" size="6" maxlength="8" value="0" class="timerbutton timerbutton1" readonly>&nbsp;
+Remaining Ticks&#8620;<div class="timer3"><span class="second">00</span></div>
+</td>
 
 
-<td style="height: 30px">
-Alert On <input type="checkbox" name="alarmOnOff" onClick="alarmOn()"> 
-Alert Off <input type="radio" name="alarmOnOff" onClick="alarmOff()"> 
-On Now <input type="radio" name="alarmOnNow" onClick="alarmNow()">  <!--  Mute <input type="radio" name="muteOn" onClick="muteNow()"> -->
-</tr>
-
-
-<tr align="center" BGCOLOR="transparent">
-<td style="height: 30px">
-&nbsp;Your Local System Alarm Time&nbsp;&nbsp;&nbsp;<nobr>
-<input name="DalarmTime" ></nobr></td>
-<td style="height: 30px">
-&nbsp;Your&nbsp;Local&nbsp;System&nbsp;Clock&nbsp;Time&nbsp;&nbsp;&nbsp;<input name="local" >
+<td style="height:3vmin">
+Elapsed Ticks&#8620;<input type="text" name="secctrRD" size="2" class="timerbutton timerbutton1" readonly>&nbsp;&nbsp;
+Ticks Setting&#8620;<input type="text" name="RemainingTimeRD" size="6" class="timerbutton timerbutton1" readonly>
 </td>
 </tr>
 
-<tr align="center" BGCOLOR="transparent">
-<td colspan="2" align=center style="height: 30px">
-<nobr>Messages <input type="text" name="messagesD" size="90" readonly></nobr>
+
+<tr align="left" BGCOLOR="transparent">
+<td style="height: 3vmin">
+Client Alarm Time&#8620;<input name="DalarmTime" size="12" class="timerbutton timerbutton1">
+</td>
+
+<td style="height: 3vmin">
+Client System Clock Time&#8620;<input name="local" size="14"class="timerbutton timerbutton1">&nbsp;
+Days Elapsed&#8620;<input type="text" name="dayTimeRD" size="2" class="timerbutton timerbutton1" readonly>
 </td>
 </tr>
 
 <tr align="left" BGCOLOR="transparent">
-<td colspan="2" style="height: 30px">
-<nobr>Elapsed Ticks<input type="text" name="secctrRD" size="2" readonly>&nbsp;&nbsp;Day Ticks<input type="text" name="dayTimeRD" size="10" readonly>&nbsp;&nbsp;Ticks Setting<input type="text" name="RemainingTimeRD" size="10" readonly></nobr>
-<nobr>Remaining Ticks<div class="timer3"><span class="second">00</span></div></nobr>
+<td colspan="2" style="height: 3vmin">
+<nobr>Messages<input type="text" name="messagesD" size="94" class="timerbutton timerbutton1" readonly></nobr>
+</td>
+</tr>
+
+<tr align="center" BGCOLOR="transparent">
+<td colspan="2" style="height: 3vmin">
+
+Alert On <input type="checkbox" name="alarmOnOff" onClick="alarmOn()"> 
+Alert Off <input type="radio" name="alarmOnOff" onClick="alarmOff()"> 
+On Now <input type="radio" name="alarmOnNow" onClick="alarmNow()">  <!--  Mute <input type="radio" name="muteOn" onClick="muteNow()"> -->
+
 </td>
 </tr>
 

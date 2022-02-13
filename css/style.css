@@ -229,7 +229,7 @@ table {
     left: 0%;
     width:auto;
     height: auto;
-    max-height:20%;
+    max-height:23%;
     bottom:3%;
     overflow:visible;
     opacity:0.35;
@@ -239,7 +239,7 @@ table {
     border-style:double;
     border-color:transparent;
     border-radius:1.5vmin;
-    padding-bottom:1.5vmin;
+    padding-bottom:3vmin;
     padding: 1vmin 1vmin;
 }
 
@@ -310,10 +310,10 @@ table {
     border-radius: 1vmin;
     width: auto; 
     height: auto;
-    padding-bottom:3px;
+    padding-bottom:0.25vmin;
     text-align: center;
-    margin: 1px 1px;
-    margin-top:3px;   
+    margin: 0.2vmin 0.2vmin;
+    margin-top:0.25vmin;   
     cursor: pointer;
 }
 
@@ -338,8 +338,11 @@ table {
 }
 
 .timerbutton1:focus {
+    content: "😩";
     background-color: pink; 
-    color: black
+    color: lime;
+    font-style:italic;
+    font-weight:600;
 }
 
 .timerbutton1:hover {
@@ -350,7 +353,7 @@ table {
 
 .timerbutton1:active {
     background-color: yellow; 
-    color: black
+    color: lime
 }
 
 .timerbutton2 {
@@ -621,29 +624,35 @@ table {
 .timer3 {
     display:inline-block;
     transition: opacity 2s;
-    border:2px white double;
-    border-radius: 4px;
-    height:auto;
+    background: -webkit-linear-gradient(top, lightgray, black);
+    font-family:Verdana;
+    font-size: 1.5vmin;
+    line-height:1.5vmin;    
+    font-weight:500; 
+    text-shadow: 0.1vmin 0.1vmin silver;
+    border: 0.5vmin double silver;
+    border-radius: 1vmin;
     width: auto;
-    line-height:20px;
-    font-size:16px;
-    font-family:"Verdana";
-    font-weight:500;
+    min-width:2vmin; 
+    height: auto;
+    min-height:1.75vmin;
     text-align:center;
     color: white;
-    margin-left:4px;
-    padding-top: 0pt;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-bottom:0.2vmin;
+    padding-top:0.2vmin;
+    padding-left:0.5vmin;
+    padding-right:0.5vmin;
+    text-align: center;
+    margin: 0.2vmin 0.2vmin;
+    margin-top:0.25vmin;   
+    cursor: pointer;
     z-index:11;
-
 }
 .timer3:hover {
-    border:2px red double;
+    border: 0.5vmin double red;
     background: -webkit-linear-gradient(top, lightyellow, lightpink);
     color: darkred;
-    text-shadow: 1px 1px red;
-
+    text-shadow: 0.1vmin 0.1vmin red;
 }
 
 .timer4 {

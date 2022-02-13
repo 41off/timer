@@ -28,7 +28,7 @@ var snd = new Audio("audio/dogs.mp3"); // buffers automatically when created
 
 function _timer(callback)
 {
-    var time = Date.now();     //  The default time of the timer
+    var time = Date.parse('December 31 2023 23:59:59 GMT+0200') - Date.parse(new Date());     //  The default time of the timer
     var mode = 1;     //    Mode: count up or count down
     var status = 0;    //    Status: timer is running or stoped
     var timer_id;    //    This is used by setInterval function
@@ -190,7 +190,7 @@ function _timer2(callback)
 
 // var d=new Date();
 //    d.getTime();
-    var time2 =  new Date();  //  The default time of the timer
+    var time2 =  Date.parse() - Date.parse(new Date());  //  The default time of the timer
     var mode = 1;     //    Mode: count up or count down
     var status = 0;    //    Status: timer is running or stoped
     var timer2_id;    //    This is used by setInterval function
