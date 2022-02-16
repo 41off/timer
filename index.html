@@ -303,16 +303,16 @@ window.addEventListener("load", function B() { onloadA() })
    </div>
 
      <div class="convertor">
-       <span class="closebtn2" title="Click to close this calculator box">&times;</span>
-       <span title="Drag Speed Calculator elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
+       <span class="closebtn2" title="Click to close this calculator box">&nbsp;&times;</span>
+       <span title="Drag Speed Calculator elsewhere as needed" class="drag">&nbsp;&#10016;&nbsp;</span>
        <form name="converter">
-          Miles Per Hour&nbsp;<input type="text" size="3" maxlength="10" value="0.00"  name="mph">
-          <input type="button" value="Convert MPH to &#x2192;" onclick="calc(); calc3()">&nbsp;&nbsp;&nbsp;
-          <input type="reset" value="reset" >&nbsp;&nbsp;&nbsp;
-          Meters Per Second&nbsp;<input type="text" size="4" maxlength="10" value="0.00"  name="mps">
-          <input type="button" value="MPH&#x2190;Convert MPS&#x2192;KPH" onclick="javascript:calc2(); javascript:calc6() ">&nbsp;&nbsp;&nbsp;&nbsp;
-          <input type="button" value="&#x2190;Convert KPH to" onclick="javascript:calc4(); javascript:calc5() ">         
-          Kilometers Per Hour&nbsp;<nobr><input type="text" size="3" maxlength="10" value="0.00"  name="kph">&nbsp;</nobr>
+          Miles Per Hour&nbsp;<input class="entry" size="4" maxlength="10" value="entry"  name="mph" type="text" onclick="this.form.reset();" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+          <input type="button" class="timer3" value="Convert MPH to &#x2192;" onclick="calc(); calc3()">&nbsp;&nbsp;&nbsp;
+          <input type="reset" class="timer3" value="reset" >&nbsp;&nbsp;
+          Meters Per Second&nbsp;<input class="entry" size="4" maxlength="10" value="entry"  name="mps" type="text"  onclick="this.form.reset();" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+          <input type="button" class="timer3" value="MPH&#x2190;Convert MPS&#x2192;KPH" onclick="javascript:calc2(); javascript:calc6() ">&nbsp;&nbsp;
+          <input type="button" class="timer3" value="&#x2190;Convert KPH to" onclick="javascript:calc4(); javascript:calc5() ">         
+          Kilometers Per Hour&nbsp;<input class="entry" size="4" maxlength="10" value="entry"  name="kph" type="text"  onclick="this.form.reset();" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
        </form>
       </div>
 
@@ -351,10 +351,10 @@ window.addEventListener("load", function B() { onloadA() })
 
 <form name="clock">
 
-<TABLE ALIGN="left" BORDER-STYLE="double" BORDERRADIUS="5vmin" BORDERCOLOR="transparent" cellspacing="1" class="auto-style1" style="width: 100%">
+<TABLE ALIGN="left" BORDER-STYLE="double" BORDERRADIUS="5vmin" BORDERCOLOR="transparent" cellspacing="0" class="auto-style1" style="width: 100%">
 
 <tr align="center" BGCOLOR="transparent">
-<td colspan="2" style="height: 3vmin">
+<td colspan="2" style="height: 2vmin">
 <nobr>
 Choose Repeating Preset&nbsp;&nbsp;
 <input type="radio" name="wmSlalom" onClick="whichSlalomwm()">30 Seconds
@@ -370,30 +370,30 @@ Choose Repeating Preset&nbsp;&nbsp;
 </tr>
 
 <tr align="left" BGCOLOR="transparent">
-<td colspan="2" style="height: 3vmin">
-Set Alert Time For&nbsp;&nbsp;&nbsp;Days&#8620;<input type="text" name="snoozeOptD" size="2" maxlength="3" class="timerbutton timerbutton1" value="0" onFocus="clear_field(this)">&nbsp;
-Hours&#8620;<input type="text" name="snoozeOptH" size="2" maxlength="2" class="timerbutton timerbutton1" value="0" onFocus="clear_field(this)">&nbsp;
-Minutes&#8620;<input type="text" name="snoozeOptM" size="2" maxlength="2" class="timerbutton timerbutton1" value="0" onFocus="clear_field(this)">&nbsp;
-Seconds&#8620;<input type="text" name="snoozeOptS" size="2" maxlength="3" class="timerbutton timerbutton1" value="0" onFocus="clear_field(this)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<input type="button" value="Start"  class="timerbutton timerbutton1" onClick="snooze() + timer.start(10)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<button class="timerbutton timerbutton1" onClick="timer.reset(0)">Reset</button>
+<td colspan="2" style="height: 2vmin">
+Set Alert Time For&nbsp;&nbsp;&nbsp;Days&#8620;<input type="text" name="slalomOptD" size="2" maxlength="3" class="timer3" value="0" onFocus="clear_field(this)">&nbsp;
+Hours&#8620;<input type="text" name="slalomOptH" size="2" maxlength="2" class="timer3" value="0" onFocus="clear_field(this)">&nbsp;
+Minutes&#8620;<input type="text" name="slalomOptM" size="2" maxlength="2" class="timer3" value="0" onFocus="clear_field(this)">&nbsp;
+Seconds&#8620;<input type="text" name="slalomOptS" size="2" maxlength="3" class="timer3" value="0" onFocus="clear_field(this)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" value="Start"  class="timer3" onClick="slalom() + timer.start(10)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="timer3" onClick="timer.reset(0)">Reset</button>
 <span title="Drag TimerTable elsewhere as needed" class="drag">&#10016;&nbsp;</span>
 </td>
 </tr>
 
 
 <tr align="left" BGCOLOR="transparent">
-<td colspan="2" style="height: 3vmin">
-Client&nbsp;Alarm&nbsp;Status&#8620;<input type="text" name="Dstatus" size="6" maxlength="8" value="0" class="timerbutton timerbutton1" readonly>&nbsp;
-Remaining Ticks&#8620;<div class="timer3"><span class="second">00</span></div>
-Elapsed Ticks&#8620;<input type="text" name="secctrRD" size="5" class="timerbutton timerbutton1" readonly>&nbsp;
-Ticks Setting&#8620;<input type="text" name="RemainingTimeRD" size="6" class="timerbutton timerbutton1" readonly>
+<td colspan="2" style="height: 2vmin">
+Client&nbsp;Alarm&nbsp;Status&#8620;<input type="text" name="Dstatus" size="10" maxlength="8" value="0" class="timer3" readonly>&nbsp;
+Remaining Ticks&#8620;<div class="timer3"><span class="second">000</span></div>&nbsp;
+Elapsed Ticks&#8620;<input type="text" name="secctrRD" size="8" class="timer3" readonly>&nbsp;
+Ticks Setting&#8620;<input type="text" name="RemainingTimeRD" size="6" class="timer3" readonly>
 </td>
 </tr>
 
 
 <tr align="left" BGCOLOR="transparent">
-<td colspan="2" style="height: 3vmin">
+<td colspan="2" style="height: 2vmin">
 Client Alarm Time&#8620;<input name="DalarmTime" size="12" class="timerbutton timerbutton1">
 Client System Clock Time&#8620;<input name="local" size="14"class="timerbutton timerbutton1">&nbsp;
 Days Elapsed&#8620;<input type="text" name="dayTimeRD" size="5" class="timerbutton timerbutton1" readonly>
@@ -401,13 +401,13 @@ Days Elapsed&#8620;<input type="text" name="dayTimeRD" size="5" class="timerbutt
 </tr>
 
 <tr align="left" BGCOLOR="transparent">
-<td colspan="2" style="height: 3vmin">
+<td colspan="2" style="height: 2vmin">
 Messages<input type="text" name="messagesD" size="94" class="timerbutton timerbutton1" readonly>
 </td>
 </tr>
 
 <tr align="center" BGCOLOR="transparent">
-<td colspan="2" style="height: 3vmin">
+<td colspan="2" style="height: 2vmin">
 
 Alert On <input type="checkbox" name="alarmOnOff" onClick="alarmOn()"> 
 Alert Off <input type="radio" name="alarmOnOff" onClick="alarmOff()"> 

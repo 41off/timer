@@ -340,54 +340,7 @@ $(document).ready(function(e)
 );
 
 
-//calculate function
-function calc(){
-//variables convert mph to mps
-var milesperhour = document.converter.mph.value
-var calculated = Math.round(milesperhour * 0.44704*1000)/1000
-//write in text box
-document.converter.mps.value=calculated
-}
 
-function calc2(){
-//variables convert mps to mph
-var meterspersecond = document.converter.mps.value
-var calculated = Math.round(meterspersecond * 3600/1610.3)
-//write in text box
-document.converter.mph.value=calculated
-}
-
-function calc3(){
-//variables convert kph to mph
-var milesperhour = document.converter.mph.value
-var calculated = Math.round(milesperhour * 1.609344*1000)/1000
-//write in text box
-document.converter.kph.value=calculated
-}
-
-function calc4(){
-//variables convert kph to mph
-var kilometersperhour = document.converter.kph.value
-var calculated = Math.round(kilometersperhour * 6214)/10000
-//write in text box
-document.converter.mph.value=calculated
-}
-
-function calc5(){
-//variables convert kph to mps
-var kilometersperhour = document.converter.kph.value
-var calculated = Math.round(kilometersperhour * 10)/36
-//write in text box
-document.converter.mps.value=calculated
-}
-
-function calc6(){
-//variables convert mps to kph
-var meterspersecond = document.converter.mps.value
-var calculated = Math.round(meterspersecond * 36)/10
-//write in text box
-document.converter.kph.value=calculated
-}
 
 
 function GetTime() {
@@ -412,7 +365,7 @@ document.clock.local.value = dt.getFullYear() + "~" + IfZero(dt.getHours()) + ":
 
 $('div.dispclock span.clock').html(clock);
 
-setTimeout("GetTime()", 1);
+setTimeout("GetTime()", 9);
 curTimeD = (IfZero(dt.getHours()) + ":" + IfZero(dt.getMinutes()) + ":" + IfZero(dt.getSeconds()));
 document.clock.DalarmTime.value = alarmTime;
 
@@ -430,10 +383,10 @@ if (alarmTime == "0000~00:00:00") {document.clock.Dstatus.value = "Not Set ";}
 if (alarmTime == curTime) {alarmOn();}
 if (alarmTime > curTime) {document.clock.Dstatus.value = "Counting";
 
-secctrR = secctrR + 1;
+secctrR = (secctrR + 1);
  
-document.clock.secctrRD.value = secctrR; // Display up to 24 hours of Elapsed Ticks
-	if (secctrR == 86399000){
+document.clock.secctrRD.value = secctrR + " csec"; // Display up to 24 hours of Elapsed Ticks
+	if (secctrR == 86399999){
 	dayTimeR = dayTimeR + 1; // add a day to Day Ticks
 	document.clock.dayTimeRD.value = dayTimeR; // Display
 	secctrR = 0; // reset Elapsed Ticks
@@ -453,7 +406,7 @@ document.clock.messagesD.value = "The " + TypeMessage + "timer has been started 
 if (alarmTime == curTime) {
 snd.play();
 snd.currentTime=0;
-document.clock.Dstatus.value = "Pending";
+document.clock.Dstatus.value = "Pending 9 sec";
 document.clock.RemainingTimeRD.value = "Zero";
 document.clock.secctrRD.value = "Done";
 document.clock.dayTimeRD.value = "None";
@@ -488,10 +441,10 @@ document.clock.wmSlalom.checked = false;
 document.clock.noSlalom.checked = false;
 
 document.all.sound.src = null;
-document.clock.snoozeOptD.value = "0";
-document.clock.snoozeOptH.value = "0";
-document.clock.snoozeOptM.value = "0";
-document.clock.snoozeOptS.value = "0";
+document.clock.slalomOptD.value = "0";
+document.clock.slalomOptH.value = "0";
+document.clock.slalomOptM.value = "0";
+document.clock.slalomOptS.value = "0";
 document.clock.messagesD.value = "The " + TypeMessage + "timer has been delayed! ";
 
 
@@ -508,23 +461,23 @@ alarmOn();
 
 }
 
-function snooze() {
+function slalom() {
 document.all.sound.src = "";
 
-var snooze = new Date();
+var slalom= new Date();
 
-// cdayNum = (snooze.getDay());
+// cdayNum = (slalom.getDay());
 cdayNum = dayTimeR;
-chourNum = (snooze.getHours());
-cminNum = (snooze.getMinutes());
-csecNum = (snooze.getSeconds());
-// cmilliNum = (snooze.getMilliseconds());
+chourNum = (slalom.getHours());
+cminNum = (slalom.getMinutes());
+csecNum = (slalom.getSeconds());
+// cmilliNum = (slalom.getMilliseconds());
 
-dayNum = (parseInt(document.clock.snoozeOptD.value) * 1) + (cdayNum * 1);
-hourNum = (parseInt(document.clock.snoozeOptH.value) * 1) + (chourNum * 1);
-minNum = (parseInt( document.clock.snoozeOptM.value) * 1) + (cminNum * 1);
-secNum = (parseInt(document.clock.snoozeOptS.value) * 1) + (csecNum * 1);
-// milliNum = (parseInt(document.clock.snoozeOptSS.value) * 1) + (cmilliNum * 1);
+dayNum = (parseInt(document.clock.slalomOptD.value) * 1) + (cdayNum * 1);
+hourNum = (parseInt(document.clock.slalomOptH.value) * 1) + (chourNum * 1);
+minNum = (parseInt( document.clock.slalomOptM.value) * 1) + (cminNum * 1);
+secNum = (parseInt(document.clock.slalomOptS.value) * 1) + (csecNum * 1);
+// milliNum = (parseInt(document.clock.slalomOptSS.value) * 1) + (cmilliNum * 1);
 
 
 // while(milliNum >= 1000){milliNum = milliNum - 1000;secNum++;}
@@ -566,9 +519,9 @@ document.clock.RemainingTimeRD.value = RemainingTime; // sets initially and disp
 document.clock.DalarmTime.value = alarmTime; // sets initially and displays only once
 document.clock.messagesD.value = "days "+dayNum+" hours "+hourNum+" minutes "+minNum+" seconds "+secNum+" alarmtime "+alarmTime+ " secctrR "+secctrR+" dayTimerR "+dayTimeR;
 
-// var snoozeM = set up the input
+// var slalomM = set up the input
 
-//var snooze = new Date();
+//var slalom= new Date();
 
 alarmOn();
 timer2.reset(00);
@@ -581,7 +534,7 @@ timer2.start(10);
 
 
 function audiotrigger()  {
-    snooze();
+    slalom();
     timer.mode(1);
     timer.start(10);
 
@@ -600,9 +553,9 @@ document.clock.smSlalom.checked = false;
 document.clock.clSlalom.checked = true;
 document.clock.wmSlalom.checked = false;
 document.clock.noSlalom.checked = false;
-document.clock.snoozeOptS.value = "900";
+document.clock.slalomOptS.value = "900";
 TypeMessage = "15 Minute ";
-snooze();
+slalom();
 timer2.reset(00);
 timer.mode(1);
 timer.start(10);
@@ -610,7 +563,7 @@ timer2.mode(1);
 timer2.start(10);
 
 
-setTimeout(whichSlalomcl, x*1000);
+setTimeout(whichSlalomcl, 909*1000);
 }
 whichSlalomcl();
 timer.start(10); // execute function
@@ -630,9 +583,9 @@ document.clock.smSlalom.checked = true;
 document.clock.clSlalom.checked = false;
 document.clock.wmSlalom.checked = false;
 document.clock.noSlalom.checked = false;
-document.clock.snoozeOptS.value = "600";
+document.clock.slalomOptS.value = "600";
 TypeMessage = "10 Minute ";
-snooze();
+slalom();
 timer2.reset(00);
 timer.mode(1);
 timer.start(10);
@@ -640,7 +593,7 @@ timer2.mode(1);
 timer2.start(10);
 
 
-setTimeout(whichSlalomsm, x*1000);
+setTimeout(whichSlalomsm, 609*1000);
 }
 whichSlalomsm();
 timer.start(10); // execute function
@@ -659,9 +612,9 @@ document.clock.smSlalom.checked = false;
 document.clock.clSlalom.checked = false;
 document.clock.wmSlalom.checked = false;
 document.clock.noSlalom.checked = false;
-document.clock.snoozeOptS.value = "300";
+document.clock.slalomOptS.value = "300";
 TypeMessage = "5 Minute ";
-snooze();
+slalom();
 timer2.reset(00);
 timer.mode(1);
 timer.start(10);
@@ -669,7 +622,7 @@ timer2.mode(1);
 timer2.start(10);
 
 
-setTimeout(whichSlalomme, x*1000);
+setTimeout(whichSlalomme, 309*1000);
 }
 whichSlalomme();
 timer.start(10); // execute function
@@ -689,16 +642,16 @@ document.clock.smSlalom.checked = false;
 document.clock.clSlalom.checked = false;
 document.clock.wmSlalom.checked = false;
 document.clock.noSlalom.checked = false;
-document.clock.snoozeOptS.value = "180";
+document.clock.slalomOptS.value = "180";
 TypeMessage = "3 Minute ";
-snooze();
+slalom();
 timer2.reset(00);
 timer.mode(1);
 timer.start(10);
 timer2.mode(1);
 timer2.start(10);
 
-setTimeout(whichSlalomlg, x*1000);
+setTimeout(whichSlalomlg, 189*1000);
 }
 whichSlalomlg();
 timer.start(10); // execute function
@@ -718,9 +671,9 @@ document.clock.smSlalom.checked = false;
 document.clock.clSlalom.checked = false;
 document.clock.wmSlalom.checked = false;
 document.clock.noSlalom.checked = false;
-document.clock.snoozeOptS.value = "120";
+document.clock.slalomOptS.value = "120";
 TypeMessage = "2 Minute ";
-snooze();
+slalom();
 timer2.reset(00);
 timer.mode(1);
 timer.start(10);
@@ -728,7 +681,7 @@ timer2.mode(1);
 timer2.start(10);
 
 
-setTimeout(whichSlalomxl, x*1000);
+setTimeout(whichSlalomxl, 129*1000);
 }
 whichSlalomxl(); // execute function
 timer.start(10);
@@ -749,16 +702,16 @@ document.clock.smSlalom.checked = false;
 document.clock.clSlalom.checked = false;
 document.clock.wmSlalom.checked = false;
 document.clock.noSlalom.checked = false;
-document.clock.snoozeOptS.value = "60";
+document.clock.slalomOptS.value = "60";
 TypeMessage = "1 Minute ";
-snooze();
+slalom();
 timer2.reset(00);
 timer.mode(1);
 timer.start(10);
 timer2.mode(1);
 timer2.start(10);
 
-setTimeout(whichSlalomjb,  x*1000);
+setTimeout(whichSlalomjb,  69*1000);
 }
 whichSlalomjb(); // execute function
 timer.start(10);
@@ -778,9 +731,9 @@ document.clock.smSlalom.checked = false;
 document.clock.clSlalom.checked = false;
 document.clock.wmSlalom.checked = true;
 document.clock.noSlalom.checked = false;
-document.clock.snoozeOptS.value = "30";
+document.clock.slalomOptS.value = "30";
 TypeMessage = "30 Second ";
-snooze();
+slalom();
 timer2.reset(00);
 timer.mode(1);
 timer.start(10);
@@ -789,7 +742,7 @@ timer2.start(10);
 
 
 
-setTimeout(whichSlalomwm,  x*1000);
+setTimeout(whichSlalomwm,  39*1000);
 }
 whichSlalomwm(); // execute function
 timer.start(10);
@@ -805,7 +758,7 @@ document.clock.smSlalom.checked = false;
 document.clock.clSlalom.checked = false;
 document.clock.wmSlalom.checked = false;
 document.clock.noSlalom.checked = true;
-document.clock.snoozeOptS.value = "0";
+document.clock.slalomOptS.value = "0";
 TypeMessage = "current timer has been delayed; ignore the following message -->> ";
 
 timer.stop();
@@ -845,6 +798,56 @@ function clear_field(field) {
                 if (field.value==field.defaultValue) {
                         field.value=''
     }
+}
+
+
+//calculate function form convertor
+function calc(){
+//variables convert mph to mps
+var milesperhour = document.converter.mph.value
+var calculated = Math.round(milesperhour * 44.7)/100
+//write in text box
+document.converter.mps.value=calculated
+}
+
+function calc2(){
+//variables convert mps to mph
+var meterspersecond = document.converter.mps.value
+var calculated = Math.round(meterspersecond * 223.69)/100
+//write in text box
+document.converter.mph.value=calculated
+}
+
+function calc3(){
+//variables convert mph to kph
+var milesperhour = document.converter.mph.value
+var calculated = Math.round(milesperhour * 1.60934*100)/100
+//write in text box
+document.converter.kph.value=calculated
+}
+
+function calc4(){
+//variables convert kph to mph
+var kilometersperhour = document.converter.kph.value
+var calculated = Math.round(kilometersperhour * 62.14)/100
+//write in text box
+document.converter.mph.value=calculated
+}
+
+function calc5(){
+//variables convert kph to mps
+var kilometersperhour = document.converter.kph.value
+var calculated = Math.round(kilometersperhour * 1000/36)/100
+//write in text box
+document.converter.mps.value=calculated
+}
+
+function calc6(){
+//variables convert mps to kph
+var meterspersecond = document.converter.mps.value
+var calculated = Math.round(meterspersecond * 360)/100
+//write in text box
+document.converter.kph.value=calculated
 }
 
 // -->
