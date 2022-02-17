@@ -24,7 +24,7 @@ body {
   font-family: Verdana;
   font-weight:700;
   background: url('../pics/silverbars.jpg') no-repeat fixed center;  
-  color: black;
+  color: white;
   line-height: 2vmin;
   font-size: 2vmin;
   text-shadow: 0.1vmin 0.1vmin silver;
@@ -32,12 +32,97 @@ body {
   
 }
 
+/* Center child elements */
+
+
+/* Styles for website counter container */
+.website-counter {
+  background: -webkit-linear-gradient(top, lightgray, black);
+  height: 2vmin;
+  width:auto;
+  padding: 0.15vmin 0.15vmin;
+  min-width: 8vmin;
+  color: white;
+  text-shadow: 0.1vmin 0.1vmin red;
+  border-radius: 5vmin;
+  font-weight: 700;
+  font-size: 1.5vmin;
+  margin-top: 0.1vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+ 
+}
+
+/* Styles for reset button */
+#reset {
+  background: -webkit-linear-gradient(top, lightyellow, pink);
+  height: auto;
+  width:15%;
+  padding: 0.15vmin 0.15vmin;
+  min-width: 8vmin;
+  color: white;
+  text-shadow: 0.1vmin 0.1vmin black;
+  border-radius: 5vmin;
+  font-weight: 700;
+  font-size: 2vmin;
+  line-height:2.25vmin;
+  margin-top: 0.11vmin;
+  visibility:visible;
+  opacity: 0;
+  -webkit-animation: fadeout 3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeout 3s; /* Firefox < 16 */
+  -ms-animation: fadeout 3s; /* Internet Explorer */
+  -o-animation: fadeout 3s; /* Opera < 12.1 */
+  animation: fadeout 3s; 
+ 
+}
+
+.visit {
+  display:inline-block;
+  height:auto;
+  max-height: 6vmin;
+  visibility:visible;
+  opacity: 0;
+  transition: 5s;
+ -webkit-animation: fadeout 5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadeout 5s; /* Firefox < 16 */
+        -ms-animation: fadeout 5s; /* Internet Explorer */
+         -o-animation: fadeout 5s; /* Opera < 12.1 */
+            animation: fadeout 5s;  
+  
+-webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 5s; /* Firefox < 16 */
+        -ms-animation: fadein 5s; /* Internet Explorer */
+         -o-animation: fadein 5s; /* Opera < 12.1 */
+            animation: fadein 5s;
+
+  position: fixed;
+  top: 65%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);	
+  
+  z-index:45;
+}
+
+.visit:hover {
+  border-color: white;
+  opacity:0.75; 
+  transition: 3s;
+ 
+}
+
+
 
 /* fallback for IE */
 .gradient-text {
   color: red;
 }
-/* gradient text for modern browsers */
+
+/* gradient text for modern browsers
 @supports (background-clip: text) {
   .gradient-text {
     background-image: linear-gradient(60deg, #E21143, #FFB03A);
@@ -45,6 +130,7 @@ body {
     color: transparent;
   }
 }
+*/
 
 @keyframes fadein {
     from { opacity: 0; transition: 2s; }
@@ -77,33 +163,32 @@ body {
 
 @keyframes fadeout {
     from { opacity: 1; }
-    to   { transition: 5s; opacity: 1;}
+    to   { transition: 5s; opacity: 0;}
 }
 
 /* Firefox < 16 */
 @-moz-keyframes fadeout {
     from { opacity: 1; }
-    to   { transition: 5s; opacity: 1;}
+    to   { transition: 5s; opacity: 0;}
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadeout {
     from { opacity: 1; }
-    to   { transition: 5s; opacity: 1;}
+    to   { transition: 5s; opacity: 0;}
 }
 
 /* Internet Explorer */
 @-ms-keyframes fadeout {
     from { opacity: 1; }
-    to   { transition: 5s; opacity: 1;}
+    to   { transition: 5s; opacity: 0;}
 }
 
 /* Opera < 12.1 */
 @-o-keyframes fadeout {
    from { opacity: 1;  }
-    to  { transition: 5s; opacity: 1; }
+    to  { transition: 5s; opacity: 0; }
 }
-
 
 
 

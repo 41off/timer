@@ -52,6 +52,10 @@
     $(".dispalarm").draggable();
 } );
 
+  $( function() {
+    $(".visit").draggable();
+} );
+
 
 $( function() {
     $( ".dirbtn" ).draggable();
