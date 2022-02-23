@@ -1,7 +1,7 @@
 ﻿body{
   text-align: center;
   background: transparent; /*-webkit-linear-gradient(top, black, gray); */
-  font-weight: 100;
+  font-weight: 200;
   width:99vw;  /* height:96vh; */
   height: 100vh;
   object-fit: contain;
@@ -11,9 +11,38 @@
   line-height: 2vmin;
   font-size: 2vmin;
   text-shadow: 0.1vmin 0.1vmin black;
-  margin: 0 auto;
-
+  
+ 
+/* 
+  vertical-align: middle;
+  column-count: 3;
+  column-gap: 2vmin;
+  column-rule-style: groove;
+  column-rule-width: 0.5vmin;
+  column-rule: 0.5vmin groove red; 
+  column-width: 33%;
+  display:inline-block;
+  margin-left:1%;  
+  break-inside: avoid;
+  page-break-inside: avoid;
+*/
 }
+
+.container {
+  vertical-align: middle;
+  column-count: 3;
+  column-gap: 2vmin;
+  column-rule-style: groove;
+  column-rule-width: 0.5vmin;
+  column-rule: 0.5vmin groove red; 
+  column-width: 33%;
+  display:inline-block;
+  margin-left:1%;
+  margin: 0 auto;
+  margin-top:2%;
+	
+}
+
 
 h1{
   text-decoration:blink;
@@ -49,6 +78,13 @@ a:active {
 }
 
 
+#fill{
+	height:10%;
+}
+
+
+
+
 #clockdiv{
 	font-family: sans-serif;
 	color: #fff;
@@ -81,6 +117,8 @@ a:active {
 	text-align: center;
 	font-size: 2.5vmin;
 	text-shadow: 0.1vmin 0.1vmin black;
+	
+	
 }
 
 #clockdiv2 > div{
@@ -88,6 +126,7 @@ a:active {
 	border-radius: 0.5vmin;
 	background: -webkit-linear-gradient(top, lightgray, black);
 	display: inline-block;
+	
 }
 
 #clockdiv2 div > span{
@@ -193,6 +232,29 @@ a:active {
 	display: inline-block;
 }
 
+#clockdiv7{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv7 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv7 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, blue, silver);
+	display: inline-block;
+}
 
 
 .smalltext{
