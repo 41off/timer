@@ -1,0 +1,178 @@
+﻿<html>
+
+<head>
+<title>Moomba Countdown</title>
+
+
+<style>
+
+body {
+  text-align: center;
+  vertical-align: middle;
+  background: -webkit-linear-gradient(top, black, gray);
+  font-weight: 200;
+  width:99vw;  /* height:96vh; */
+  height: 100vh;
+  object-fit: contain;
+  overflow:hidden;
+  font-family: Verdana;
+  color: white;
+  line-height: 2vmin;
+  font-size: 1vmin;
+  text-shadow: 0.1vmin 0.1vmin black;
+  
+}
+  
+h1: {
+ 
+  text-decoration:blink;
+  font-weight: 200;
+  font-size: 0.5vmin;
+  text-shadow: 0.1vmin 0.1vmin black;
+  margin: 1.5vmin 0vmin 1.5vmin;
+  cursor:pointer;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display:inline;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, black, #00816A);
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, #00816A, silver);
+	display: inline-block;
+}
+
+
+
+.smalltext{
+	padding-top: 0.25vmin;
+	font-size: 2vmin;
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<div id="clockdiv">
+
+
+<br><br><br><br><br>
+
+<h1><a href="https://www.moombamasters.com.au/" target="_blank">Moomba Masters Countdown</a></h1>
+
+
+  <div>
+    <span class="days"></span>
+    <div class="smalltext">Days</div>
+  </div>
+  <div>
+    <span class="hours"></span>
+    <div class="smalltext">Hours</div>
+  </div>
+  <div>
+    <span class="minutes"></span>
+    <div class="smalltext">Minutes</div>
+  </div>
+  <div>
+    <span class="seconds"></span>
+    <div class="smalltext">Seconds</div>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+function getTimeRemaining7(endtime) {
+  const total = Date.parse(endtime) - Date.parse(new Date());
+  const seconds = Math.floor((total / 1000) % 60);
+  const minutes = Math.floor((total / 1000 / 60) % 60);
+  const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+  const days = Math.floor(total / (1000 * 60 * 60 * 24));
+  
+  return {
+    total,
+    days,
+    hours,
+    minutes,
+    seconds
+  };
+}
+
+function initializeClock7(id, endtime) {
+  const clock = document.getElementById(id);
+  const daysSpan = clock.querySelector('.days');
+  const hoursSpan = clock.querySelector('.hours');
+  const minutesSpan = clock.querySelector('.minutes');
+  const secondsSpan = clock.querySelector('.seconds');
+
+function updateClock7() {
+    const t = getTimeRemaining7(endtime);
+
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval7);
+    }
+  }
+
+  updateClock7();
+  const timeinterval7 = setInterval(updateClock7, 1000);
+}
+
+const deadline7 = 'March 09 2022 08:00:00 GMT+1100';
+
+initializeClock7('clockdiv', deadline7);
+</script>
+
+</body>
+
+</html>
+
+
