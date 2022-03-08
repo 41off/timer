@@ -1,0 +1,499 @@
+﻿body{
+  text-align: center;
+  background: transparent; /*-webkit-linear-gradient(top, black, gray); */
+  font-weight: 200;
+  width:99vw;  /* height:96vh; */
+  height: 100vh;
+  object-fit: contain;
+  overflow:hidden;
+  font-family: Verdana;
+  color: white;
+  line-height: 2.25vmin;
+  font-size: 2vmin;
+  text-shadow: 0.1vmin 0.1vmin black;
+  
+ 
+/* 
+  vertical-align: middle;
+  column-count: 3;
+  column-gap: 2vmin;
+  column-rule-style: groove;
+  column-rule-width: 0.5vmin;
+  column-rule: 0.5vmin groove red; 
+  column-width: 33%;
+  display:inline-block;
+  margin-left:1%;  
+  break-inside: avoid;
+  page-break-inside: avoid;
+*/
+}
+
+ul {
+  line-height:2.5vmin;
+  vertical-align: middle;
+  column-count: 3;
+  column-gap: 2vmin;
+  column-rule-style: groove;
+  column-rule-width: 0.5vmin;
+  column-rule: 0.5vmin groove red; 
+  column-width: 33%;
+  display:inline-block;
+  margin-left:1%;
+  margin: 0 auto;
+  margin-top:2%;
+	
+}
+
+h1{
+  text-decoration:blink;
+  font-weight: 400;
+  font-size: 2vmin;
+  text-shadow: 0.1vmin 0.1vmin black;
+  margin: 1.5vmin 0vmin 1.5vmin;
+  cursor:pointer;
+  
+}
+
+h2{
+  text-decoration:blink;
+  font-weight: 400;
+  font-size: 2vmin;
+  font-family:"Century Schoolbook";
+  text-shadow: 0.1vmin 0.1vmin black;
+  margin: 1.5vmin 0vmin 1.5vmin;
+  color: yellow;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+#fill{
+	height:10%;
+}
+
+
+
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, #00816A, silver);
+	display: inline-block;
+}
+
+#clockdiv2{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+	
+	
+}
+
+#clockdiv2 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+	
+}
+
+#clockdiv2 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, green, silver);
+	display: inline-block;
+}
+
+#clockdiv3{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv3 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv3 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, red, silver);
+	display: inline-block;
+}
+
+#clockdiv4{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv4 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv4 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, orange, silver);
+	display: inline-block;
+}
+
+#clockdiv5{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv5 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv5 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, gold, silver);
+	display: inline-block;
+}
+
+#clockdiv6{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv6 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv6 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, blue, silver);
+	display: inline-block;
+}
+
+#clockdiv7{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv7 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv7 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, blue, silver);
+	display: inline-block;
+}
+
+#clockdiv8{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv8 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv8 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, pink, silver);
+	display: inline-block;
+}
+
+#clockdiv9{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv9 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv9 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, green, silver);
+	display: inline-block;
+}
+
+
+#clockdiv10{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv10 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv10 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, #00816A, silver);
+	display: inline-block;
+}
+
+
+#clockdiv11{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv11 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv11 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, green, silver);
+	display: inline-block;
+}
+
+
+#clockdiv12{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv12 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv12 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, blue, silver);
+	display: inline-block;
+}
+
+
+#clockdiv13{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv13 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv13 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, blue, silver);
+	display: inline-block;
+}
+
+
+#clockdiv14{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv14 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv14 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, blue, silver);
+	display: inline-block;
+}
+
+#clockdiv15{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv15 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv15 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, blue, silver);
+	display: inline-block;
+}
+
+
+
+#clockdiv16{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 2.5vmin;
+	text-shadow: 0.1vmin 0.1vmin black;
+}
+
+#clockdiv16 > div{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, lightgray, black);
+	display: inline-block;
+}
+
+#clockdiv16 div > span{
+	padding: 0.5vmin;
+	border-radius: 0.5vmin;
+	background: -webkit-linear-gradient(top, blue, silver);
+	display: inline-block;
+}
+
+
+
+
+.smalltext{
+	padding-top: 0.25vmin;
+	font-size: 2vmin;
+}
