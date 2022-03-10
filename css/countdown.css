@@ -57,9 +57,9 @@ h1{
 h2{
   text-decoration:blink;
   font-weight: 400;
-  font-size: 2.5vmin;
-  font-family: Verdana;
-  text-shadow: 0.1vmin 0.1vmin silver;
+  font-size: 3vmin;
+  font-family: "Century Schoolbook";
+  text-shadow: 0.15vmin 0.15vmin silver;
   margin: 1.5vmin 0vmin 1.5vmin;
   color: yellow;
 }
