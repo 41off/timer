@@ -877,3 +877,278 @@ table {
 	opacity: 1;
 	color: black;
 }
+
+#video {
+  position: relative;
+  border: 2px;
+  border-color:gold;
+  border-style:solid;
+  border-radius: 4px;
+  width: 99.0%;
+  height: 94.6%;
+  padding-bottom: 0px;
+  margin-right:0.0%;
+  margin-top: 0%;
+  overflow:hidden;
+}
+
+.menu {
+    position: absolute;
+    display:block;
+    padding-top: 0.25vmin;
+    right:1%;
+    top: 10%;
+    height: auto;
+    width:auto;
+    max-width:20vmin;
+    margin: 0vmin auto;
+    opacity: 1.0;
+    transition: opacity 5s;
+    background-color: transparent;
+    border: .25vmin;
+    border-color: transparent;
+    border-radius: .5vmin;
+    border-style:groove;
+    overflow:hidden;
+    z-index:5;
+}
+
+
+.menu:hover {
+    background: -webkit-linear-gradient(top, lightgray, black);
+    border-color: black;
+    color:black;
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+
+.menubarR {
+    position: absolute;
+    display:inline-block;
+    padding-top: 0.25vmin;
+    right:2.5%;
+    bottom: 15%;
+    height: 3vmin;
+    width:auto;
+    margin: 0 auto;
+    opacity: 1.0;
+    transition: opacity 5s;
+    background-color: transparent;
+    border: .25vmin;
+    border-color: transparent;
+    border-radius: .5vmin;
+    border-style:groove;
+    overflow:hidden;
+    z-index:5;
+}
+
+
+.menubarR:hover {
+    background: -webkit-linear-gradient(top, lightgray, black);
+    border-color: black;
+    color:black;
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+
+
+#Rnegative2 {
+    background-color: transparent;
+    font-weight: 600;
+    color: white; 
+    margin: 0.2vmin 0.2vmin;
+    border: 0.5vmin;
+    border-color: transparent;
+    border-radius: 0.5vmin;
+    border-style:groove;
+    position:relative;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5vmin;
+    font-family:Verdana;
+    line-height:1.5vmin;
+    margin: 0.2vmin 0.2vmin;
+    margin-top: 0.1vmin;
+    padding-top:0.1vmin;
+    padding-bottom:0.1vmin;
+    padding-left:0.2vmin;
+    padding-right:0.2vmin;
+    width: auto; 
+    height: auto;
+    -webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%;
+    cursor: pointer;
+    
+}
+
+#Rnegative2:hover {
+    border-color: white;
+    background: -webkit-linear-gradient(top, red, black);
+    color: white;
+}
+
+#Rnegative2:focus {
+    border-color: white;
+    background: -webkit-linear-gradient(top, pink, black);
+    color: red;
+}
+
+
+#Rreset {
+    background-color: transparent;
+    font-weight: 600;
+    color: white; 
+    margin: 0.2vmin 0.2vmin;
+    border: 0.5vmin;
+    border-color: transparent;
+    border-radius: 0.5vmin;
+    border-style:groove;
+    position:relative;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5vmin;
+    font-family:Verdana;
+    line-height:1.5vmin;
+    margin: 0.2vmin 0.2vmin;
+    margin-top: 0.1vmin;
+    padding-top:0.1vmin;
+    padding-bottom:0.1vmin;
+    padding-left:0.2vmin;
+    padding-right:0.2vmin;
+    width: auto; 
+    height: auto;
+    -webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%;
+    cursor: pointer;
+}
+
+#Rreset:hover {
+    border-color: white;
+    background: -webkit-linear-gradient(top, lightgreen, black);
+    color: white;
+}
+
+#Rreset:active {
+   color: red;
+}
+
+#Rreset:focus {
+   color: lime;
+}
+
+
+
+.popmenu {
+    text-align: center;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.5vmin;
+    color:white;
+    line-height:1.75vmin;
+    margin-right: 1vmin;
+    margin-left: 2vmin;
+    margin-top: 0.3vmin;
+    padding-top:0.1vmin;
+    padding-bottom:0.1vmin;
+    padding-left:0.15vmin;
+    padding-right:0.15vmin;
+    height: auto;
+    width: auto; 
+    -webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%;
+    cursor: pointer;
+    border: 0.3vmin #999;
+    border-radius: 0.6vmin;
+    border-style:groove;
+    float:right;
+    position:relative;
+    background: -webkit-linear-gradient(top, lightgray, black);
+    z-index:9;
+
+}
+
+.popmenu:hover {
+  border-color: black;
+  background: -webkit-linear-gradient(top, lightyellow, lightpink);
+  text-shadow: 0.1vmin 0.1vmin silver;
+  color:black;
+
+}
+
+
+.Rbtn {
+    background:transparent;
+    border: 0.5vmin solid #999;
+    border-style:groove;
+    border-radius: 0.6vmin;
+    outline: none;
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0.1vmin 0.1vmin black;
+    font-weight:600;
+    font-size: 1.5vmin;
+    font-family:Verdana;
+    line-height:1.75vmin;
+    margin-right: 0.5vmin;
+    margin-left:0.5vmin;
+    margin-top: 0.25vmin;
+    padding-top:0.1vmin;
+    padding-bottom:0.15vmin;
+    padding-left:0.2vmin;
+    padding-right:0.2vmin;
+    width: auto; 
+    height: auto;
+    -webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%;
+    cursor: pointer;
+    opacity: 1;
+  transition: opacity 30s;
+
+  -webkit-animation: fadeout 15s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadeout 15s; /* Firefox < 16 */
+        -ms-animation: fadeout 15s; /* Internet Explorer */
+         -o-animation: fadeout 15s; /* Opera < 12.1 */
+            animation: fadeout 15s;  
+  
+    -webkit-animation: fadein 15s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 15s; /* Firefox < 16 */
+        -ms-animation: fadein 15s; /* Internet Explorer */
+         -o-animation: fadein 15s; /* Opera < 12.1 */
+            animation: fadein 15s;
+    
+}
+
+
+#R5 {
+    background-color: transparent;
+    font-weight: 600;
+    color: white; 
+    border: 0.5vmin;
+    border-color: transparent;
+    border-radius: 0.5vmin;
+    border-style:groove;
+    position:relative;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5vmin;
+    font-family:Verdana;
+    line-height:1.5vmin;
+    margin: 0.2vmin 0.2vmin;
+    margin-top: 0.1vmin;
+    padding-top:0.1vmin;
+    padding-bottom:0.1vmin;
+    padding-left:0.2vmin;
+    padding-right:0.2vmin;
+    width: auto; 
+    height: auto;
+    -webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%;
+    cursor: pointer;
+   
+}
+
+#R5:hover {
+    border-color: white;
+    background: -webkit-linear-gradient(top, lightgray, orange);
+    color: black;}
+
+
+

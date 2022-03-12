@@ -238,6 +238,7 @@
 <script>
 
 window.addEventListener("load", function B() { onloadA() })
+window.addEventListener("load", function B() { onloadR() })
 
 </script>
 
@@ -356,35 +357,16 @@ window.addEventListener("load", function B() { onloadA() })
 <li><button class='audiobtn' onClick='on143A()'>Chapter 98</button></li>
 <li><button class='audiobtn' onClick='on144A()'>Chapter 99</button></li>
 
-</div>
-">IAD</button>
+</div>"
+>IAD</button>
      
-<!--     
-  <button class="popmenu" title="Spotify New Jack Swing...&#8608;&nbsp;requires Spotify login credentials" data-toggle="popover" data-placement="right" data-html="true" 
-     data-content= "<iframe style='border-radius:12px' src='https://open.spotify.com/embed/playlist/37i9dQZF1E4kPvQC1s4IDt?utm_source=generator' width='100%' height='96%' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media;      
-        fullscreen; picture-in-picture'></iframe>">Spot1</button>
-     
-     
-  <button class="popmenu" title="Spotify Steely Dan Genre...&#8608;&nbsp;requires Spotify login credentials" data-toggle="popover" data-placement="right" data-html="true" 
-     data-content= "<iframe style='border-radius:12px' src='https://open.spotify.com/embed/playlist/37i9dQZF1E4ljikG4oUmEm?utm_source=generator' width='100%' height='96%' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media;      
-        fullscreen; picture-in-picture'></iframe>">Spot2</button>
-
-
-           
-<button class="popmenu2" title="Spotify Electronic...&#8608;&nbsp;requires Spotify login credentials" data-toggle="popover" data-placement="right" data-html="true" 
-     data-content= "<div class='ukcont3'>
-<li3><embed style='border-radius:12px' src='https://pandora.app.link/tGyr3X0runb'allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></embed></li3>
-<li3><iframe style='border-radius:12px' src='https://open.spotify.com/embed/playlist/0BgubprX6y5VZIy1sydXSI?utm_source=generator' width='25%' height='96%' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe></li3>
-</div>">Playlist</button>  
-
---> 
-
 <button class="popmenu2" title="Spotify Podcasts...&#8608;&nbsp;requires Spotify login credentials" data-toggle="popover" data-placement="right" data-html="true" 
      data-content= "<div class='ukcont3'>
 <li3><iframe style='border-radius:12px' src='https://open.spotify.com/embed/playlist/6wjhQO7cD0sKIkfqxYaG4X?utm_source=generator' allow='autoplay; clipboard-write; encrypted-media;'></iframe></li3>
 <li3><iframe style='border-radius:12px' src='https://open.spotify.com/embed/playlist/6ol7dTBHbTqhn4LwW3hWKi?utm_source=generator' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe></li3>
 <li3><iframe style='border-radius:12px' src='https://open.spotify.com/embed/playlist/7qVfIhm4zuEMLoMjYNQg2z?utm_source=generator' width='100' height='96%' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe></li3>
-</div>">Podcasts</button>  
+</div>"
+>Podcasts</button>  
 
      
   <button class="popmenu2" title="SprayMakers Podcast Episodes. Seasons 2020 and 2021 by Chris Rossi and Trent Finlayson. Presented by Radar Skis &nbsp;&#8620; Direct Streams" data-toggle="popover" data-placement="right" data-html="true" 
@@ -439,13 +421,26 @@ window.addEventListener("load", function B() { onloadA() })
 <li><button class='audiobtn' onClick='on45A()'>S2E29-Questions3</button></li>
 <li><button class='audiobtn' onClick='on46A()'>S2E30-EndSeason2</button></li>
 
-</div>
-">SprayMakers</button>
+</div>"
+>SprayMakers</button>
 
-       <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;' controls autoplay loop volume='0.4' onclick='this.paused? ClickPauseR():ClickStartR();            
-             this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
-             <source type='video/mp4' src='https://www.dropbox.com/s/7mok9cprxrdrryq/XEasternWisdomSadhguru.mp4?raw=1'></video>">Wisdom</button>     
-     
+       <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 92%;' controls autoplay volume='0.4' onclick='this.paused? ClickPauseR():ClickStartR();            
+             onended='onVideoNextR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/7mok9cprxrdrryq/XEasternWisdomSadhguru.mp4?raw=1'></video>
+             
+        <div class='menu button'>
+            <button class='Rbtn' id ='Rreset' onClick='on0R()'>Inner Intelligence</button>
+            <button class='Rbtn' id='Rreset' onClick='onPauseR() | on1R()'>Power of Alone</button>
+            <button class='Rbtn' id='Rreset' onClick='on2R()'>Ultimate Intelligence</button>
+         </div>
+        
+        <div class='menubarR' style='text-align:center'>
+            <button class='Rbtn' id ='Rnegative2' onClick='onvideoBackR()'>Prior</button>  
+            <button class='Rbtn' id='Rreset' onClick='onvideoNextR()'>Next</button>               
+            <button class='Rbtn' id='Rreset' onClick='on0R()'>Repeat</button>
+         </div>"
+         >Wisdom</button>     
+    
        <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;' controls autoplay loop volume='0.4' onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/3iezsqiaolub43g/XNeck1.mp4?raw=1'></video>">Neck</button>
@@ -518,7 +513,7 @@ window.addEventListener("load", function B() { onloadA() })
      <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99.5%; height: 90%;' controls autoplay loop  onclick='this.paused? ClickPauseR():ClickStartR();            
              this.paused? timerR.start(10):timerR.stop(0)' onended='onVideoEndedR();'>
              <source type='video/mp4' src='https://www.dropbox.com/s/jw2glcg9yr05ojv/X4MinuteFoundation.mp4?raw=1'></video>">4 Minute Foundation</button>
-             
+              
    </div>
 
      <div class="convertor">
@@ -549,22 +544,6 @@ window.addEventListener("load", function B() { onloadA() })
       <div class="timer5">
           <span class="second">000</span>
         </div>
-
-      
-<!-- 
-     <div class="timer">
-            <span class="closebtn2">&times;</span>
-            <span title="Drag Timer elsewhere as needed" class="drag">&nbsp;&#10016;</span>
-            <span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>.<span class="milli">00</span>
-     </div>
-       
-     <div class="timer2">
-            <span class="closebtn2">&times;&nbsp;</span>
-            <span title="Drag Counter elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span>
-            <span class="hour"></span><span class="minute"></span><span class="second">0</span>
-     </div>
--->
-
 
 <div id="table">
 
@@ -663,6 +642,7 @@ Exercise Stretching Audible Alert Timer&nbsp;&nbsp;&nbsp;<nobr><button class="ti
 
 </div>
 
+<script type="text/javascript" src="plugins/videojs/js/41off_timer_video.js"></script> 
 <script type="text/javascript" src="plugins/videojs/js/audio.js"></script>
 
 <script>

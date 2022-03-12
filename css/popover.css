@@ -31,11 +31,8 @@ background-color:silver;
 border:1px solid rgba(0,0,0,.2);
 border-radius:6px;
 transition: 3s;
--webkit-animation: fadeout 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadeout 2s; /* Firefox < 16 */
-        -ms-animation: fadeout 2s; /* Internet Explorer */
-         -o-animation: fadeout 2s; /* Opera < 12.1 */
-            animation: fadeout 2s; 
+
+            
 opacity:1.0;
 
  /* whatever you want */
