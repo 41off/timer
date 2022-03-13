@@ -1,0 +1,625 @@
+﻿<html>
+<head>
+    <title>Timer</title>
+    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-touch-fullscreen" content="yes"/>
+  <meta name="msapplication-tap-highlight" content="no"/>
+
+<link rel='icon' href='pics/favicon.ico' type='image/x-icon'>
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/exertime.css" rel="stylesheet" type="text/css">
+<link href="css/slidebardrop.css" rel="stylesheet" type="text/css">                
+<link rel="stylesheet" href="css/popover.css">
+
+  <link rel="stylesheet" href="vecjs/css/style.css">
+    <script type="text/javascript" src="vecjs/paper-full.js"></script>
+    <script type="text/javascript" src="vecjs/mediaelement.js"></script>
+    
+    <script type="text/paperscript" canvas="canvas">
+     
+        // A tribute to Nyan Cat http://www.youtube.com/watch?v=QH2-TGUlwu4
+        var mediaElement;
+        var playing = false;
+        MediaElement('nyan', {
+                success: function(me) {
+                mediaElement = me;
+                me.play();
+                me.addEventListener('timeupdate', function(time) {
+                    if (me.currentTime > 3.7)
+                        playing = true;
+                });
+            }
+        });
+
+        var mousePos = view.center + [view.bounds.width / 5, 150];
+        var position = view.center;
+
+        function onFrame(event) {
+            position += (mousePos - position) / 10;
+            var vector = (view.center - position) / 10;
+            moveStars(vector * 0.20);
+            moveRainbow(vector, event);
+        }
+
+        function onMouseMove(event) {
+            mousePos = event.point;
+        }
+
+        function onKeyDown(event) {
+            if (event.key == 'space')
+                project.activeLayer.selected = !project.activeLayer.selected;
+        }
+
+        var moveStars = new function() {
+            // The amount of symbol we want to place;
+            var count = 6;
+
+            // Create a symbol, which we will use to place instances of later:
+            var path = new Path.Circle({
+                center: new Point(100, 50),
+                radius: 75,
+                fillColor: '#FF6600',
+                strokeColor: 'white',
+                strokeWidth: 3                                                            
+            });
+            
+           
+
+            
+            var symbol = new SymbolDefinition(path);
+
+            // Place the instances of the symbol:
+            for (var i = 0; i < count; i++) {
+                // The center position is a random point in the view:
+                var center = Point.random() * view.size;
+                var placed = symbol.place(center);
+                placed.scale(i / count + 0.01);
+                placed.data = {
+                    vector: new Point({
+                        angle: Math.random() * 360,
+                        length : (i / count) * Math.random() / 5
+                    })
+                };
+            }
+            
+            
+            
+   var vector = new Point({
+                angle: 45,
+                length: 150
+            });
+
+
+
+            function keepInView(item) {
+                var position = item.position;
+                var viewBounds = view.bounds;
+                if (position.isInside(viewBounds))
+                    return;
+                var itemBounds = item.bounds;
+                if (position.x > viewBounds.width + 5) {
+                    position.x = -item.bounds.width;
+                }
+
+                if (position.x < -itemBounds.width - 5) {
+                    position.x = viewBounds.width;
+                }
+
+                if (position.y > viewBounds.height + 5) {
+                    position.y = -itemBounds.height;
+                }
+
+                if (position.y < -itemBounds.height - 5) {
+                    position.y = viewBounds.height
+                }
+            }
+
+            return function(vector) {
+                // Run through the active layer's children list and change
+                // the position of the placed symbols:
+                var layer = project.activeLayer;
+                for (var i = 0; i < count; i++) {
+                    var item = layer.children[i];
+                    var size = item.bounds.size;
+                    var length = vector.length / 10 * size.width / 10;
+                    item.position += vector.normalize(length) + item.data.vector;
+                    keepInView(item);
+                }
+            };
+        };
+
+        var moveRainbow = new function() {
+          
+            var paths = [];
+            var colors = ['#FF3300', '#FF9900', '#FFFF33', '#33CC00', '#3300FF', '#CC66CC'];
+            for (var i = 0; i < colors.length; i++) {
+                var path = new Path({
+                    fillColor: colors[i],
+                    strokeColor: 'black',
+                    strokeWidth: 2  
+                });
+                paths.push(path);
+               
+                
+            }
+            
+            var count = 10;
+            var group = new Group(paths);
+            var headGroup;
+            var eyePosition = new Point();
+            var eyeFollow = (Point.random() - 0.5);
+            var blinkTime = 200;
+            function createHead(vector, count) {
+                var eyeVector = (eyePosition - eyeFollow);
+                eyePosition -= eyeVector / 4;
+                if (eyeVector.length < 0.00001)
+                    eyeFollow = (Point.random() - 0.5);
+                if (headGroup)
+                    headGroup.remove();
+                var top = paths[0].lastSegment.point;
+                var bottom = paths[paths.length - 1].firstSegment.point;
+                var radius = (bottom - top).length / 2;
+                var circle = new Path.Circle({
+                    center: top + (bottom - top) / 2,
+                    radius: radius,
+                    fillColor: 'white',
+                   
+                });
+                circle.scale(vector.length / 50, 1);
+                circle.rotate(vector.angle, circle.center);
+                
+                
+                innerCircle = circle.clone();
+                innerCircle.scale(0.5);
+                innerCircle.fillColor = (count % blinkTime < 3)
+                    || (count % (blinkTime + 5) < 3) ? 'black' : 'lightgreen';
+                if (count % (blinkTime + 40) == 0)
+                    blinkTime = Math.round(Math.random() * 40) + 200;
+                var eye = circle.clone();
+                eye.position += eyePosition * radius;
+                eye.scale(0.25, innerCircle.position);
+                eye.fillColor = 'black';
+                headGroup = new Group(circle, innerCircle, eye);
+            }
+
+            return function(vector, event) {
+                var vector = (view.center - position) / 30;
+
+                if (vector.length < 5)
+                    vector.length = 5;
+                count += vector.length / 100;
+                group.translate(vector);
+                var rotated = vector.rotate(90);
+                var middle = paths.length / 6;
+                for (var j = 0; j < paths.length; j++) {
+                    var path = paths[j];
+                    var nyanSwing = playing ? Math.sin(event.count / 2) * vector.length : 1;
+                    var unitLength = vector.length * (2 + Math.sin(event.count / 10)) / 2;
+                    var length = (j - middle) * unitLength + nyanSwing;
+                    var top = view.center + rotated.normalize(length);
+                    var bottom = view.center + rotated.normalize(length + unitLength);
+                    path.add(top);
+                    path.insert(0, bottom);
+                    if (path.segments.length > 100) {
+                        var index = Math.round(path.segments.length / 2);
+                        path.segments[index].remove();
+                        path.segments[index - 1].remove();
+                    }
+                    path.smooth();
+                }
+                createHead(vector, event.count);
+                if (mediaElement)
+                    mediaElement.setVolume(vector.length / 100);
+            }
+        }   
+</script>
+
+
+
+ 
+ <script src="js/jquery-3.6.0.js"></script>
+ <script src="js/jquery-ui.js"></script>
+ <script src="js/popper.min.js"></script> 
+ <script src="js/bootstrap_popup.min.js"></script> 
+ 
+ <script type="text/javascript" src="plugins/exertimer2.js"></script>
+ 
+ <script type="text/javascript" src="plugins/exertimer-drag.popover.closebtn.js"></script>
+ 
+
+</head>
+
+<bgSound id="sound">
+
+<script>
+
+window.addEventListener("load", function B() { onloadA() })
+window.addEventListener("load", function B() { onloadR() })
+
+</script>
+
+
+<body onLoad="GetTime();">
+
+<!--
+  <div class="visit"><h6>Visit Count:<span title="Drag Visit Counter elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span></h6>
+    <nobr><div class="website-counter"></div></nobr>
+  <!--  <button id="reset">Reset</button> 
+     <script type="text/javascript" src="plugins/index.js"></script>
+   </div>
+-->
+        <div id="video">
+        
+       <div class="popdiv"> 
+              
+        <button class="popmenu2" title="Is Atheism Dead? Pub 2021; by Eric Metaxas, Yale '84. Chapters will auto-advance after launch. If you view ontotheologism as a secular conflict; click tab to close this menu." data-toggle="popover" data-placement="right" data-html="true" 
+     data-content="<div class='ukcont2'>
+<li><button class='audiobtn' onClick='on47A()'>Chapter 1</button></li>
+<li><button class='audiobtn' onClick='on48A()'>Chapter 2</button></li>
+<li><button class='audiobtn' onClick='on49A()'>Chapter 3</button></li>
+<li><button class='audiobtn' onClick='on50A()'>Chapter 4</button></li>
+<li><button class='audiobtn' onClick='on51A()'>Chapter 5</button></li>
+<li><button class='audiobtn' onClick='on52A()'>Chapter 6</button></li>
+<li><button class='audiobtn' onClick='on53A()'>Chapter 7</button></li>
+<li><button class='audiobtn' onClick='on54A()'>Chapter 8</button></li>
+<li><button class='audiobtn' onClick='on55A)'>Chapter 9</button></li>
+<li><button class='audiobtn' onClick='on56A()'>Chapter 10</button></li>
+<li><button class='audiobtn' onClick='on57A()'>Chapter 11</button></li>
+<li><button class='audiobtn' onClick='on58A()'>Chapter 12</button></li>
+<li><button class='audiobtn' onClick='on59A()'>Chapter 13</button></li>
+<li><button class='audiobtn' onClick='on60A()'>Chapter 14</button></li>
+<li><button class='audiobtn' onClick='on61A()'>Chapter 15</button></li>
+<li><button class='audiobtn' onClick='on62A()'>Chapter 16</button></li>
+<li><button class='audiobtn' onClick='on63A()'>Chapter 17</button></li>
+<li><button class='audiobtn' onClick='on64A()'>Chapter 18</button></li>
+<li><button class='audiobtn' onClick='on65A()'>Chapter 19</button></li>
+<li><button class='audiobtn' onClick='on66A()'>Chapter 20</button></li>
+<li><button class='audiobtn' onClick='on67A()'>Chapter 21</button></li>
+<li><button class='audiobtn' onClick='on68A()'>Chapter 22</button></li>
+<li><button class='audiobtn' onClick='on69A()'>Chapter 23</button></li>
+<li><button class='audiobtn' onClick='on70A()'>Chapter 24</button></li>
+<li><button class='audiobtn' onClick='on71A()'>Chapter 25</button></li>
+<li><button class='audiobtn' onClick='on72A()'>Chapter 26</button></li>
+<li><button class='audiobtn' onClick='on73A()'>Chapter 27</button></li>
+<li><button class='audiobtn' onClick='on74A()'>Chapter 28</button></li>
+<li><button class='audiobtn' onClick='on75A()'>Chapter 29</button></li>
+<li><button class='audiobtn' onClick='on76A()'>Chapter 30</button></li>
+<li><button class='audiobtn' onClick='on77A()'>Chapter 31</button></li>
+<li><button class='audiobtn' onClick='on78A()'>Chapter 32</button></li>
+<li><button class='audiobtn' onClick='on79A()'>Chapter 33</button></li>
+<li><button class='audiobtn' onClick='on80A()'>Chapter 34</button></li>
+<li><button class='audiobtn' onClick='on81A()'>Chapter 35</button></li>
+<li><button class='audiobtn' onClick='on82A()'>Chapter 36</button></li>
+<li><button class='audiobtn' onClick='on83A()'>Chapter 37</button></li>
+<li><button class='audiobtn' onClick='on84A()'>Chapter 38</button></li>
+<li><button class='audiobtn' onClick='on85A()'>Chapter 39</button></li>
+<li><button class='audiobtn' onClick='on86A()'>Chapter 40</button></li>
+<li><button class='audiobtn' onClick='on87A()'>Chapter 41</button></li>
+<li><button class='audiobtn' onClick='on88A()'>Chapter 42</button></li>
+<li><button class='audiobtn' onClick='on89A()'>Chapter 43</button></li>
+<li><button class='audiobtn' onClick='on90A()'>Chapter 44</button></li>
+<li><button class='audiobtn' onClick='on91A()'>Chapter 45</button></li>
+<li><button class='audiobtn' onClick='on92A()'>Chapter 46</button></li>
+<li><button class='audiobtn' onClick='on93A()'>Chapter 47</button></li>
+<li><button class='audiobtn' onClick='on94A()'>Chapter 48</button></li>
+<li><button class='audiobtn' onClick='on95A()'>Chapter 49</button></li>
+<li><button class='audiobtn' onClick='on96A()'>Chapter 50</button></li>
+<li><button class='audiobtn' onClick='on97A()'>Chapter 51</button></li>
+<li><button class='audiobtn' onClick='on98A()'>Chapter 52</button></li>
+<li><button class='audiobtn' onClick='on99A()'>Chapter 53</button></li>
+<li><button class='audiobtn' onClick='on100A()'>Chapter 54</button></li>
+<li><button class='audiobtn' onClick='on101A()'>Chapter 55</button></li>
+<li><button class='audiobtn' onClick='on102A()'>Chapter 56</button></li>
+<li><button class='audiobtn' onClick='on103A()'>Chapter 57</button></li>
+<li><button class='audiobtn' onClick='on104A()'>Chapter 58</button></li>
+<li><button class='audiobtn' onClick='on105A()'>Chapter 59</button></li>
+<li><button class='audiobtn' onClick='on106A()'>Chapter 60</button></li>
+<li><button class='audiobtn' onClick='on107A()'>Chapter 61</button></li>
+<li><button class='audiobtn' onClick='on108A()'>Chapter 62</button></li>
+<li><button class='audiobtn' onClick='on109A()'>Chapter 63</button></li>
+<li><button class='audiobtn' onClick='on110A()'>Chapter 64</button></li>
+<li><button class='audiobtn' onClick='on111A()'>Chapter 65</button></li>
+<li><button class='audiobtn' onClick='on112A()'>Chapter 66</button></li>
+<li><button class='audiobtn' onClick='on113A()'>Chapter 67</button></li>
+<li><button class='audiobtn' onClick='on114A()'>Chapter 68</button></li>
+<li><button class='audiobtn' onClick='on115A()'>Chapter 69</button></li>
+<li><button class='audiobtn' onClick='on116A()'>Chapter 70</button></li>
+<li><button class='audiobtn' onClick='on117A()'>Chapter 71</button></li>
+<li><button class='audiobtn' onClick='on118A()'>Chapter 72</button></li>
+<li><button class='audiobtn' onClick='on119A()'>Chapter 73</button></li>
+<li><button class='audiobtn' onClick='on120A()'>Chapter 74</button></li>
+<li><button class='audiobtn' onClick='on121A()'>Chapter 75</button></li>
+<li><button class='audiobtn' onClick='on122A()'>Chapter 76</button></li>
+<li><button class='audiobtn' onClick='on123A()'>Chapter 77</button></li>
+<li><button class='audiobtn' onClick='on124A()'>Chapter 78</button></li>
+<li><button class='audiobtn' onClick='on125A()'>Chapter 79</button></li>
+<li><button class='audiobtn' onClick='on126A()'>Chapter 80</button></li>
+<li><button class='audiobtn' onClick='on127A()'>Chapter 81</button></li>
+<li><button class='audiobtn' onClick='on128A()'>Chapter 82</button></li>
+<li><button class='audiobtn' onClick='on129A()'>Chapter 83</button></li>
+<li><button class='audiobtn' onClick='on130A()'>Chapter 84</button></li>
+<li><button class='audiobtn' onClick='on131A()'>Chapter 85</button></li>
+<li><button class='audiobtn' onClick='on131A()'>Chapter 86</button></li>
+<li><button class='audiobtn' onClick='on132A()'>Chapter 87</button></li>
+<li><button class='audiobtn' onClick='on133A()'>Chapter 88</button></li>
+<li><button class='audiobtn' onClick='on134A()'>Chapter 89</button></li>
+<li><button class='audiobtn' onClick='on135A()'>Chapter 90</button></li>
+<li><button class='audiobtn' onClick='on136A()'>Chapter 91</button></li>
+<li><button class='audiobtn' onClick='on137A()'>Chapter 92</button></li>
+<li><button class='audiobtn' onClick='on138A()'>Chapter 93</button></li>
+<li><button class='audiobtn' onClick='on139A()'>Chapter 94</button></li>
+<li><button class='audiobtn' onClick='on140A()'>Chapter 95</button></li>
+<li><button class='audiobtn' onClick='on141A()'>Chapter 96</button></li>
+<li><button class='audiobtn' onClick='on142A()'>Chapter 97</button></li>
+<li><button class='audiobtn' onClick='on143A()'>Chapter 98</button></li>
+<li><button class='audiobtn' onClick='on144A()'>Chapter 99</button></li>
+
+</div>"
+>IAD</button>
+     
+<button class="popmenu2" title="Spotify Podcasts...&#8608;&nbsp;requires Spotify login credentials" data-toggle="popover" data-placement="right" data-html="true" 
+     data-content= "<div class='ukcont3'>
+<li3><iframe style='border-radius:12px' src='https://open.spotify.com/embed/playlist/6wjhQO7cD0sKIkfqxYaG4X?utm_source=generator' allow='autoplay; clipboard-write; encrypted-media;'></iframe></li3>
+<li3><iframe style='border-radius:12px' src='https://open.spotify.com/embed/playlist/6ol7dTBHbTqhn4LwW3hWKi?utm_source=generator' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe></li3>
+<li3><iframe style='border-radius:12px' src='https://open.spotify.com/embed/playlist/7qVfIhm4zuEMLoMjYNQg2z?utm_source=generator' width='100' height='96%' frameBorder='0' allowfullscreen='' allow='autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture'></iframe></li3>
+</div>"
+>Podcasts</button>  
+
+     
+  <button class="popmenu2" title="SprayMakers Podcast Episodes. Seasons 2020 and 2021 by Chris Rossi and Trent Finlayson. Presented by Radar Skis &nbsp;&#8620; Direct Streams" data-toggle="popover" data-placement="right" data-html="true" 
+     data-content="<div class='ukcont'>
+<li><button class='audiobtn' onClick='on1A()'>S1-Core Fundamentals</button></li>
+<li><button class='audiobtn' onClick='on2A()'>S1-Strengths-Weaknesses</button></li>
+<li><button class='audiobtn' onClick='on3A()'>S1-Stacked</button></li>
+<li><button class='audiobtn' onClick='on4A()'>S1-Ski-Setup</button></li>
+<li><button class='audiobtn' onClick='on5A()'>S1-LineLengthProgression</button></li>
+<li><button class='audiobtn' onClick='on6A()'>S1-Gates</button></li>
+<li><button class='audiobtn' onClick='on7A()'>S1-Edge Change</button></li>
+<li><button class='audiobtn' onClick='on8A()'>S1-Handle Control</button></li>
+<li><button class='audiobtn' onClick='on9A()'>S1-LightontheLine</button></li>
+<li><button class='audiobtn' onClick='on10A()'>S1-Onside Turns</button></li>
+<li><button class='audiobtn' onClick='on11A()'>S1-Offside Turns</button></li>
+<li><button class='audiobtn' onClick='on12A()'>S1-CounterRotation</button></li>
+<li><button class='audiobtn' onClick='on13A()'>S1-Boots</button></li>
+<li><button class='audiobtn' onClick='on15A()'>S1-RecurringThemes</button></li>
+<li><button class='audiobtn' onClick='on16A()'>S1-OffSeason</button></li>
+<br>
+<button class='audiobtn' onClick='on14A()'>Season 2 Next&#8595;&#8595;</button>
+<br>
+<br>
+<li><button class='audiobtn' onClick='on17A()'>S2E1-Boys Are Back</button></li>
+<li><button class='audiobtn' onClick='on18A()'>S2E2-TakeItToTheWater</button></li>
+<li><button class='audiobtn' onClick='on19A()'>S2E3-Vision</button></li>
+<li><button class='audiobtn' onClick='on20A()'>S2E4-Planning</button></li>
+<li><button class='audiobtn' onClick='on21A()'>S2E5-OnTheWater</button></li>
+<li><button class='audiobtn' onClick='on22A()'>S2E6-Fatal Flaws</button></li>
+<li><button class='audiobtn' onClick='on23A()'>S2E7-WorkZone</button></li>
+<li><button class='audiobtn' onClick='on24A()'>S2E8-Training Regimen</button></li>
+<li><button class='audiobtn' onClick='on25A()'>S2E9-Perfect Path</button></li>
+<li><button class='audiobtn' onClick='on26A()'>S2E10-Turning</button></li>
+<li><button class='audiobtn' onClick='on27A()'>S2E11-Gates</button></li>
+<li><button class='audiobtn' onClick='on28A()'>S2E12-Fin Setup</button></li>
+<li><button class='audiobtn' onClick='on29A()'>S2E13-Unwritten Rules</button></li>
+<li><button class='audiobtn' onClick='on30A()'>S2E14-Tournaments</button></li>
+<li><button class='audiobtn' onClick='on31A()'>S2E15-Speed</button></li>
+<li><button class='audiobtn' onClick='on32A()'>S2E16-The Handle</button></li>
+<li><button class='audiobtn' onClick='on33A()'>S2E17-Vision</button></li>
+<li><button class='audiobtn' onClick='on34A()'>S2E18-RoadBlocks</button></li>
+<li><button class='audiobtn' onClick='on35A()'>S2E19-Max Coaching</button></li>
+<li><button class='audiobtn' onClick='on36A()'>S2E29-Plateaus</button></li>
+<li><button class='audiobtn' onClick='on37A()'>S2E21-Wear & Tear</button></li>
+<li><button class='audiobtn' onClick='on38A()'>S2E22-Slack</button></li>
+<li><button class='audiobtn' onClick='on39A()'>S2E23-HouseKeeping</button></li>
+<li><button class='audiobtn' onClick='on40A()'>S2E24-MakingMistakes</button></li>
+<li><button class='audiobtn' onClick='on41A()'>S2E25-SetUp Success</button></li>
+<li><button class='audiobtn' onClick='on42A()'>S2E26-Changing Direction</button></li>
+<li><button class='audiobtn' onClick='on43A()'>S2E27-ListenerFeedback</button></li>
+<li><button class='audiobtn' onClick='on44A()'>S2E28-Questions2</button></li>
+<li><button class='audiobtn' onClick='on45A()'>S2E29-Questions3</button></li>
+<li><button class='audiobtn' onClick='on46A()'>S2E30-EndSeason2</button></li>
+
+</div>"
+>SprayMakers</button>
+
+       <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99%; height: 92%;' controls autoplay loop volume='0.8' onclick='this.paused? ClickPauseR():ClickStartR();            
+             onended='onVideoNextR();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/7mok9cprxrdrryq/XEasternWisdomSadhguru.mp4?raw=1'></video>
+             
+        <div class='menu button'>
+            <button class='Rbtn' id ='Rreset' onClick='on0R()'>Inner Intelligence</button>
+            <button class='Rbtn' id='Rreset' onClick='on1R()'>Power of Alone</button>
+            <button class='Rbtn' id='Rreset' onClick='on2R()'>Ultimate Intelligence</button>
+            <button class='Rbtn' id='Rreset' onClick='on3R()'>Consciousness &amp; Anesthesia</button>
+         </div>
+        
+        <div class='menubarR' style='text-align:center'>
+            <button class='Rbtn' id ='Rnegative2' onClick='onvideoBackR()'>Prior</button>  
+            <button class='Rbtn' id='Rreset' onClick='onvideoNextR()'>Next</button>               
+            <button class='Rbtn' id='Rreset' onClick='on0R()'>Repeat</button>
+         </div>"
+         >Wisdom</button>
+         
+       <button class="popmenu" title="Use the&nbsp;&nbsp&nbsp&#10016;&nbsp;&nbsp to Drag Table, Timer, or Tool bars out of view prn;&nbsp;&times; to close.&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp Click Video Item Button Again to Close and Select another Video Clip or Click RESET in Timertable" data-toggle="popover" data-placement="right" data-html="true" data-content="<video id='video' style='width: 99%; height: 92%;' controls autoplay loop volume='0.8' onclick='this.paused? ClickPauseR():ClickStartR();            
+             onended='onVideoNextR2();'>
+             <source type='video/mp4' src='https://www.dropbox.com/s/76ie7lw8412m2lb/X4MustStretches.mp4?raw=1'></video>
+             
+        <div class='menu button'>
+            <button class='Rbtn' id ='Rreset' onClick='on0R2()'>Four Must Stretches</button>
+            <button class='Rbtn' id='Rreset' onClick='on1R2()'>Shoulder Impingement</button>
+            <button class='Rbtn' id='Rreset' onClick='on2R2()'>Neck Mobility Routine</button>
+            <button class='Rbtn' id ='Rreset' onClick='on3R2()'>Stiff Neck Explained</button>
+            <button class='Rbtn' id='Rreset' onClick='on4R2()'>Back Stretches</button>
+            <button class='Rbtn' id='Rreset' onClick='on5R2()'>Lower Back Therapy</button>
+            <button class='Rbtn' id ='Rreset' onClick='on6R2()'>Quadratus Lumborum</button>
+            <button class='Rbtn' id='Rreset' onClick='on7R2()'>Piriformis Stretching</button>
+            <button class='Rbtn' id='Rreset' onClick='on8R2()'>Gluteus Medius Activation</button>
+            <button class='Rbtn' id ='Rreset' onClick='on9R2()'>Glutus Maximus Activation</button>
+            <button class='Rbtn' id='Rreset' onClick='on10R2()'>Hip Flexor Mobility</button>
+            <button class='Rbtn' id='Rreset' onClick='on11R2()'>Alfredson Achilles Protocol</button>
+            <button class='Rbtn' id ='Rreset' onClick='on12R2()'>Prone Back Decompression</button>
+            <button class='Rbtn' id='Rreset' onClick='on13R2()'>Static Lunges</button>
+            <button class='Rbtn' id='Rreset' onClick='on14R2()'>Balance Yoga Dude</button>
+            <button class='Rbtn' id ='Rreset' onClick='on15R2()'>Foundation Vs. Pain</button>
+            <button class='Rbtn' id='Rreset' onClick='on16R2()'>Basic Foundation</button>
+            <button class='Rbtn' id='Rreset' onClick='on17R2()'>4 Minute Foundation</button>
+         </div>
+        
+        <div class='menubarR' style='text-align:center'>
+            <button class='Rbtn' id ='Rnegative2' onClick='onvideoBackR2()'>Prior</button>  
+            <button class='Rbtn' id='Rreset' onClick='onvideoNextR2()'>Next</button>               
+            <button class='Rbtn' id='Rreset' onClick='on0R2()'>Repeat</button>
+         </div>"
+         >Exercise &amp; Stretches</button>      
+    
+ </div>
+
+     <div class="convertor">
+       <span class="closebtn2" title="Click to close this calculator box">&nbsp;&times;</span>
+       <span title="Drag Speed Calculator elsewhere as needed" class="drag">&nbsp;&#10016;&nbsp;</span>
+       <form name="converter">
+          Miles Per Hour&nbsp;<input class="entry" size="4" maxlength="10" value="entry"  name="mph" type="text" onclick="this.form.reset();" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+          <input type="button" class="timer3" value="Convert MPH to &#x2192;" onclick="calc(); calc3()">&nbsp;&nbsp;&nbsp;
+          <input type="reset" class="timer3" value="reset" >&nbsp;&nbsp;
+          Meters Per Second&nbsp;<input class="entry" size="4" maxlength="10" value="entry"  name="mps" type="text"  onclick="this.form.reset();" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+          <input type="button" class="timer3" value="MPH&#x2190;Convert MPS&#x2192;KPH" onclick="javascript:calc2(); javascript:calc6() ">&nbsp;&nbsp;
+          <input type="button" class="timer3" value="&#x2190;Convert KPH to" onclick="javascript:calc4(); javascript:calc5() ">         
+          Kilometers Per Hour&nbsp;<input class="entry" size="4" maxlength="10" value="entry"  name="kph" type="text"  onclick="this.form.reset();" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+       </form>
+      </div>
+
+      <div class="dispclock">
+            <span class="closebtn2" title="Click to close this timer box">&times;</span>
+            <span title="Drag Clock elsewhere as needed" class="drag">&nbsp;&#10016;</span>
+            Clock&nbsp;&#8620;&nbsp;<span class="clock" class="milli"></span><br>
+            Days~HH:MM:SS&nbsp;&#8620;&nbsp;<span class="aDays"></span><span class="alarm"></span><br>
+            Counting&nbsp;&#8620;&nbsp;<span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>.<span class="milli">00</span>
+         <div class="timer4">
+          T-Minus&nbsp;&#8620;&nbsp;<span class="second">000</span>&nbsp;s
+         </div>
+      </div>
+      
+      <div class="timer5">
+          <span class="second">000</span>
+        </div>
+
+<div id="table">
+
+<form name="clock">
+
+<TABLE ALIGN="left" BORDER-STYLE="double" BORDERRADIUS="5vmin" BORDERCOLOR="transparent" cellspacing="0" class="auto-style1" style="width: 100%">
+
+<tr align="center" BGCOLOR="transparent">
+<td colspan="2" style="height: 2vmin">
+<nobr>
+Choose Repeating Preset&nbsp;&nbsp;
+<input type="radio" name="wmSlalom" onClick="whichSlalomwm()">30 Seconds
+<input type="radio" name="jbSlalom" onClick="whichSlalomjb()">1 Minute  
+<input type="radio" name="xlSlalom" onClick="whichSlalomxl()">2 Minutes
+<input type="radio" name="lgSlalom" onClick="whichSlalomlg()">3 Minutes 
+<input type="radio" name="meSlalom" onClick="whichSlalomme()">5 Minutes  
+<input type="radio" name="smSlalom" onClick="whichSlalomsm()">10 Minutes   
+<input type="radio" name="clSlalom" onClick="whichSlalomcl()">15 Minutes  
+<input type="checkbox" name="noSlalom" onClick="whichSlalomno();" checked>Delay Fx() 
+</nobr>
+</td>
+</tr>
+
+<tr align="left" BGCOLOR="transparent">
+<td colspan="2" style="height: 2vmin">
+Set Alert Time For&nbsp;&nbsp;&nbsp;Days&#8620;<input type="text" name="slalomOptD" size="2" maxlength="3" class="timer3" value="0" onFocus="clear_field(this)">&nbsp;
+Hours&#8620;<input type="text" name="slalomOptH" size="2" maxlength="2" class="timer3" value="0" onFocus="clear_field(this)">&nbsp;
+Minutes&#8620;<input type="text" name="slalomOptM" size="2" maxlength="2" class="timer3" value="0" onFocus="clear_field(this)">&nbsp;
+Seconds&#8620;<input type="text" name="slalomOptS" size="2" maxlength="3" class="timer3" value="0" onFocus="clear_field(this)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="button" value="Start"  class="timer3" onClick="slalom() + timer.start(10)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="timer3" onClick="timer.reset(0)">Reset</button>
+<span title="Drag TimerTable elsewhere as needed" class="drag">&#10016;&nbsp;</span>
+</td>
+</tr>
+
+
+<tr align="left" BGCOLOR="transparent">
+<td colspan="2" style="height: 2vmin">
+Client&nbsp;Alarm&nbsp;Status&#8620;<input type="text" name="Dstatus" size="10" maxlength="8" value="0" class="timer3" readonly>&nbsp;
+Remaining Ticks&#8620;<div class="timer3"><span class="second">000</span></div>&nbsp;
+Elapsed Ticks&#8620;<input type="text" name="secctrRD" size="8" class="timer3" readonly>&nbsp;
+Ticks Setting&#8620;<input type="text" name="RemainingTimeRD" size="6" class="timer3" readonly>
+</td>
+</tr>
+
+
+<tr align="left" BGCOLOR="transparent">
+<td colspan="2" style="height: 2vmin">
+Client Alarm Time&#8620;<input name="DalarmTime" size="12" class="timerbutton timerbutton1">
+Client System Clock Time&#8620;<input name="local" size="14"class="timerbutton timerbutton1">&nbsp;
+Days Elapsed&#8620;<input type="text" name="dayTimeRD" size="5" class="timerbutton timerbutton1" readonly>
+</td>
+</tr>
+
+<tr align="left" BGCOLOR="transparent">
+<td colspan="2" style="height: 2vmin">
+Messages<input type="text" name="messagesD" size="94" class="timerbutton timerbutton1" readonly>
+</td>
+</tr>
+
+<tr align="center" BGCOLOR="transparent">
+<td colspan="2" style="height: 2vmin">
+
+Alert On <input type="checkbox" name="alarmOnOff" onClick="alarmOn()"> 
+Alert Off <input type="radio" name="alarmOnOff" onClick="alarmOff()"> 
+On Now <input type="radio" name="alarmOnNow" onClick="alarmNow()">  <!--  Mute <input type="radio" name="muteOn" onClick="muteNow()"> -->
+
+</td>
+</tr>
+
+<!--
+<tr align="center" BGCOLOR="transparent">
+<td colspan="2" align=center style="height: 30px">
+Exercise Stretching Audible Alert Timer&nbsp;&nbsp;&nbsp;<nobr><button class="timerbutton timerbutton1" onClick="timer.reset(0)">Reset</button><span title="Drag TimerTable elsewhere as needed" class="drag">&nbsp;&nbsp;&#10016;</span></nobr>
+</td>
+</tr>
+-->
+
+</TABLE>
+
+</form>
+
+</div>
+ 
+<div class="aud">
+
+<audio controls onended="onaudioNextA();">
+  <source src="" type="audio/ogg">
+  <source src="" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+
+</div>
+
+
+
+</div>
+
+<script type="text/javascript" src="plugins/videojs/js/41off_timer_video.js"></script> 
+<script type="text/javascript" src="plugins/videojs/js/audio.js"></script>
+
+<script>
+var close = document.getElementsByClassName('closebtn2');
+var i;
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 1200);
+    }
+}
+</script>
+
+<audio id="nyan" src="nyan.mp3" autoplay autobuffer preload=none loop style="display:none"></audio>
+<canvas id="canvas" resize hidpi="off"></canvas>
+
+</body>
+</html>
