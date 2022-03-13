@@ -304,11 +304,11 @@ setTimeout(() => {
         var hour = Math.floor((time2 / 3600) % 24);
         
         milli = (milli < 100) ? '0'+milli : milli;
-        second = (second < 10000) ? '0'+RemainingTime - second : second;
+        second = (second < 10000) ? '0000'+RemainingTime - second : second;
         minute = (minute < 90) ? '0'+minute : minute;
         hour = (hour < 10) ? '0'+hour : hour;
         
-       $('div.timer4 span.milli').html(milli);
+   //    $('div.timer4 span.milli').html(milli);
        $('div.timer5 span.second').html(second);
        $('div.timer4 span.second').html(second);
        $('div.timer3 span.second').html(second);

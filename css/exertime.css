@@ -3,9 +3,9 @@
 	display:inline-block;
 	width:99%;
 	height:99%;
-	left:1%;	
+	left:-1%;	
 	font-size: 0vmin;
-	float:left;
+	
 	z-index:45;
 	background: transparent;
     border: 0.5vmin;
@@ -17,25 +17,25 @@
 
 .popdiv:hover {
 	background-color: transparent;
-	border-color: red;
+	
 	opacity: 1;
 	color: black;
 }
 
 .popmenu {
-    font-size: 1.5vmin;
-    line-height:1.5vmin;
+    font-size: 1.75vmin;
+    line-height:2vmin;
     font-weight: 600;
     color:white;
-    margin-top: 0.3vmin;
+    margin-top: 0.1vmin;
     padding-top:0.2vmin;
     padding-bottom:0.15vmin;
-    padding-left:0.2vmin;
-    padding-right:0.2vmin;
+    padding-left:0.4vmin;
+    padding-right:0.4vmin;
     cursor: pointer;
-    border-width:0.2vmin;
-    border: double #999;
-    border-radius: .5vmin;
+    border-width:0.3vmin;
+    border: #999 double;
+    border-radius: 0.75vmin;
     border-style:groove;
     background: -webkit-linear-gradient(top, lightgray, black);
     text-shadow: 0.1vmin 0.1vmin black;
@@ -54,26 +54,24 @@
 
 
 .popmenu2 {
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.5vmin;
-    line-height:1.5vmin;
+    font-size: 1.75vmin;
+    line-height:2vmin;
     font-weight: 600;
     color:white;
     margin-right:0.1vmin;
     margin-left:0.1vmin;
-    margin-top: 0.3vmin;
+    margin-top: 0.1vmin;
     padding-top:0.2vmin;
     padding-bottom:0.15vmin;
-    padding-left:0.2vmin;
-    padding-right:0.2vmin;
+    padding-left:0.4vmin;
+    padding-right:0.4vmin;
     height: auto;
     width: auto; 
     -webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%;
     cursor: pointer;
-    border-width:0.2vmin;
-    border: double #999;
-    border-radius: .5vmin;
+    border-width:0.3vmin;
+    border: #999 double;
+    border-radius: 0.75vmin;
     border-style:groove;
     float:right;
     position:relative;

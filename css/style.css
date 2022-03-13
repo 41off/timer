@@ -19,7 +19,7 @@ body {
    background: url('../pics/silverbars.jpg') no-repeat fixed center;
   */
 
-  width:99vw;  /* height:96vh; */
+  width:100vw;  /* height:96vh; */
   height: 100vh;
   object-fit: contain;
   overflow:hidden;
@@ -31,6 +31,7 @@ body {
   font-size: 2vmin;
   text-shadow: 0.1vmin 0.1vmin silver;
   margin: 0 auto;
+  left:-1%;
   
 }
 
@@ -790,18 +791,17 @@ table {
 
 .timer4 {
   color:yellow;
-  font-weight:800;
-  font-size:2.75vmin;
-  text-shadow: 0.15vmin 0.15vmin silver;
-  padding: 0.75vmin 0.75vmin;
+  font-weight:600;
+  font-size:2.5vmin;
+  text-shadow: 0.2vmin 0.2vmin black;
+  padding: 0.15vmin 0.15vmin;
 }
 
 
 .timer4:hover {
   color:red; 
-  text-shadow: 0.15vmin 0.15vmin black;
-  
 }
+
 
 .timer5 {
   position:absolute;
