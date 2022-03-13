@@ -1,11 +1,25 @@
 ﻿
 .popdiv {
-	margin-right:0.5%;
 	display:inline-block;
 	width:99%;
-	float:right;
+	height:99%;
+	left:1%;	
 	font-size: 0vmin;
+	float:left;
+	z-index:45;
+	background: transparent;
+    border: 0.5vmin;
+    border-color: transparent;
+    border-radius: 1vmin;
+    border-style: double;
 	
+}
+
+.popdiv:hover {
+	background-color: transparent;
+	border-color: red;
+	opacity: 1;
+	color: black;
 }
 
 .popmenu {

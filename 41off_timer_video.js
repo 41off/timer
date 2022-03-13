@@ -250,15 +250,19 @@
                              'https://www.dropbox.com/s/opba225bqkdqt9i/XLBPC.mp4?raw=1',
                              'https://www.dropbox.com/s/cqo8bktmhbzatzv/XQuadratusLumborumStretch.mp4?raw=1',
                              'https://www.dropbox.com/s/odnyngndjwh6utq/XPiriformis.mp4?raw=1',
-                             'https://www.dropbox.com/s/spmsl2jlhgjyhfi/PG.mp4?raw=1',
-                             'https://www.dropbox.com/s/afmg5cv1z94kfrg/XPG-08-09-2021.mkv.mp4?raw=1',
-                             'https://www.dropbox.com/s/spmsl2jlhgjyhfi/PG.mp4?raw=1',
-                             'https://www.dropbox.com/s/afmg5cv1z94kfrg/XPG-08-09-2021.mkv.mp4?raw=1',
-                             'https://www.dropbox.com/s/spmsl2jlhgjyhfi/PG.mp4?raw=1',
-                             'https://www.dropbox.com/s/afmg5cv1z94kfrg/XPG-08-09-2021.mkv.mp4?raw=1',
-                             'https://www.dropbox.com/s/spmsl2jlhgjyhfi/PG.mp4?raw=1'
-
-
+                             'https://www.dropbox.com/s/qj4qwbct1ilm2ic/XMedius.mp4?raw=1',
+                             'https://www.dropbox.com/s/cof4htyz4rrf733/XMaximus.mp4?raw=1',
+                             'https://www.dropbox.com/s/to14p7stkhr4fhq/XHips.mp4?raw=1',
+                             'https://www.dropbox.com/s/q6zbxoifj8bcv2x/XAchillesAlfredson.mp4?raw=1',
+                             'https://www.dropbox.com/s/bhyj2t3o02szyo1/XProneDecompression.mp4?raw=1',
+                             'https://www.dropbox.com/s/2hrwt41hu737jo1/XStaticLunge.mp4?raw=1',
+                             'https://www.dropbox.com/s/e006shc7j8msq5d/XYogaDude.mp4?raw=1',
+                             'https://www.dropbox.com/s/i8mn7t1q8bkttqv/XFoundationTrainingHelpingPain.mp4?raw=1',
+                             'https://www.dropbox.com/s/qccjjb8ix4wkbas/XBasicFoundationTraining.mp4?raw=1',
+                             'https://www.dropbox.com/s/jw2glcg9yr05ojv/X4MinuteFoundation.mp4?raw=1',
+                             'https://www.dropbox.com/s/e006shc7j8msq5d/XYogaDude.mp4?raw=1',
+                             'https://www.dropbox.com/s/76ie7lw8412m2lb/X4MustStretches.mp4?raw=1',
+                             'https://www.dropbox.com/s/k59bbd1yhybb3gh/XImpingement.mp4?raw=1',
 
                              ];                      
  
@@ -276,17 +280,18 @@
             else{
                 videoR2_index = 1;
             }
+            videoR2_player = document.getElementsByTagName("video")[0];
             videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
             videoR2_player.play();
         }
         
        function onvideoNextR2(){
-            console.log("videoR next");
-            if(videoR_index < videoR_directory.length - 1){
-                videoR_index++;
+            console.log("videoR2 next");
+            if(videoR2_index < videoR2_directory.length - 1){
+                videoR2_index++;
             }
             else{
-                videoR_index = 1;
+                videoR2_index = 1;
             }
             videoR2_player = document.getElementsByTagName("video")[0];
             videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
@@ -327,79 +332,173 @@
            
          }
            
-          function on2R(){
+          function on2R2(){
             console.log("2 ended");
-            videoR_index = 2;
-            videoR_player = document.getElementsByTagName("video")[0];
-            videoR_player.setAttribute("src", videoR_directory[videoR_index]);
-            videoR_player.play();
+            videoR2_index = 2;
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
 
                    
          }
                       
-          function on3R(){
+          function on3R2(){
             console.log("3 ended");
-            videoR_index = 3;
-            videoR_player = document.getElementsByTagName("video")[0];
-            videoR_player.setAttribute("src", videoR_directory[videoR_index]);
-            videoR_player.play();
+            videoR2_index = 3;
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
+
         }
         
-          function on4R(){
+          function on4R2(){
             console.log("4 ended");
-            videoR_index = 4;
-            videoR_player = document.getElementsByTagName("video")[0];
-            videoR_player.setAttribute("src", videoR_directory[videoR_index]);
-            videoR_player.play();
+            videoR2_index = 4;
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
         }
            
-         function on5R(){
+         function on5R2(){
             console.log("5 ended");
-            videoR_index = 5;            
-            videoR_player = document.getElementsByTagName("video")[0];
-            videoR_player.setAttribute("src", videoR_directory[videoR_index]);
-            videoR_player.play();
+            videoR2_index = 5;            
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
+
         }
         
-         function on6R(){
+         function on6R2(){
             console.log("6 ended");
-            videoR_index = 6;
-            videoR_player = document.getElementsByTagName("video")[0];
-            videoR_player.setAttribute("src", videoR_directory[videoR_index]);
-            videoR_player.play();
+            videoR2_index = 6;
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
         }
          
-          function on7R(){
+          function on7R2(){
             console.log("7 ended");
-            videoR_index = 7;
-            videoR_player = document.getElementsByTagName("video")[0];
-            videoR_player.setAttribute("src", videoR_directory[videoR_index]);
-            videoR_player.play();
+            videoR2_index = 7;
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
         }
         
-          function on8R(){
+          function on8R2(){
             console.log("8 ended");
-            videoR_index = 8;
-            videoR_player = document.getElementsByTagName("video")[0];
-            videoR_player.setAttribute("src", videoR_directory[videoR_index]);
-            videoR_player.play();
+            videoR2_index = 8;
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
+
         }
         
-          function on9R(){
+          function on9R2(){
            console.log("9 ended");
-           videoR_index = 9;
-           videoR_player = document.getElementsByTagName("video")[0];
-           videoR_player.setAttribute("src", videoR_directory[videoR_index]);
-           videoR_player.play();
+           videoR2_index = 9;
+           videoR2_player = document.getElementsByTagName("video")[0];
+           videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+           videoR2_player.play();
        }
        
-          function on10R(){
+          function on10R2(){
            console.log("10 ended");
-           videoR_index = 10;
-           videoR_player = document.getElementsByTagName("video")[0];
-           videoR_player.setAttribute("src", videoR_directory[videoR_index]);
-           videoR_player.play();
+           videoR2_index = 10;
+           videoR2_player = document.getElementsByTagName("video")[0];
+           videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+           videoR2_player.play();
        }
+
+          function on11R2(){
+            console.log("11 ended");
+            videoR2_index = 11;
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
+
+                       
+         }
+        
+        function on12R2(){
+            console.log("12 ended");
+            videoR2_index = 12;
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
+
+           
+         }
+           
+          function on13R2(){
+            console.log("13 ended");
+            videoR2_index = 13;
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
+
+                   
+         }
+                      
+          function on14R2(){
+            console.log("14 ended");
+            videoR2_index = 14;
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
+
+        }
+        
+          function on15R2(){
+            console.log("15 ended");
+            videoR2_index = 15;
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
+        }
+           
+         function on16R2(){
+            console.log("16 ended");
+            videoR2_index = 16;            
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
+
+        }
+        
+         function on17R2(){
+            console.log("17 ended");
+            videoR2_index = 17;
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
+        }
+         
+          function on18R2(){
+            console.log("18 ended");
+            videoR2_index = 18;
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
+        }
+        
+          function on19R2(){
+            console.log("19 ended");
+            videoR2_index = 19;
+            videoR2_player = document.getElementsByTagName("video")[0];
+            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+            videoR2_player.play();
+
+        }
+        
+          function on20R2(){
+           console.log("20 ended");
+           videoR2_index = 20;
+           videoR2_player = document.getElementsByTagName("video")[0];
+           videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+           videoR2_player.play();
+       }
+       
+       
 
     
 
