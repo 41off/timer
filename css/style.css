@@ -899,8 +899,8 @@ table {
     position: absolute;
     display:block;
     padding-top: 0.25vmin;
-    right:1%;
-    top: 10%;
+    right:0.75%;
+    top: 4%;
     height: auto;
     width:auto;
     max-width:25vmin;
@@ -929,10 +929,10 @@ table {
 .menubarR {
     position: absolute;
     display:inline-block;
-    padding-top: 0.25vmin;
-    right:2.5%;
-    bottom: 15%;
-    height: 3vmin;
+    padding-top: 0.1vmin;
+    right:2%;
+    bottom: 3.5%;
+    height: 2.5vmin;
     width:auto;
     margin: 0 auto;
     opacity: 1.0;
@@ -1091,10 +1091,11 @@ table {
     font-weight:600;
     font-size: 1.5vmin;
     font-family:Verdana;
-    line-height:1.75vmin;
-    margin-right: 0.5vmin;
-    margin-left:0.5vmin;
-    margin-top: 0.25vmin;
+    line-height:1.5vmin;
+    margin-right: 0.3vmin;
+    margin-left:0.3vmin;
+    margin-top: 0vmin;
+    margin-bottom: 0.25vmin;
     padding-top:0.1vmin;
     padding-bottom:0.15vmin;
     padding-left:0.2vmin;

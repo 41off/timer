@@ -54,15 +54,14 @@ margin-right:15%;
 
 .popover-title {
   display:inline-block;
-  padding-left: 5%; 
-  padding-right:5%;
-  margin:0.1% auto;
-  width:80%;
-  font-size:1.5vmin;
+  left:25%;
+  margin: 0.25% auto;
+  width: 70%;
+  font-size: 1.5vmin;
   background-color:#f7f7f7;
-  border-bottom:1px solid #ebebeb;
-  border-radius:4px 4px 0 0;
-  text-shadow: 1px 1px silver;
+  border-bottom: 0.1vmin solid #ebebeb;
+  border-radius: 0.5vmin 0.5vmin 0 0;
+  text-shadow: 0.15vmin 0.15vmin silver;
   text-align:center;
   color:red;
   line-height:1.5vmin;
@@ -100,7 +99,7 @@ margin-right:15%;
   font-weight:500;
   height:90%;
   width:99%;
-  overflow-x:scroll;
+  overflow-x:none;
   z-index:33;
  
 
