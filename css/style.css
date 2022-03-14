@@ -29,7 +29,7 @@ body {
   color: white;
   line-height: 2vmin;
   font-size: 2vmin;
-  text-shadow: 0.1vmin 0.1vmin silver;
+  
   margin: 0 auto;
   left:-1%;
   
@@ -519,26 +519,24 @@ table {
     display:inline-block;
     transition: opacity 2s;
     background: -webkit-linear-gradient(top, lightgray, black);
-    font-family:Verdana;
-    font-size: 1.5vmin;
+    
+    font-size: 1.75vmin;
     line-height:1.75vmin;       
     font-weight:500; 
     text-shadow: 0.1vmin 0.1vmin silver;
     border: 0.5vmin double silver;
-    border-radius: 1vmin;
+    border-radius: 0.75vmin;
     width: auto;
-    min-width:2vmin; 
-    height: auto;
-    min-height:1.75vmin;
+    min-width:1.75vmin; 
+    height: 3vmin;
+    
     text-align:center;
     color: white;
-    padding-bottom:0.1vmin;
-    padding-top:0.1vmin;
-    padding-left:0.25vmin;
-    padding-right:0.25vmin;
+    
+    padding-left:0.15vmin;
+    padding-right:0.15vmin;
     text-align: center;
-    margin: 0.1vmin 0.1vmin;
-    margin-top:0.1vmin;   
+       
     cursor: pointer;
     z-index:11;
 }
@@ -546,7 +544,7 @@ table {
     border: 0.5vmin double red;
     background: -webkit-linear-gradient(top, lightyellow, lightpink);
     color: black;
-    text-shadow: 0.1vmin 0.1vmin red;
+    text-shadow: 0.05vmin 0.05vmin red;
 }
 
 .entry:focus {
@@ -759,34 +757,33 @@ table {
     display:inline-block;
     transition: opacity 2s;
     background: -webkit-linear-gradient(top, lightgray, black);
-    font-family:Verdana;
-    font-size: 1.5vmin;
+    
+    font-size: 1.75vmin;
     line-height:1.75vmin;       
     font-weight:500; 
     text-shadow: 0.1vmin 0.1vmin silver;
     border: 0.5vmin double silver;
-    border-radius: 1vmin;
+    border-radius: 0.75vmin;
     width: auto;
     min-width:2vmin; 
     height: auto;
     min-height:1.75vmin;
     text-align:center;
     color: white;
-    padding-bottom:0.1vmin;
-    padding-top:0.1vmin;
+    
     padding-left:0.25vmin;
     padding-right:0.25vmin;
     text-align: center;
     margin: 0.1vmin 0.1vmin;
-    margin-top:0.1vmin;   
+    margin-bottom:0.1vmin;   
     cursor: pointer;
     z-index:11;
 }
 .timer3:hover {
     border: 0.5vmin double red;
     background: -webkit-linear-gradient(top, lightyellow, lightpink);
-    color: darkred;
-    text-shadow: 0.1vmin 0.1vmin red;
+    color: black;
+    text-shadow: 0.05vmin 0.05vmin red;
 }
 
 .timer4 {
@@ -846,8 +843,8 @@ table {
 .convertor {
     position:absolute;
     display:inline-block;
-    padding-top: 0vmin;
-    padding-bottom:0.5vmin;
+    padding-top: 0.1vmin;
+    padding-bottom:0.15vmin;
     padding-left: 0.15vmin;
     background: transparent;
     border: 0.5vmin;
@@ -855,23 +852,22 @@ table {
     border-radius: 1vmin;
     border-style: double;
     float:right;
-    right:34%;    
-    max-height:2.5vmin;
-    font-family: "Arial Narrow", Arial, sans-serif;
+    right:40%; 
+    height: auto;   
+    max-height:3vmin;
+    
     font-size: 1.75vmin;
-    line-height:2.5vmin;
-    font-weight:bold;    
+    line-height:2vmin;
+    
+    font-weight:600;    
     color: white;
     opacity: .6;
     transition: opacity 3s;
     top: 0%;
     text-align:center;
     z-index:55;
-    
-    margin-right:0.5vmin;
-    width:65%;
-    
    
+    width:59%;
 }
 
 .convertor:hover {
@@ -879,7 +875,47 @@ table {
 	border-color: red;
 	opacity: 1;
 	color: black;
+	font-weight:600;
 }
+
+.mediabar {
+    position:absolute;
+    display:inline-block;
+    padding-top: 0.1vmin;
+    padding-bottom:0.15vmin;
+    padding-left: 0.15vmin;
+    background: transparent;
+    border: 0.5vmin;
+    border-color: transparent;
+    border-radius: 1vmin;
+    border-style: double;
+    float:right;
+    right:1%; 
+    height: auto;   
+    max-height:3vmin;
+    
+    font-size: 1.75vmin;
+    line-height:2vmin;
+    
+    font-weight:600;    
+    color: white;
+    opacity: .6;
+    transition: opacity 3s;
+    top: 0%;
+    text-align:center;
+    z-index:55;
+   
+    width:auto;
+}
+
+.mediabar:hover {
+	background-color: #C0C0C0;
+	border-color: red;
+	opacity: 1;
+	color: black;
+	font-weight:600;
+}
+
 
 #video {
   position: relative;
