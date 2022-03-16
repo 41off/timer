@@ -849,7 +849,7 @@ table {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: rainbow_animation 17s ease-in-out infinite;
+    animation: rainbow_animation 34s ease-in-out infinite;
     background-size: 1000% 100%;
     -webkit-text-stroke-width: 0.75vmin;
     -webkit-text-stroke-color: black;
