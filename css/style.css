@@ -809,7 +809,7 @@ table {
 
 #shadowBox {
   position:absolute;
-  height:80%;
+  height:76%;
   top:9%;
   left:0%;
   right:18%;
@@ -821,8 +821,13 @@ table {
     /* Fallback color */
  /*   background-color: rgba(0, 0, 0, 0.2); */
     /* Black w/opacity/see-through */
-  border: 2pvmin solid;
+  border: 0vmin solid;
 }
+
+#shadowBox:hover {
+  z-index:33;
+}
+
 
 .rainbow {
     text-align: left;
