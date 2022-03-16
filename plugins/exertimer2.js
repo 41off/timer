@@ -309,6 +309,7 @@ setTimeout(() => {
         hour = (hour < 10) ? '0'+hour : hour;
         
    //    $('div.timer4 span.milli').html(milli);
+       $('div#shadowBox span.second').html(second);
        $('div.timer5 span.second').html(second);
        $('div.timer4 span.second').html(second);
        $('div.timer3 span.second').html(second);

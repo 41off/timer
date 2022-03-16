@@ -245,6 +245,8 @@
     var videoR2_directory = ['https://www.dropbox.com/s/76ie7lw8412m2lb/X4MustStretches.mp4?raw=1',
                              'https://www.dropbox.com/s/k59bbd1yhybb3gh/XImpingement.mp4?raw=1',
                              'https://www.dropbox.com/s/jasjosa8fo55x8y/XPerfectShoulderWorkout.mp4?raw=1',
+                             'https://www.dropbox.com/s/xgf7k7v89b5m9vd/XRotatorCuffExercises.mp4?raw=1',
+                             'https://www.dropbox.com/s/c4w76a9kb893a1b/XRotatorCuffExerciseMyths.mp4?raw=1',
                              'https://www.dropbox.com/s/3iezsqiaolub43g/XNeck1.mp4?raw=1',
                              'https://www.dropbox.com/s/en3jex3gpfqk0pm/XStiffNeck.mp4?raw=1',
                              'https://www.dropbox.com/s/cutfo76owr1shin/X2BackStretches.mp4?raw=1',
@@ -262,9 +264,6 @@
                              'https://www.dropbox.com/s/qccjjb8ix4wkbas/XBasicFoundationTraining.mp4?raw=1',
                              'https://www.dropbox.com/s/jw2glcg9yr05ojv/X4MinuteFoundation.mp4?raw=1',
                              'https://www.dropbox.com/s/e006shc7j8msq5d/XYogaDude.mp4?raw=1',
-                             'https://www.dropbox.com/s/76ie7lw8412m2lb/X4MustStretches.mp4?raw=1',
-                             'https://www.dropbox.com/s/k59bbd1yhybb3gh/XImpingement.mp4?raw=1',
-
                              ];                      
  
   
