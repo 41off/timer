@@ -21,7 +21,7 @@
 	opacity: 1;
 	color: black;
 }
-
+/*
 .popmenu {
     font-size: 1.75vmin;
     line-height:2vmin;
@@ -46,6 +46,43 @@
 
 .popmenu:hover {
   border: red double;
+  background: -webkit-linear-gradient(top, lightyellow, lightpink);
+  text-shadow: 0.1vmin 0.1vmin silver;
+  color:black;
+
+}
+*/
+
+.popmenu {
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.75vmin;
+    line-height:2vmin;
+    font-weight: 600;
+    color:white;
+    margin-top: 0.1vmin;
+    margin-right:0.1vmin;
+    margin-left:0.1vmin;
+    padding-top:0.2vmin;
+    padding-bottom:0.15vmin;
+    padding-left:0.4vmin;
+    padding-right:0.4vmin;
+    height: auto;
+    width: auto; 
+    -webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%;
+    cursor: pointer;
+    border: 0.3vmin #999;
+    border-radius: 0.6vmin;
+    border-style:groove;
+    float:right;
+    position:relative;
+    background: -webkit-linear-gradient(top, lightgray, black);
+    z-index:9;
+
+}
+
+.popmenu:hover {
+   border: red double;
   background: -webkit-linear-gradient(top, lightyellow, lightpink);
   text-shadow: 0.1vmin 0.1vmin silver;
   color:black;

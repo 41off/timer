@@ -88,16 +88,14 @@
    
    
   
-        var videoR_directory = ['https://www.dropbox.com/s/7mok9cprxrdrryq/XEasternWisdomSadhguru.mp4?raw=1',
-                                'https://www.dropbox.com/s/iz4t7sfhte5ii2c/XPowerBeingAloneSadhguru.mp4?raw=1',
-                                'https://www.dropbox.com/s/67km5q2s6u1q5bm/XConsciousnessUltimateIntelligenceSadhguru.mp4?raw=1',
-                                'https://www.dropbox.com/s/3iyzp5u2nhm0pyv/XMemoryConsciousnessAnesthesiaSadhguruHarvardMedicalSchool.mp4?raw=1',
-                                'https://www.dropbox.com/s/um8jz1a2p63idxe/10-10-2021-14_52.mp4?raw=1',
-                                'https://www.dropbox.com/s/365bhju44j7zlj7/V1.mp4?raw=1',
-                                'https://www.dropbox.com/s/43ewvwpf48p1qos/v2.mp4?raw=1',
-                                'https://www.dropbox.com/s/afmg5cv1z94kfrg/XPG-08-09-2021.mkv.mp4?raw=1',
-                                'https://www.dropbox.com/s/spmsl2jlhgjyhfi/PG.mp4?raw=1'
-                               ];                      
+        var videoR_directory = ['https://www.dropbox.com/s/cef0z3gdft153s1/XLaneVsHitch.mp4?raw=1',
+                                'https://www.dropbox.com/s/ss5q4l3cq3vahx3/XJBP_12_rules.mp4?raw=1',
+                                'https://www.dropbox.com/s/yeoi0mso09tqkw7/XJBP_12Rules_Tour_02-16-2019.mp4?raw=1',
+                                'https://www.dropbox.com/s/5xb98xprifqw810/XJBP_Theism.mp4?raw=1',
+                                'https://www.dropbox.com/s/3uw657r6nerdm88/XTurekvsHitchens.mp4?raw=1',
+                                'https://www.dropbox.com/s/y1kprh51kcm1q39/XAllenParrFalsehoods.mp4?raw=1',
+                                'https://www.dropbox.com/s/cqyr9r63yr6ej64/X7_Essential_Knots.mp4?raw=1',
+                                ];                      
  
   
         var videoR_index = 0;

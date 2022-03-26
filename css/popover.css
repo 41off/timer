@@ -400,14 +400,15 @@ uk {
   height:98%;
   width:97%;
   bottom:2%;
-  column-count: 4;
+  column-count: 6;
   column-gap: 10px;
   column-rule-style: groove;
   column-rule-width:2px;
   column-rule: 2px solid red; 
-  column-width: 25%;
+  column-width: 16%;
   display:inline-block;
   margin-left:2%;
+  overflow:scroll;
 
 	
 }
@@ -416,14 +417,15 @@ uk {
   height:98%;
   width:97%;
   bottom:2%;
-  column-count: 5;
+  column-count: 8;
   column-gap: 0.25vmin;
   column-rule-style: groove;
   column-rule-width:0.5vmin;
   column-rule: 0.2vmin solid red; 
-  column-width: 20%;
+  column-width: 12%;
   display:inline-block;
   margin-left:2%;
+  overflow:scroll;
 }
 
 .ukcont3 {
@@ -436,8 +438,9 @@ uk {
   column-rule-style: groove;
   column-rule-width:0.5vmin;
   column-rule: 0.5vmin solid red; 
-  column-width: 33%;  
+  column-width: 32%;  
   margin-left:2vmin;
+  overflow:scroll;
   
 }
 
