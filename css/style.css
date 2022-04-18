@@ -968,12 +968,13 @@ table {
 .menu {
     position: absolute;
     display:block;
-    padding-top: 0.25vmin;
+    padding-top: 0.5vmin;
+    padding-bottom: 0.5vmin;
     right:0.75%;
     top: 4%;
-    height: auto;
-    width:auto;
-    max-width:25vmin;
+    height: 75%;
+    width:14%;
+    max-width:30vmin;
     margin: 0vmin auto;
     opacity: 1.0;
     transition: opacity 5s;
@@ -982,7 +983,8 @@ table {
     border-color: transparent;
     border-radius: .5vmin;
     border-style:groove;
-    overflow:hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
     z-index:5;
 }
 

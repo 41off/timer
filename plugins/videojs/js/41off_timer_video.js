@@ -254,6 +254,7 @@
                              'https://www.dropbox.com/s/qj4qwbct1ilm2ic/XMedius.mp4?raw=1',
                              'https://www.dropbox.com/s/cof4htyz4rrf733/XMaximus.mp4?raw=1',
                              'https://www.dropbox.com/s/uq38omei6tq4vi8/X22DayGlutes.mp4?raw=1',
+                             'https://www.dropbox.com/s/eonw9ztvbdsae05/X22Day_Hamstring_Flexibility.mp4?raw=1',
                              'https://www.dropbox.com/s/to14p7stkhr4fhq/XHips.mp4?raw=1',
                              'https://www.dropbox.com/s/w4yvx6616fb191l/XBarbellHipThrusts.mp4?raw=1',
                              'https://www.dropbox.com/s/q6zbxoifj8bcv2x/XAchillesAlfredson.mp4?raw=1',
@@ -510,6 +511,15 @@
           function on22R2(){
            console.log("22 ended");
            videoR2_index = 22;
+           videoR2_player = document.getElementsByTagName("video")[0];
+           videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+           videoR2_player.play();
+       }
+       
+      
+          function on23R2(){
+           console.log("23 ended");
+           videoR2_index = 23;
            videoR2_player = document.getElementsByTagName("video")[0];
            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
            videoR2_player.play();
