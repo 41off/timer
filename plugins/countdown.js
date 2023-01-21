@@ -39,6 +39,6 @@ function initializeClock(id, endtime) {
   const timeinterval = setInterval(updateClock, 1000);
 }
 
-const deadline = 'May 27 2022 08:00:00 GMT-0500';
+const deadline = 'May 26 2023 08:00:00 GMT-0500';
 
 initializeClock('clockdiv', deadline);

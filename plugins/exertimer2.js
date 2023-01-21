@@ -722,7 +722,7 @@ timer2.reset(00);
 
 function whichSlalomwm() {
 
-x = 45;  // x Seconds
+x = 30;  // x Seconds
 
 document.clock.jbSlalom.checked = false;
 document.clock.xlSlalom.checked = false;
@@ -732,8 +732,8 @@ document.clock.smSlalom.checked = false;
 document.clock.clSlalom.checked = false;
 document.clock.wmSlalom.checked = true;
 document.clock.noSlalom.checked = false;
-document.clock.slalomOptS.value = "45";
-TypeMessage = "45 Second ";
+document.clock.slalomOptS.value = "30";
+TypeMessage = "30 Second ";
 slalom();
 timer2.reset(00);
 timer.mode(1);
@@ -743,7 +743,7 @@ timer2.start(10);
 
 
 
-setTimeout(whichSlalomwm,  54*1000);
+setTimeout(whichSlalomwm,  39*1000);
 }
 whichSlalomwm(); // execute function
 timer.start(10);
