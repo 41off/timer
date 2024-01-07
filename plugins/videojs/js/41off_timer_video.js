@@ -265,6 +265,8 @@
                              'https://www.dropbox.com/s/qccjjb8ix4wkbas/XBasicFoundationTraining.mp4?raw=1',
                              'https://www.dropbox.com/s/jw2glcg9yr05ojv/X4MinuteFoundation.mp4?raw=1',
                              'https://www.dropbox.com/s/e006shc7j8msq5d/XYogaDude.mp4?raw=1',
+                             'https://www.dropbox.com/scl/fi/qkd5iwiyil6p6h9l471uk/Glutes-Hamstrings.mp4?rlkey=udhzzzgzrlmwjwssjd81wg9xa&raw=1',
+                             'https://www.dropbox.com/scl/fi/369lspmc3zyoz5wd4vz7y/Glutes.mp4?rlkey=ptxxa64q29tkysbfa6a2yfjn2&raw=1',
                              ];                      
  
   
@@ -524,6 +526,33 @@
            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
            videoR2_player.play();
        }
+       
+          function on24R2(){
+           console.log("24 ended");
+           videoR2_index = 24;
+           videoR2_player = document.getElementsByTagName("video")[0];
+           videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+           videoR2_player.play();
+       }
+
+
+       function on25R2(){
+           console.log("25 ended");
+           videoR2_index = 25;
+           videoR2_player = document.getElementsByTagName("video")[0];
+           videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+           videoR2_player.play();
+       }
+       
+         function on26R2(){
+           console.log("26 ended");
+           videoR2_index = 26;
+           videoR2_player = document.getElementsByTagName("video")[0];
+           videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+           videoR2_player.play();
+       }
+
+
        
 
        
