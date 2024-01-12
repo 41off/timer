@@ -241,6 +241,7 @@
    //   directory two below //
    
     var videoR2_directory = ['https://www.dropbox.com/s/76ie7lw8412m2lb/X4MustStretches.mp4?raw=1',
+                             'https://www.dropbox.com/scl/fi/ilhspitr1qwvilwgrteah/Longevity-Training.mp4?rlkey=vjqh792bkrvj882te85uxgoad&raw=1',
                              'https://www.dropbox.com/s/k59bbd1yhybb3gh/XImpingement.mp4?raw=1',
                              'https://www.dropbox.com/s/jasjosa8fo55x8y/XPerfectShoulderWorkout.mp4?raw=1',
                              'https://www.dropbox.com/s/xgf7k7v89b5m9vd/XRotatorCuffExercises.mp4?raw=1',
@@ -251,12 +252,17 @@
                              'https://www.dropbox.com/s/opba225bqkdqt9i/XLBPC.mp4?raw=1',
                              'https://www.dropbox.com/s/cqo8bktmhbzatzv/XQuadratusLumborumStretch.mp4?raw=1',
                              'https://www.dropbox.com/s/odnyngndjwh6utq/XPiriformis.mp4?raw=1',
+                             'https://www.dropbox.com/scl/fi/369lspmc3zyoz5wd4vz7y/Glutes.mp4?rlkey=ptxxa64q29tkysbfa6a2yfjn2&raw=1',
+                             'https://www.dropbox.com/scl/fi/qkd5iwiyil6p6h9l471uk/Glutes-Hamstrings.mp4?rlkey=udhzzzgzrlmwjwssjd81wg9xa&raw=1',
                              'https://www.dropbox.com/s/qj4qwbct1ilm2ic/XMedius.mp4?raw=1',
                              'https://www.dropbox.com/s/cof4htyz4rrf733/XMaximus.mp4?raw=1',
                              'https://www.dropbox.com/s/uq38omei6tq4vi8/X22DayGlutes.mp4?raw=1',
                              'https://www.dropbox.com/s/eonw9ztvbdsae05/X22Day_Hamstring_Flexibility.mp4?raw=1',
                              'https://www.dropbox.com/s/to14p7stkhr4fhq/XHips.mp4?raw=1',
                              'https://www.dropbox.com/s/w4yvx6616fb191l/XBarbellHipThrusts.mp4?raw=1',
+                             'https://www.dropbox.com/scl/fi/dikutfmjnb0q0kv9uye1x/AB-Workout-5-min.mp4?rlkey=m0c9ydtx9pq7tot6dkt79v8hj&raw=1',
+                             'https://www.dropbox.com/scl/fi/62g31y7gdyvfl709zd5x5/AB-Workout-10-min.mp4?rlkey=bci8v8xnjnh3fs72z4t69z9iv&raw=1',
+                             'https://www.dropbox.com/scl/fi/uyugwuviv9d8ewqtwjc0g/ChestWorkout-10min.mp4?rlkey=sypeuh5zq5mgq9jxwhvorabgl&raw=1',
                              'https://www.dropbox.com/s/q6zbxoifj8bcv2x/XAchillesAlfredson.mp4?raw=1',
                              'https://www.dropbox.com/s/bhyj2t3o02szyo1/XProneDecompression.mp4?raw=1',
                              'https://www.dropbox.com/s/2hrwt41hu737jo1/XStaticLunge.mp4?raw=1',
@@ -265,8 +271,8 @@
                              'https://www.dropbox.com/s/qccjjb8ix4wkbas/XBasicFoundationTraining.mp4?raw=1',
                              'https://www.dropbox.com/s/jw2glcg9yr05ojv/X4MinuteFoundation.mp4?raw=1',
                              'https://www.dropbox.com/s/e006shc7j8msq5d/XYogaDude.mp4?raw=1',
-                             'https://www.dropbox.com/scl/fi/qkd5iwiyil6p6h9l471uk/Glutes-Hamstrings.mp4?rlkey=udhzzzgzrlmwjwssjd81wg9xa&raw=1',
-                             'https://www.dropbox.com/scl/fi/369lspmc3zyoz5wd4vz7y/Glutes.mp4?rlkey=ptxxa64q29tkysbfa6a2yfjn2&raw=1',
+                                              
+                             
                              ];                      
  
   
@@ -547,6 +553,39 @@
          function on26R2(){
            console.log("26 ended");
            videoR2_index = 26;
+           videoR2_player = document.getElementsByTagName("video")[0];
+           videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+           videoR2_player.play();
+       }
+ 
+     function on27R2(){
+           console.log("7 ended");
+           videoR2_index = 27;
+           videoR2_player = document.getElementsByTagName("video")[0];
+           videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+           videoR2_player.play();
+       }
+       
+          function on28R2(){
+           console.log("28 ended");
+           videoR2_index = 28;
+           videoR2_player = document.getElementsByTagName("video")[0];
+           videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+           videoR2_player.play();
+       }
+
+
+       function on29R2(){
+           console.log("29 ended");
+           videoR2_index = 29;
+           videoR2_player = document.getElementsByTagName("video")[0];
+           videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
+           videoR2_player.play();
+       }
+       
+         function on30R2(){
+           console.log("30 ended");
+           videoR2_index = 30;
            videoR2_player = document.getElementsByTagName("video")[0];
            videoR2_player.setAttribute("src", videoR2_directory[videoR2_index]);
            videoR2_player.play();
