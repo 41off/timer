@@ -39,7 +39,7 @@ function updateClock7() {
   const timeinterval7 = setInterval(updateClock7, 1000);
 }
 
-const deadline7 = 'March 09 2023 07:00:00 GMT+1100';
+const deadline7 = 'March 09 2022 08:00:00 GMT+1100';
 
 initializeClock7('clockdiv7', deadline7);
 

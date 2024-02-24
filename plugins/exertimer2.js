@@ -22,7 +22,7 @@ var csecNum;
 var cmilliNum;
 var Message = "";
 var TypeMessage = "";
-var snd = new Audio("audio/dogs.mp3"); // buffers automatically when created
+var snd = new Audio("audio/a.mp3"); // buffers automatically when created
 
 
 
@@ -564,7 +564,7 @@ timer2.mode(1);
 timer2.start(10);
 
 
-setTimeout(whichSlalomcl, 909*1000);
+setTimeout(whichSlalomcl, 901*1000);
 }
 whichSlalomcl();
 timer.start(10); // execute function
@@ -594,7 +594,7 @@ timer2.mode(1);
 timer2.start(10);
 
 
-setTimeout(whichSlalomsm, 609*1000);
+setTimeout(whichSlalomsm, 601*1000);
 }
 whichSlalomsm();
 timer.start(10); // execute function
@@ -623,7 +623,7 @@ timer2.mode(1);
 timer2.start(10);
 
 
-setTimeout(whichSlalomme, 309*1000);
+setTimeout(whichSlalomme, 301*1000);
 }
 whichSlalomme();
 timer.start(10); // execute function
@@ -652,7 +652,7 @@ timer.start(10);
 timer2.mode(1);
 timer2.start(10);
 
-setTimeout(whichSlalomlg, 189*1000);
+setTimeout(whichSlalomlg, 181*1000);
 }
 whichSlalomlg();
 timer.start(10); // execute function
@@ -682,7 +682,7 @@ timer2.mode(1);
 timer2.start(10);
 
 
-setTimeout(whichSlalomxl, 129*1000);
+setTimeout(whichSlalomxl, 121*1000);
 }
 whichSlalomxl(); // execute function
 timer.start(10);
@@ -712,7 +712,7 @@ timer.start(10);
 timer2.mode(1);
 timer2.start(10);
 
-setTimeout(whichSlalomjb,  69*1000);
+setTimeout(whichSlalomjb,  61*1000);
 }
 whichSlalomjb(); // execute function
 timer.start(10);
@@ -743,7 +743,7 @@ timer2.start(10);
 
 
 
-setTimeout(whichSlalomwm,  54*1000);
+setTimeout(whichSlalomwm,  46*1000);
 }
 whichSlalomwm(); // execute function
 timer.start(10);

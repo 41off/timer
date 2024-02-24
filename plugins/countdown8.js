@@ -39,7 +39,7 @@ function updateClock8() {
   const timeinterval8 = setInterval(updateClock8, 1000);
 }
 
-const deadline8 = 'May 07 2023 08:00:00 GMT-0500';
+const deadline8 = 'May 01 2022 08:00:00 GMT-0500';
 
 initializeClock8('clockdiv8', deadline8);
 
